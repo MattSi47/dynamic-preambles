@@ -1,32 +1,18 @@
+
 import numpy as np
 from scipy import signal
+import matplotlib.pyplot as plt
 
-from pymoo.model.problem import Problem
-from pymoo.algorithms.nsga2 import NSGA2
+from pymoo.core.problem import Problem
+from pymoo.algorithms.moo.nsga2 import NSGA2
 from pymoo.optimize import minimize
-
-# sample frequency
-Fs = 10e6
-# sample period
-Ts = 1/Fs 
-# 40uS symbol period
-T_sig = 45e-6 
-# number of signals to optimize
-M = 6
-
-# number of points per signal
-N = int(T_sig/Ts)
-S = [np.random.uniform(-1, 1, N) for _ in range(M)]
-
+from pymoo.visualization.scatter import Scatter
 
 class preamble_optimization1(Problem):
-    def __init__(self, Fs, T_sig, M):
-        # sample period
-        self.Ts = 1/Fs
-        # total time for each signal
-        self.T_sig = T_sig
+    def __init__(self, M, N):
+        
         # number of samples per signal
-        N = int(T_sig/Ts)
+        self.N = N 
         # of signals to optimize
         self.M = M
 
@@ -38,22 +24,23 @@ class preamble_optimization1(Problem):
     # negate result to make it a minimization
     def autocorr_obj_fn(self, S):
         sig_ac = [signal.correlate(Sn, Sn) for Sn in S]
-        return -min([np.corrcoef(sig_ac_n, self.delta) for sig_ac_n in sig_ac])
+        # Select diagonal element of 2x2 corr. matrix fro cross correlation
+        return -min([np.corrcoef(sig_ac_n, self._delta)[0][1] for sig_ac_n in sig_ac])
 
     # want to minimize the maximum cross corellation between 2 signals:
     def crosscorr_obj_fn(self, S):
         crosscorrs = np.full((self.M, self.M), -2) # 2 is out of bounds of corr. coeff
         # ignore the autocorrelation terms which = 1
-        masked_crosscorrs = np.ma(crosscorrs, mask=-2*np.identity(self.M))
+        masked_crosscorrs = np.ma.masked_array(crosscorrs, mask=-2*np.identity(self.M))
 
         for i in range(0, self.M):
             # start at i so we don't repeat unnecessary operations
             # Add 1 so we don't find autocorrelation coefficient which is always 1.
             for j in range(i+1, self.M):
-                rho = np.corrcoef(self.S[i], self.S[j])
+                rho = np.corrcoef(S[i], S[j])[0][1]
                 crosscorrs[i][j] = rho
                 crosscorrs[j][i] = rho
-            return max(masked_crosscorrs)
+        return np.max(masked_crosscorrs)
     
     # Calls evaluation function on each generation of results, outputs those results
     # S_new_gen_flat_array has dimensions (num designs per gen) x (M*N)
@@ -66,6 +53,7 @@ class preamble_optimization1(Problem):
 
         out["F"] = np.array(gen_results)
 
+
 # sample frequency
 Fs = 10e6
 # sample period
@@ -73,19 +61,46 @@ Ts = 1/Fs
 # 40uS symbol period
 T_sig = 45e-6 
 # number of signals to optimize
-M = 6
-
+M = 81
+# number of samples per signal
+N = int(T_sig/Ts)
 # Create an instance of the optimization problem
-problem = preamble_optimization1(Fs, T_sig, M)
+problem = preamble_optimization1(M, N)
+
 
 # Choose the optimization algorithm (NSGA-II in this case)
-algorithm = NSGA2()
+algorithm = NSGA2(pop_size=20)
 
 # Perform the optimization
 result = minimize(problem, algorithm)
 
 # Access the optimal solution
-optimal_signal = result.X
+print(len(result.X))
+optimal_signal_set = np.array(np.reshape(result.X, (M, N))) 
+print(len(optimal_signal_set))
+np.savetxt("optimal.txt", optimal_signal_set)
 
-# Print the result
-print("Optimal Signal:", optimal_signal)
+def plot_many(rows, cols, horiz_axis, data, title, x_label, y_label):
+
+    for i in range(1, len(data)+1):
+        plt.subplot(rows, cols, i)
+        plt.stem(horiz_axis, data[i-1])
+        # plt.xlabel(x_label)
+        # plt.ylabel(y_label)
+        # plt.title(title)
+        print(i)
+    
+    # ax.grid()
+    # ax.set(xlabel='Sample [n]', ylabel='Autocorrelation', tile=title)
+    plt.show()
+
+autocorr = [signal.correlate(Sn, Sn) for Sn in optimal_signal_set]
+plot_many(9, 9, range(0, N), optimal_signal_set, 'Optimal signal set', 'sample number', 'sample value')
+plot_many(9, 9, range(0, 2*N-1), autocorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
+
+xcorr = [signal.correlate(optimal_signal_set[0], optimal_signal_set[i]) for i in range(0,M)]
+
+plot_many(9, 9, range(0, 2*N-1), xcorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
+
+
+print(np.corrcoef(optimal_signal_set))

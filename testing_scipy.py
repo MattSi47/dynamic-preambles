@@ -26,7 +26,7 @@ def plot_many(rows, cols, horiz_axis, data, title=''):
     
     # ax.grid()
     # ax.set(xlabel='Sample [n]', ylabel='Autocorrelation', tile=title)
-    plt.show() 
+    plt.show()
 
 autocorr = [signal.correlate(Sn, Sn) for Sn in S]
 
