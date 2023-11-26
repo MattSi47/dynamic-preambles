@@ -87,7 +87,7 @@ with open("timing_data.csv", mode='w', newline='') as csv_file:
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
     writer.writeheader() # Write header
 
-#Ask to perform 5x loop for timing pts to avg 
+#Ask to perform 5x loop for timing pts to avg
 timingcheck=False
 response = input( "Averaging timing check? (y/n): ").lower()
 if response =="y":
