@@ -1,7 +1,12 @@
 
+import math
 import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
+import scipy.io.wavfile
+import os, sys
+import datetime
+os.chdir(sys.path[0])
 
 from pymoo.core.problem import Problem
 from pymoo.algorithms.moo.nsga2 import NSGA2
@@ -61,7 +66,7 @@ Ts = 1/Fs
 # 40uS symbol period
 T_sig = 45e-6 
 # number of signals to optimize
-M = 81
+M = 4
 # number of samples per signal
 N = int(T_sig/Ts)
 # Create an instance of the optimization problem
@@ -78,7 +83,16 @@ result = minimize(problem, algorithm)
 print(len(result.X))
 optimal_signal_set = np.array(np.reshape(result.X, (M, N))) 
 print(len(optimal_signal_set))
-np.savetxt("optimal.txt", optimal_signal_set)
+
+# Function to generate .wav files for GNURadio
+def wavgen (M, data):
+    path=f'./{M} Signals {datetime.datetime.now()}'
+    os.mkdir(path)
+    os.chdir(path)
+    for i in range(M):
+        scipy.io.wavfile.write(f"Signal_{i+1}of{M}.wav", int(Fs) , optimal_signal_set[i])
+    os.chdir(sys.path[0])
+
 
 def plot_many(rows, cols, horiz_axis, data, title, x_label, y_label):
 
@@ -88,19 +102,21 @@ def plot_many(rows, cols, horiz_axis, data, title, x_label, y_label):
         # plt.xlabel(x_label)
         # plt.ylabel(y_label)
         # plt.title(title)
-        print(i)
+        #print(i)
     
     # ax.grid()
-    # ax.set(xlabel='Sample [n]', ylabel='Autocorrelation', tile=title)
+    # ax.set(xlabel='Sample [n]', ylabel='Autsocorrelation', tile=title)
     plt.show()
 
+
+wavgen(M,optimal_signal_set)
 autocorr = [signal.correlate(Sn, Sn) for Sn in optimal_signal_set]
-plot_many(9, 9, range(0, N), optimal_signal_set, 'Optimal signal set', 'sample number', 'sample value')
-plot_many(9, 9, range(0, 2*N-1), autocorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
+plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, N), optimal_signal_set, 'Optimal signal set', 'sample number', 'sample value')
+plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), autocorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
 
 xcorr = [signal.correlate(optimal_signal_set[0], optimal_signal_set[i]) for i in range(0,M)]
 
-plot_many(9, 9, range(0, 2*N-1), xcorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
+plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), xcorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
 
 
-print(np.corrcoef(optimal_signal_set))
+#print(np.corrcoef(optimal_signal_set))
