@@ -90,8 +90,13 @@ def wavgen (M, data):
     os.mkdir(path)
     os.chdir(path)
     for i in range(M):
+        
+        SignalArr = ', '.join(map(str, data[i]))
+        with open(f"Signal_{i+1}of{M}", 'w') as file:
+            file.write(SignalArr)
+
         #scale to int16 before conversion
-        audio=optimal_signal_set[i]*32767
+        audio=data[i]*32767
         scipy.io.wavfile.write(f"Signal_{i+1}of{M}.wav", int(Fs) , audio.astype(np.int16))
     os.chdir(sys.path[0])
 
