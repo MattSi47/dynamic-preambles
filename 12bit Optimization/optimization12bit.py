@@ -108,6 +108,20 @@ norm_optimal_signal_set = np.array(np.reshape(normalized_signal, (M, N)))
 #save data set
 np.savetxt(f"optimal(12bit).txt", optimal_signal_set)
 
+path=f'./{M} Signals {datetime.datetime.now()}'
+os.mkdir(path)
+os.chdir(path)
+for i in range(M):
+    #txt file
+    SignalArr = ', '.join(map(str, optimal_signal_set[i]))
+    with open(f"Signal_{i+1}of{M}.txt", 'w') as file:
+        file.write(SignalArr)
+    #raw data
+    optimal_signal_set[i].astype('int16').tofile(f"Signal_{i+1}of{M}")
+    #wav file
+    scipy.io.wavfile.write(f"Signal_{i+1}of{M}.wav", int(Fs) , optimal_signal_set[i].astype(np.int16))
+
+os.chdir(sys.path[0])#return to parent dir
 
 
 def plot_many(rows, cols, horiz_axis, data, title, x_label, y_label):
