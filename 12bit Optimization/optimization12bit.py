@@ -91,15 +91,24 @@ algorithm = NSGA2(
     mutation=PM(prob=1.0, eta=3.0, vtype=float, repair=RoundingRepair())
 )
 
+
+
+
 # Perform the optimization
 result = minimize(problem, algorithm)
 
 # Access the optimal solution
-#print(len(result.X))
 optimal_signal_set = np.array(np.reshape(result.X, (M, N))) 
-#print(len(optimal_signal_set))
 
+#Normalize
+rms = np.sqrt(np.sum(np.square(result.X)))
+normalized_signal = (result.X) * (1/rms)
+norm_optimal_signal_set = np.array(np.reshape(normalized_signal, (M, N))) 
+
+#save data set
 np.savetxt(f"optimal(12bit).txt", optimal_signal_set)
+
+
 
 def plot_many(rows, cols, horiz_axis, data, title, x_label, y_label):
 
@@ -116,14 +125,19 @@ def plot_many(rows, cols, horiz_axis, data, title, x_label, y_label):
     plt.show()
 
 
-# wavgen(M,optimal_signal_set)
+#Plot Signal
 autocorr = [signal.correlate(Sn, Sn) for Sn in optimal_signal_set]
+xcorr = [signal.correlate(optimal_signal_set[0], optimal_signal_set[i]) for i in range(0,M)]
 plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, N), optimal_signal_set, 'Optimal signal set', 'sample number', 'sample value')
 plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), autocorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
-
-xcorr = [signal.correlate(optimal_signal_set[0], optimal_signal_set[i]) for i in range(0,M)]
-
 plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), xcorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
 
+
+#Plot Normalized Signal
+norm_autocorr = [signal.correlate(Sn, Sn) for Sn in norm_optimal_signal_set]
+norm_xcorr = [signal.correlate(norm_optimal_signal_set[0], norm_optimal_signal_set[i]) for i in range(0,M)]
+plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, N), norm_optimal_signal_set, 'Optimal signal set', 'sample number', 'sample value')
+plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), norm_autocorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
+plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), norm_xcorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
 
 #print(np.corrcoef(optimal_signal_set))
