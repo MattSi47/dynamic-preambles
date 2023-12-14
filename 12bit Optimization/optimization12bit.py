@@ -1,8 +1,9 @@
-
+from datetime import datetime
 import math
 import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
 import scipy.io.wavfile
 import os, sys
 import datetime
@@ -32,49 +33,72 @@ class preamble_optimization1(Problem):
 
         self._delta = np.where(np.arange(2 * N - 1) != int((2 * N - 1) / 2), 0, 1)
 
+        # of form:
+        # [
+        #     [rho1, alpha1,rho2, alpha2,..], #gen 0
+        #     [rho1, alpha1, rho2, alpha2,..], #gen 1
+        #     ...
+        # ]
+        self.data = []
+        self._gen_num = 0
     # want to maximize the minimum "spikiness" of autocorrelation:
     # negate result to make it a minimization
     def autocorr_obj_fn(self, S):
-        sig_ac = [signal.correlate(Sn, Sn) for Sn in S]
-        # Select diagonal element of 2x2 corr. matrix fro cross correlation
-        return -min([np.corrcoef(sig_ac_n, self._delta)[0][1] for sig_ac_n in sig_ac])
-
-    # want to minimize the maximum cross corellation between 2 signals:
+        norm_S = [Sn / np.sqrt(np.sum(np.square(Sn))) for Sn in S]
+        sig_ac = [signal.correlate(Sn, Sn) for Sn in norm_S]
+        # Select diagonal element of 2x2 corr. matrix for cross correlation
+        min_ac = min([np.corrcoef(sig_ac_n, self._delta)[0][1] for sig_ac_n in sig_ac])
+        # print(f"Min AC: {min_ac}")
+        return -min_ac
+    
+    # want to minimize the maximum cross correlation between 2 signals:
     def crosscorr_obj_fn(self, S):
-        crosscorrs = np.full((self.M, self.M), -2) # 2 is out of bounds of corr. coeff
+        S_norms = [Sn / np.sqrt(np.sum(np.square(Sn))) for Sn in S]
         # ignore the autocorrelation terms which = 1
-        masked_crosscorrs = np.ma.masked_array(crosscorrs, mask=-2*np.identity(self.M))
-
+        max_crosscorr = []
         for i in range(0, self.M):
             # start at i so we don't repeat unnecessary operations
             # Add 1 so we don't find autocorrelation coefficient which is always 1.
             for j in range(i+1, self.M):
-                rho = np.corrcoef(S[i], S[j])[0][1]
-                crosscorrs[i][j] = rho
-                crosscorrs[j][i] = rho
-        return np.max(masked_crosscorrs)
-    
+                max_xcorr = signal.correlate(S_norms[i], S_norms[j]).max()
+                max_crosscorr.append(max_xcorr)
+        max_max_xcorr = max(max_crosscorr)
+        # print(max_max_xcorr)
+        return max_max_xcorr
+
     # Calls evaluation function on each generation of results, outputs those results
     # S_new_gen_flat_array has dimensions (num designs per gen) x (M*N)
     def _evaluate(self, S_new_gen_flat_array, out, *args, **kwargs):
+        # print("reached eval!")
         #Array of entire generation of M x N array of signal row vectors
-        S_generation = np.array([np.reshape(Si, (self.M, N)) for Si in S_new_gen_flat_array])
+        S_generation = np.array([np.reshape(Si, (self.M, self.N)) for Si in S_new_gen_flat_array])
+        # print(S_generation)
         gen_results = []
-        for S in S_generation:
-            gen_results.append([self.autocorr_obj_fn(S), self.crosscorr_obj_fn(S)])
+        self.data.append([])
+        for Si in S_generation:
+            
+            worst_autocorr = self.autocorr_obj_fn(Si)
+            worst_crosscorr = self.crosscorr_obj_fn(Si)
+
+            #note: undo negation of autocorr which makes it a min problem
+            self.data[self._gen_num].append(worst_crosscorr)
+            self.data[self._gen_num].append(-worst_autocorr)
+            gen_results.append([worst_autocorr, worst_crosscorr])
             # rounded_S = np.round(S).astype(int)  # Round to the nearest integer
             # gen_results.append([self.autocorr_obj_fn(rounded_S), self.crosscorr_obj_fn(rounded_S)])
 
             #print(S)
+        self._gen_num += 1
+        # print(out["F"].shapve)
         out["F"] = np.array(gen_results)
 
 
 # sample frequency
-Fs = 10e6
+Fs = 1e6
 # sample period
 Ts = 1/Fs 
 # 40uS symbol period
-T_sig = 45e-6 
+T_sig = 40e-6 
 # number of signals to optimize
 M = 4
 # number of samples per signal
@@ -85,73 +109,29 @@ problem = preamble_optimization1(M, N)
 
 # Choose the optimization algorithm (NSGA-II in this case)
 algorithm = NSGA2(
-    pop_size=200,
+    pop_size=20,
     sampling=IntegerRandomSampling(),
-    crossover=SBX(prob=1.0, eta=3.0, vtype=float, repair=RoundingRepair()),
-    mutation=PM(prob=1.0, eta=3.0, vtype=float, repair=RoundingRepair())
+    crossover=SBX(prob=1.0, eta=3.0, vtype=int, repair=RoundingRepair()),
+    mutation=PM(prob=1.0, eta=3.0, vtype=int, repair=RoundingRepair())
 )
-
-
-
 
 # Perform the optimization
 result = minimize(problem, algorithm)
 
-# Access the optimal solution
-optimal_signal_set = np.array(np.reshape(result.X, (M, N))) 
-
-#Normalize
-rms = np.sqrt(np.sum(np.square(result.X)))
-normalized_signal = (result.X) * (1/rms)
-norm_optimal_signal_set = np.array(np.reshape(normalized_signal, (M, N))) 
+# pareto_set = np.array([np.array(np.reshape(sig_set, (M, N))) for sig_set in result.X])
+optimization_history = np.array(problem.data)
 
 #save data set
-np.savetxt(f"optimal(12bit).txt", optimal_signal_set)
+timestamp = datetime.datetime.now()
+format_timestamp = timestamp.strftime("%Y-%m-%d_%H-%M-%S")
+np.savetxt(f"pareto-signals_M{M}-N{N}_{format_timestamp}.txt", result.X)
+np.savetxt(f"optimization-data_{format_timestamp}", optimization_history)
 
-path=f'./{M} Signals {datetime.datetime.now()}'
-os.mkdir(path)
-os.chdir(path)
-for i in range(M):
-    #txt file
-    SignalArr = ', '.join(map(str, optimal_signal_set[i]))
-    with open(f"Signal_{i+1}of{M}.txt", 'w') as file:
-        file.write(SignalArr)
-    #raw data
-    optimal_signal_set[i].astype('int16').tofile(f"Signal_{i+1}of{M}")
-    #wav file
-    scipy.io.wavfile.write(f"Signal_{i+1}of{M}.wav", int(Fs) , optimal_signal_set[i].astype(np.int16))
-
-os.chdir(sys.path[0])#return to parent dir
-
-
-def plot_many(rows, cols, horiz_axis, data, title, x_label, y_label):
-
-    for i in range(1, len(data)+1):
-        plt.subplot(rows, cols, i)
-        plt.stem(horiz_axis, data[i-1])
-        # plt.xlabel(x_label)
-        # plt.ylabel(y_label)
-        # plt.title(title)
-        #print(i)
-    
-    # ax.grid()
-    # ax.set(xlabel='Sample [n]', ylabel='Autsocorrelation', tile=title)
-    plt.show()
-
-
-#Plot Signal
-autocorr = [signal.correlate(Sn, Sn) for Sn in optimal_signal_set]
-xcorr = [signal.correlate(optimal_signal_set[0], optimal_signal_set[i]) for i in range(0,M)]
-plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, N), optimal_signal_set, 'Optimal signal set', 'sample number', 'sample value')
-plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), autocorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
-plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), xcorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
-
-
-#Plot Normalized Signal
-norm_autocorr = [signal.correlate(Sn, Sn) for Sn in norm_optimal_signal_set]
-norm_xcorr = [signal.correlate(norm_optimal_signal_set[0], norm_optimal_signal_set[i]) for i in range(0,M)]
-plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, N), norm_optimal_signal_set, 'Optimal signal set', 'sample number', 'sample value')
-plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), norm_autocorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
-plot_many(int(math.sqrt(M)), int(math.sqrt(M)), range(0, 2*N-1), norm_xcorr, 'Autocorrelation of each signal', 'Time Lag', 'Autocorrelation of Signal ')
-
-#print(np.corrcoef(optimal_signal_set))
+rcParams['font.family'] = 'Liberation Sans'
+# Create a Scatter plot to visualize the Pareto front with negated values
+# Negate both X and Y values
+negated_pareto_front = result.F.copy()
+negated_pareto_front[:, :] *= -1
+plot = Scatter(title="Pareto Front", labels=["Objective 1", "Objective 2"])
+plot.add(negated_pareto_front, color="red", alpha=0.8, s=20)
+plot.show()
