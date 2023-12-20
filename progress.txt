@@ -1,0 +1,7 @@
+1. Initial optimization attempt ??/??/2023
+    Issues:
+        - Not 12 bit limited signal
+        - Objective function issues:
+            - Correlation coefficient minimization assumed signals were aligned
+            - Autocorrelation doesn't incentivize negative values. Also, requires centrally located spike.
+    
