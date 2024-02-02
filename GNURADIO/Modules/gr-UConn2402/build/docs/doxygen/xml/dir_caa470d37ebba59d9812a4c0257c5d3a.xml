@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_caa470d37ebba59d9812a4c0257c5d3a" kind="dir">
+    <compoundname>bindings</compoundname>
+    <innerfile refid="build_2python_2UConn2402_2bindings_2pydoc__macros_8h">build/python/UConn2402/bindings/pydoc_macros.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/build/python/UConn2402/bindings/"/>
+  </compounddef>
+</doxygen>

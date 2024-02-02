@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classgr_1_1UConn2402_1_1CrossCorrDown" kind="class" language="C++" prot="public">
+    <compoundname>gr::UConn2402::CrossCorrDown</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr::block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1UConn2402_1_1CrossCorrDown__impl" prot="public" virt="non-virtual">gr::UConn2402::CrossCorrDown_impl</derivedcompoundref>
+    <includes refid="CrossCorrDown_8h" local="no">CrossCorrDown.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1UConn2402_1_1CrossCorrDown_1a4acf4a3f28e097ff829ee3f86b013370" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classgr_1_1UConn2402_1_1CrossCorrDown" kindref="compound">CrossCorrDown</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;CrossCorrDown&gt; gr::UConn2402::CrossCorrDown::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/include/gnuradio/UConn2402/CrossCorrDown.h" line="25" column="31" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/include/gnuradio/UConn2402/CrossCorrDown.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1UConn2402_1_1CrossCorrDown_1abf8c1748238cbced1a5f8de190070863" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1UConn2402_1_1CrossCorrDown_1a4acf4a3f28e097ff829ee3f86b013370" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::UConn2402::CrossCorrDown::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1UConn2402_1_1CrossCorrDown" kindref="compound">UConn2402::CrossCorrDown</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1UConn2402_1_1CrossCorrDown" kindref="compound">UConn2402::CrossCorrDown</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1UConn2402_1_1CrossCorrDown_1abf8c1748238cbced1a5f8de190070863" kindref="member">UConn2402::CrossCorrDown::make</ref> is the public interface for creating new instances. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/include/gnuradio/UConn2402/CrossCorrDown.h" line="35" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>gr::UConn2402::CrossCorrDown_impl</label>
+        <link refid="classgr_1_1UConn2402_1_1CrossCorrDown__impl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::UConn2402::CrossCorrDown</label>
+        <link refid="classgr_1_1UConn2402_1_1CrossCorrDown"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::UConn2402::CrossCorrDown</label>
+        <link refid="classgr_1_1UConn2402_1_1CrossCorrDown"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/include/gnuradio/UConn2402/CrossCorrDown.h" line="22" column="5" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/include/gnuradio/UConn2402/CrossCorrDown.h" bodystart="23" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classgr_1_1UConn2402_1_1CrossCorrDown_1abf8c1748238cbced1a5f8de190070863" prot="public" virt="non-virtual"><scope>gr::UConn2402::CrossCorrDown</scope><name>make</name></member>
+      <member refid="classgr_1_1UConn2402_1_1CrossCorrDown_1a4acf4a3f28e097ff829ee3f86b013370" prot="public" virt="non-virtual"><scope>gr::UConn2402::CrossCorrDown</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

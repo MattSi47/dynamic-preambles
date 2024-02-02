@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b9ee18a51778236b0917dc692148046a" kind="dir">
+    <compoundname>docstrings</compoundname>
+    <innerfile refid="CrossCorrDown__pydoc__template_8h">CrossCorrDown_pydoc_template.h</innerfile>
+    <innerfile refid="CrossCorrUp__pydoc__template_8h">CrossCorrUp_pydoc_template.h</innerfile>
+    <innerfile refid="LFMChirpXCorr__pydoc__template_8h">LFMChirpXCorr_pydoc_template.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/python/UConn2402/bindings/docstrings/"/>
+  </compounddef>
+</doxygen>

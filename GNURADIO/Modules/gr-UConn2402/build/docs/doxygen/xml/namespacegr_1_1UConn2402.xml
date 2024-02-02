@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacegr_1_1UConn2402" kind="namespace" language="C++">
+    <compoundname>gr::UConn2402</compoundname>
+    <innerclass refid="classgr_1_1UConn2402_1_1CrossCorrDown" prot="public">gr::UConn2402::CrossCorrDown</innerclass>
+    <innerclass refid="classgr_1_1UConn2402_1_1CrossCorrUp" prot="public">gr::UConn2402::CrossCorrUp</innerclass>
+    <innerclass refid="classgr_1_1UConn2402_1_1LFMChirpXCorr" prot="public">gr::UConn2402::LFMChirpXCorr</innerclass>
+    <innerclass refid="classgr_1_1UConn2402_1_1CrossCorrDown__impl" prot="public">gr::UConn2402::CrossCorrDown_impl</innerclass>
+    <innerclass refid="classgr_1_1UConn2402_1_1CrossCorrUp__impl" prot="public">gr::UConn2402::CrossCorrUp_impl</innerclass>
+    <innerclass refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl" prot="public">gr::UConn2402::LFMChirpXCorr_impl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/include/gnuradio/UConn2402/CrossCorrDown.h" line="15" column="3"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="CrossCorrUp_8h" kind="file" language="C++">
+    <compoundname>CrossCorrUp.h</compoundname>
+    <includes refid="api_8h" local="no">gnuradio/UConn2402/api.h</includes>
+    <includes local="no">gnuradio/block.h</includes>
+    <includedby refid="CrossCorrUp__impl_8h" local="no">CrossCorrUp_impl.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>gnuradio/UConn2402/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CrossCorrUp.h</label>
+        <link refid="CrossCorrUp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="4">
+        <label>gnuradio/block.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>CrossCorrUp.h</label>
+        <link refid="CrossCorrUp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CrossCorrUp_impl.h</label>
+        <link refid="CrossCorrUp__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr_1_1UConn2402_1_1CrossCorrUp" prot="public">gr::UConn2402::CrossCorrUp</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1UConn2402">gr::UConn2402</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/include/gnuradio/UConn2402/CrossCorrUp.h"/>
+  </compounddef>
+</doxygen>

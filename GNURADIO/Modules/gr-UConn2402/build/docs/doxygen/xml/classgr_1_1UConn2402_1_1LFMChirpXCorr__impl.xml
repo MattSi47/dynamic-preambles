@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::UConn2402::LFMChirpXCorr_impl</compoundname>
+    <basecompoundref refid="classgr_1_1UConn2402_1_1LFMChirpXCorr" prot="public" virt="non-virtual">gr::UConn2402::LFMChirpXCorr</basecompoundref>
+    <includes refid="LFMChirpXCorr__impl_8h" local="no">LFMChirpXCorr_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a30eb1f172b9ad35aca371055faea15d2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::UConn2402::LFMChirpXCorr_impl::_samp_rate</definition>
+        <argsstring></argsstring>
+        <name>_samp_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="19" column="11" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a800ea497752d9253845e9da872cdb65b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::UConn2402::LFMChirpXCorr_impl::_B</definition>
+        <argsstring></argsstring>
+        <name>_B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="20" column="11" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a015bf3cef527135e6ffea5dff96e107d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::UConn2402::LFMChirpXCorr_impl::_dur</definition>
+        <argsstring></argsstring>
+        <name>_dur</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="21" column="13" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a7722d1d39ecfb9b41d2da1cdad5a07b8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::UConn2402::LFMChirpXCorr_impl::numsamples</definition>
+        <argsstring></argsstring>
+        <name>numsamples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="22" column="9" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a44a8de006a9865f7ffd4765c1d571c31" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex gr::UConn2402::LFMChirpXCorr_impl::sum_up</definition>
+        <argsstring></argsstring>
+        <name>sum_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="23" column="18" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a3cce0f2234903ede3b761fa5f88e8a6f" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex gr::UConn2402::LFMChirpXCorr_impl::sum_down</definition>
+        <argsstring></argsstring>
+        <name>sum_down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="24" column="18" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a83689ed2fe97e78921588c460ced2621" prot="private" static="no" mutable="no">
+        <type>gr_complex *</type>
+        <definition>gr_complex* gr::UConn2402::LFMChirpXCorr_impl::Up_array</definition>
+        <argsstring></argsstring>
+        <name>Up_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="26" column="18" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a7ecb44b92123645024b5cc74f361ee0a" prot="private" static="no" mutable="no">
+        <type>gr_complex *</type>
+        <definition>gr_complex* gr::UConn2402::LFMChirpXCorr_impl::Down_array</definition>
+        <argsstring></argsstring>
+        <name>Down_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="27" column="18" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a962a6a5072781fdb364f98520c2711d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::UConn2402::LFMChirpXCorr_impl::LFMChirpXCorr_impl</definition>
+        <argsstring>(int samp_rate, int B, float dur)</argsstring>
+        <name>LFMChirpXCorr_impl</name>
+        <param>
+          <type>int</type>
+          <declname>samp_rate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="31" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1adb4ef4bfe85c719726966c6d48f87ca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::UConn2402::LFMChirpXCorr_impl::~LFMChirpXCorr_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~LFMChirpXCorr_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="32" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a0b2887284ca8a5a3af5e0fad878cec67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::UConn2402::LFMChirpXCorr_impl::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="35" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1abea77242a64ded81576d3cd5354b93e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::UConn2402::LFMChirpXCorr_impl::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="37" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1aa3d9f149ba8abb0ba512635cfd6a8e49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::UConn2402::LFMChirpXCorr_impl::XCorr</definition>
+        <argsstring>(const gr_complex *input, gr_complex *pattern)</argsstring>
+        <name>XCorr</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>gr_complex *</type>
+          <declname>pattern</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="44" column="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::UConn2402::LFMChirpXCorr_impl</label>
+        <link refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::UConn2402::LFMChirpXCorr</label>
+        <link refid="classgr_1_1UConn2402_1_1LFMChirpXCorr"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::UConn2402::LFMChirpXCorr_impl</label>
+        <link refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::UConn2402::LFMChirpXCorr</label>
+        <link refid="classgr_1_1UConn2402_1_1LFMChirpXCorr"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" line="16" column="5" bodyfile="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/LFMChirpXCorr_impl.h" bodystart="17" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a800ea497752d9253845e9da872cdb65b" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>_B</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a015bf3cef527135e6ffea5dff96e107d" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>_dur</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a30eb1f172b9ad35aca371055faea15d2" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>_samp_rate</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a7ecb44b92123645024b5cc74f361ee0a" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>Down_array</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a0b2887284ca8a5a3af5e0fad878cec67" prot="public" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>forecast</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1abea77242a64ded81576d3cd5354b93e7" prot="public" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>general_work</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a962a6a5072781fdb364f98520c2711d6" prot="public" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>LFMChirpXCorr_impl</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr_1a67e0dc3c841247ef6e7a304562554bc9" prot="public" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a7722d1d39ecfb9b41d2da1cdad5a07b8" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>numsamples</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr_1a19c7fa9666cd22aac1729bfc638921cf" prot="public" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a3cce0f2234903ede3b761fa5f88e8a6f" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>sum_down</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a44a8de006a9865f7ffd4765c1d571c31" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>sum_up</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1a83689ed2fe97e78921588c460ced2621" prot="private" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>Up_array</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1aa3d9f149ba8abb0ba512635cfd6a8e49" prot="public" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>XCorr</name></member>
+      <member refid="classgr_1_1UConn2402_1_1LFMChirpXCorr__impl_1adb4ef4bfe85c719726966c6d48f87ca2" prot="public" virt="non-virtual"><scope>gr::UConn2402::LFMChirpXCorr_impl</scope><name>~LFMChirpXCorr_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

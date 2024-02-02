@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
+    <compoundname>lib</compoundname>
+    <innerfile refid="CrossCorrDown__impl_8h">CrossCorrDown_impl.h</innerfile>
+    <innerfile refid="CrossCorrUp__impl_8h">CrossCorrUp_impl.h</innerfile>
+    <innerfile refid="LFMChirpXCorr__impl_8h">LFMChirpXCorr_impl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Modules/gr-UConn2402/lib/"/>
+  </compounddef>
+</doxygen>
