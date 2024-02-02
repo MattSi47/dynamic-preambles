@@ -31,8 +31,6 @@ class preamble_optimization(Problem):
         
         super().__init__(n_var=M*N, n_obj=2, xl=-2048, xu=2047, vtype=int, elementwise_evaluation=True)
 
-        self._delta = np.where(np.arange(2 * N - 1) != int((2 * N - 1) / 2), 0, 1)
-
         # of form:
         # [
         #     [beta1, alpha1, beta2, alpha2,..], #gen 0
@@ -76,18 +74,14 @@ class preamble_optimization(Problem):
         gen_results = []
         self.data.append([])
         for Si in S_generation:
-            
+
             worst_autocorr = self.autocorr_obj_fn(Si)
             worst_crosscorr = self.crosscorr_obj_fn(Si)
-
+            
             #note: undo negation of autocorr which makes it a min problem
-            self.data[self._gen_num].append(worst_crosscorr)
-            self.data[self._gen_num].append(-worst_autocorr) #undo the (-) to make it a min problem
+            self.data[self._gen_num].append([-worst_autocorr, worst_crosscorr]) #undo the (-) to make it a min problem
             gen_results.append([worst_autocorr, worst_crosscorr])
-            # rounded_S = np.round(S).astype(int)  # Round to the nearest integer
-            # gen_results.append([self.autocorr_obj_fn(rounded_S), self.crosscorr_obj_fn(rounded_S)])
 
-            #print(S)
         self._gen_num += 1
         # print(out["F"].shapve)
         out["F"] = np.array(gen_results)
@@ -119,19 +113,11 @@ if __name__ == "__main__":
     # Perform the optimization
     result = minimize(problem, algorithm)
 
-    # pareto_set = np.array([np.array(np.reshape(sig_set, (M, N))) for sig_set in result.X])
+    pareto_set = np.array([np.array(np.reshape(sig_set, (M, N))) for sig_set in result.X])
     optimization_history = np.array(problem.data)
 
     #save data set
     timestamp = datetime.datetime.now()
     format_timestamp = timestamp.strftime("%Y-%m-%d_%H-%M-%S")
-    np.savetxt(f"pareto-signals_M{M}-N{N}_{format_timestamp}.txt", result.X)
-    np.savetxt(f"optimization-data_{format_timestamp}.txt", optimization_history)
-    # rcParams['font.family'] = 'Liberation Sans'
-    # # Create a Scatter plot to visualize the Pareto front with negated values
-    # # Negate both X and Y values
-    # negated_pareto_front = result.F.copy()
-    # negated_pareto_front[:, :] *= -1
-    # plot = Scatter(title="Pareto Front", labels=["Objective 1", "Objective 2"])
-    # plot.add(negated_pareto_front, color="red", alpha=0.8, s=20)
-    # plot.show()
+    np.save(f"pareto-signals_M{M}-N{N}_{format_timestamp}.npy", pareto_set)
+    np.save(f"optimization-data_{format_timestamp}.npy", optimization_history)

@@ -268,7 +268,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1088, 236.0]
+    coordinate: [1080, 252.0]
     rotation: 0
     state: enabled
 - name: blocks_vector_source_x_0
@@ -290,7 +290,7 @@ blocks:
     bus_structure: null
     coordinate: [536, 260.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
   parameters:
@@ -387,7 +387,7 @@ blocks:
     bus_structure: null
     coordinate: [728, 140.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_1
   id: qtgui_time_sink_x
   parameters:
@@ -482,7 +482,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1688, 228.0]
+    coordinate: [1336, 244.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_2
@@ -856,7 +856,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [848, 388.0]
+    coordinate: [856, 388.0]
     rotation: 0
     state: disabled
 - name: uhd_usrp_source_0
@@ -1294,7 +1294,7 @@ blocks:
     bus_structure: null
     coordinate: [896, 4.0]
     rotation: 0
-    state: disabled
+    state: enabled
 
 connections:
 - [UConn2402_LFMChirpXCorr_0, '0', qtgui_time_sink_x_1, '0']

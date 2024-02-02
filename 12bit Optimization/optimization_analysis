@@ -18,30 +18,17 @@ rcParams['font.size'] = 24  # You can adjust the value to your preference
 M = 4
 N = 200
 timestamp = "2023-12-20_01-20-57"  # Replace with the timestamp from your files
-pareto_filename = f"pareto-signals_M{M}-N{N}_{timestamp}.txt"
-optimization_filename = f"optimization-data_{timestamp}.txt"
+pareto_filename = f"pareto-signals_M{M}-N{N}_{timestamp}.npy"
+optimization_filename = f"optimization-data_{timestamp}.npy"
 
 # Load the files
-pareto_set_2D = np.loadtxt(pareto_filename)
-optimization_history_2D = np.loadtxt(optimization_filename)
-
-# Reshape the 2D array to 3D
-# Set of pareto signal sets
-pareto_set = pareto_set_2D.reshape((-1, M, N)) # I believe this works
-# print("Pareto set:")
-# print(pareto_set)
-# optimization_history = np.array([optimization_history_2D[i:i+2] for i in range(0, len(optimization_history_2D), 2)])
-optimization_history = np.array([[(gen[i+0], gen[i+1]) for i in range(0, len(gen), 2)]for gen in optimization_history_2D])
-# print("Opt. history:")
-# print(optimization_history)
+pareto_set = np.loadtxt(pareto_filename)
+optimization_history = np.loadtxt(optimization_filename)
 
 
 # norm_pareto_set = np.array([])
 
-# for i in range(len(pareto_set)):
-#     norm_pareto_set.append([])
-#     for sig in pareto_set[i]:
-#         norm_pareto_set[i].append(sig/np.sqrt(np.sum(np.square(sig))))
+#### TODO continue making everything work with the new data storage format
 
 norm_pareto_set = np.array([Si / np.linalg.norm(Si) for pareto_set_option in pareto_set for Si in pareto_set_option])
 norm_pareto_set = norm_pareto_set.reshape((-1, M, N))
@@ -83,8 +70,6 @@ def plot_many(rows, cols, horiz_axis, data, main_title, x_label, y_label, plot_t
     # ax.grid()
     # ax.set(xlabel='Sample [n]', ylabel='Autsocorrelation', tile=title)
     plt.show()
-
-
 
 #Plot Normalized Signal info
 #pareto set member:
