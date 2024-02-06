@@ -41,7 +41,7 @@ namespace gr {
 
   
     
-float XCorr(const gr_complex* input, gr_complex* pattern);
+//float XCorr(const gr_complex* input, gr_complex* pattern);
     };
 
   } // namespace UConn2402

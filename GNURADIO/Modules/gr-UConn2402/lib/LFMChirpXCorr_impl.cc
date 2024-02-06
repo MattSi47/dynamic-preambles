@@ -7,6 +7,7 @@
 
 #include <gnuradio/io_signature.h>
 #include "LFMChirpXCorr_impl.h"
+#include <gnuradio/fft/fft_v.h>
 
 
 namespace gr {
@@ -78,7 +79,8 @@ namespace gr {
 
     sum_up = gr_complex(1.0f,0.0f)/sqrt(sum_up);
     sum_down = gr_complex(1.0f,0.0f)/sqrt(sum_down);
-
+    std::cout << "Sum_up: " << sum_up << std::endl;
+    std::cout << "Sum_down: " << sum_up << std::endl;
 
     }
 
@@ -87,6 +89,7 @@ namespace gr {
      */
     LFMChirpXCorr_impl::~LFMChirpXCorr_impl() {}
 
+/*
 float LFMChirpXCorr_impl::XCorr(const gr_complex* input, gr_complex* pattern)
 {
 
@@ -99,10 +102,9 @@ float LFMChirpXCorr_impl::XCorr(const gr_complex* input, gr_complex* pattern)
     }
     return real((abs(sum) / sqrt(sum_abs_1) / sqrt(sum_abs_2)));
 }
-
+*/
     void LFMChirpXCorr_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
-    //#pragma message("implement a forecast that fills in how many items on each input you need to produce noutput_items and remove this warning")
         ninput_items_required[0] = noutput_items + (numsamples);
     }
 
@@ -127,29 +129,31 @@ float LFMChirpXCorr_impl::XCorr(const gr_complex* input, gr_complex* pattern)
 
 
 
-
-    int nInputLimit = ninput_items[0] - (numsamples); // number of limited input samples can be used
-    for (int idx=0; idx < nInputLimit; idx++) {
-  
-      XUp[idx] = XCorr(&in[idx], Up_array);
-      XDown[idx] = XCorr(&in[idx], Down_array);
-
-  /*
-  //CorrFunction
-    //const gr_complex* input = &in[idx];
     gr_complex* up = Up_array;
     gr_complex* down = Down_array;
+
+    int nInputLimit = ninput_items[0] - (numsamples); // number of limited input samples can be used
+
+    for (int idx=0; idx < nInputLimit; idx++) {
+  
+      /*
+      XUp[idx] = XCorr(&in[idx], Up_array);
+      XDown[idx] = XCorr(&in[idx], Down_array);
+      */
+
+  //CorrFunction
+    const gr_complex* input = &in[idx];
     gr_complex sum_Xup = 0, sum_Xdown = 0, sum_input = 0;
     for (int index=0; index<(numsamples); index++) {
-      sum_input += abs(in[index]) * abs(in[index]);
-      sum_Xup += (in[index] * up[index]);
-      sum_Xdown += (in[index] * down[index]);
+      sum_input += abs(input[index]) * abs(input[index]);
+      sum_Xup += (input[index] * up[index]);
+      sum_Xdown += (input[index] * down[index]);
     }
   //CorrFunction
 
-    XUp[idx]= real(abs(sum_input) / (sqrt(sum_Xup) * sum_up));
-    XDown[idx]= real(abs(sum_input) / (sqrt(sum_Xdown) *sum_down));
-  */
+    XUp[idx]= real(abs(sum_Xup) / sqrt(sum_input) * sum_up);
+    XDown[idx]= real(abs(sum_Xdown) / sqrt(sum_input) * sum_down);
+  
     } 
 
 
