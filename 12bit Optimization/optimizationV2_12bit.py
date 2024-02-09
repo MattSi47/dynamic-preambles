@@ -37,7 +37,7 @@ class preamble_optimization(Problem):
         #     [beta1, alpha1, beta2, alpha2,..], #gen 1
         #     ...
         # ]
-        self.data = []
+        self.data = np.array([], dtype=np.float64)
         self._gen_num = 0
     # want to maximize the minimum "spikiness" of autocorrelation:
     # negate result to make it a minimization
@@ -45,13 +45,12 @@ class preamble_optimization(Problem):
         norm_S = [Sn / np.sqrt(np.sum(np.square(Sn))) for Sn in S]
         sig_ac_sorted = [sorted(signal.correlate(Sn, Sn), reverse=True) for Sn in norm_S]
         # maximize distance between largest and second largest value
-        # print(sig_ac_sorted)
         min_alpha = min([sorted_list[0]-sorted_list[1] for sorted_list in sig_ac_sorted])
-        # print(f"Min AC: {min_ac}")
         return -min_alpha
     
     # want to minimize the maximum cross correlation between 2 signals:
     def crosscorr_obj_fn(self, S):
+        # looks like no issues with type conversion here.
         S_norms = [Sn / np.sqrt(np.sum(np.square(Sn))) for Sn in S]
         max_crosscorr = []
         for i in range(0, self.M):
@@ -61,16 +60,13 @@ class preamble_optimization(Problem):
                 max_xcorr = signal.correlate(S_norms[i], S_norms[j]).max()
                 max_crosscorr.append(max_xcorr)
         max_max_xcorr = max(max_crosscorr)
-        # print(max_max_xcorr)
         return max_max_xcorr
 
     # Calls evaluation function on each generation of results, outputs those results
     # S_new_gen_flat_array has dimensions (num designs per gen) x (M*N)
     def _evaluate(self, S_new_gen_flat_array, out, *args, **kwargs):
-        # print("reached eval!")
         #Array of entire generation of M x N array of signal row vectors
         S_generation = np.array([np.reshape(Si, (self.M, self.N)) for Si in S_new_gen_flat_array])
-        # print(S_generation)
         gen_results = []
         self.data.append([])
         for Si in S_generation:
@@ -78,12 +74,11 @@ class preamble_optimization(Problem):
             worst_autocorr = self.autocorr_obj_fn(Si)
             worst_crosscorr = self.crosscorr_obj_fn(Si)
             
-            #note: undo negation of autocorr which makes it a min problem
-            self.data[self._gen_num].append([-worst_autocorr, worst_crosscorr]) #undo the (-) to make it a min problem
+            #undo the (-) to make it a maximin from the minimax
+            self.data[self._gen_num].append([-worst_autocorr, worst_crosscorr])
             gen_results.append([worst_autocorr, worst_crosscorr])
 
         self._gen_num += 1
-        # print(out["F"].shapve)
         out["F"] = np.array(gen_results)
 
 if __name__ == "__main__":
@@ -95,7 +90,7 @@ if __name__ == "__main__":
     # 40uS symbol period
     T_sig = 40e-6 
     # number of signals to optimize
-    M = 4
+    M = 6
     # number of samples per signal
     N = int(T_sig/Ts)
     # Create an instance of the optimization problem

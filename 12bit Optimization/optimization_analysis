@@ -15,43 +15,40 @@ rcParams['font.size'] = 24  # You can adjust the value to your preference
 
 # Load in files
 # ====================================================== #
-M = 4
+M = 6
 N = 200
-timestamp = "2023-12-20_01-20-57"  # Replace with the timestamp from your files
+timestamp = "2024-02-03_21-09-07"  # Replace with the timestamp from your files
 pareto_filename = f"pareto-signals_M{M}-N{N}_{timestamp}.npy"
 optimization_filename = f"optimization-data_{timestamp}.npy"
 
 # Load the files
-pareto_set = np.loadtxt(pareto_filename)
-optimization_history = np.loadtxt(optimization_filename)
+pareto_set = np.load(pareto_filename)
+optimization_history = np.load(optimization_filename)
+
+# Normalize the set
+norm_pareto_set = np.copy(pareto_set.astype(np.float64))
+for i in range(len(norm_pareto_set)):
+    for j in range(len(norm_pareto_set[i])):
+        sig = norm_pareto_set[i][j]
+        norm_pareto_set[i][j] = sig / np.linalg.norm(sig)
 
 
-# norm_pareto_set = np.array([])
-
-#### TODO continue making everything work with the new data storage format
-
-norm_pareto_set = np.array([Si / np.linalg.norm(Si) for pareto_set_option in pareto_set for Si in pareto_set_option])
-norm_pareto_set = norm_pareto_set.reshape((-1, M, N))
-# print(f"Shape of norm_pareto_set: {norm_pareto_set.shape}")
 # ====================================================== #
 
 # Pareto analysis
 # ====================================================== #
 dummy_opt = preamble_optimization(M, N)
-
-# form (Beta, alpha)
-pareto_data = [(dummy_opt.crosscorr_obj_fn(Si), -1*dummy_opt.autocorr_obj_fn(Si)) for Si in pareto_set]
+# form (worst_autocorr, worst_crosscorr)
+pareto_data = [(-1*dummy_opt.autocorr_obj_fn(Si), dummy_opt.crosscorr_obj_fn(Si)) for Si in pareto_set]
 # ====================================================== #
-
 # rcParams['font.family'] = 'Liberation Sans'
-# Create a Scatter plot to visualize the Pareto front with negated values
-# Negate both X and Y values
-beta, alpha = zip(*pareto_data)
-plt.scatter(beta, alpha)
-plt.xlabel("Beta (cross-correlation property)")
-plt.ylabel("Alpha (autocorrelation property)")
+# Create a Scatter plot to visualize the Pareto front
+min_autocorr, max_crosscorr = zip(*pareto_data)
+plt.scatter(min_autocorr, max_crosscorr)
+plt.xlabel("min of max autocorrelation")
+plt.ylabel("max of min cross-correlation")
 plt.title("Pareto Front")
-for i, (x, y) in enumerate(zip(beta, alpha)):
+for i, (x, y) in enumerate(zip(min_autocorr, max_crosscorr)):
     plt.annotate(str(i), (x, y), textcoords="offset points", xytext=(0, 5), ha='center')
 plt.grid()
 plt.show()
@@ -73,35 +70,42 @@ def plot_many(rows, cols, horiz_axis, data, main_title, x_label, y_label, plot_t
 
 #Plot Normalized Signal info
 #pareto set member:
-k = 5
-# print(norm_pareto_set)
+k = 1
+
 norm_autocorr = [signal.correlate(Sn, Sn) for Sn in norm_pareto_set[k]]
-plot_many(2, 2, range(0, N), norm_pareto_set[k],  f"Pereto Signal Set {k} (normalized energy)", "sample index", 'Sample amplitude', [f"Signal {i}" for i in range(M)])
-plot_many(2, 2, range(0, 2*N-1), norm_autocorr, f"Normalized Autocorrelation for Pareto Set {k}", "Lag", "Autocorrelation", [f"Autocorrelation of Signal {i}" for i in range(M)])
+
+plot_many(2, 3, range(0, N), norm_pareto_set[k],  f"Pereto Signal Set {k} (normalized energy)", "sample index", 'Sample amplitude', [f"Signal {i}" for i in range(M)])
+
+plot_many(2, 3, range(0, 2*N-1), norm_autocorr, f"Normalized Autocorrelation for Pareto Set {k}", "Lag", "Autocorrelation", [f"Autocorrelation of Signal {i}" for i in range(M)])
 
 norm_xcorrs = []
 xcorr_subtitles = []
 for i in range(M):
     # start at i so we don't repeat unnecessary operations
-    # Add 1 so we don't find autocorrelation coefficient which is always 1.
+    # Add 1 so we don't find autocorrelation.
     for j in range(i+1, M):
         xcorr_subtitles.append(f"Cross-correlation Between Signals {i} and {j}")
         norm_xcorrs.append(signal.correlate(norm_pareto_set[k][i], norm_pareto_set[k][j]))
 
-plot_many(2, 3, range(0, 2*N-1), norm_xcorrs, f"Normalized Crosscorrelations for Pareto Set {k}", "Lag", "Cross-correlation", xcorr_subtitles)
+#         x *y = (M^2-m)/2 (think matrices)
+plot_many(5, 3, range(0, 2*N-1), norm_xcorrs, f"Normalized Crosscorrelations for Pareto Set {k}", "Lag", "Cross-correlation", xcorr_subtitles)
 
-# 1. Evolution of beta and alpha for each member of each generation as scatter plot
-# Flatten the data and extract rho values
-# print(problem.data)
-flat_data = np.array([item for sublist in optimization_history for item in sublist])
-rho_values = flat_data[:, 0]
+# 1. Evolution of auto and cross correction for
+#    each member of each generation as scatter plot
 
+optimization_history_coords = np.empty([len(optimization_history), 2, len(optimization_history[0])])
+# print(testing1)
+for i in range(len(optimization_history)):
+    optimization_history_coords[i][0] = [pt[0] for pt in optimization_history[i]]
+    optimization_history_coords[i][1] = [pt[1] for pt in optimization_history[i]]
+
+print(optimization_history_coords)
 # Create a color map that transitions from one color to another
-colors = np.arange(len(rho_values))
+# colors = np.arange(len(optimization_history))
 
 # Create a scatter plot
-plt.scatter(flat_data[:, 0], flat_data[:, 1], s=2, c=colors, cmap='viridis', marker='o')
-
+generations = np.repeat(np.arange(len(optimization_history)), len(optimization_history[0]))
+plt.scatter(optimization_history.flatten()[::2], optimization_history.flatten()[1::2], s=2, c=generations, cmap='viridis', marker='o')
 # Add color bar
 plt.colorbar(label='Generation')
 
@@ -112,34 +116,3 @@ plt.title('Scatter Plot with Color Transition')
 
 # Show the plot
 plt.show()
-
-# 2. Graphs of worst case rho and alpha for each generation
-# 3. fix main titles and y axis lables for plot_many
-
-
-## stuff that doesn't belong here:
-# ======================================================= #
-# # Access the optimal solution
-# print(f'M = {M}, N={N}')
-# np.savetxt(f"test(12bit).txt", result.X)
-# optimal_signal_set = np.array(np.reshape(result.X[3], (M, N)))
-
-# #Normalize
-# norm_signals = [Si / np.sqrt(np.sum(np.square(Si))) for Si in optimal_signal_set]
-
-# path=f'./{M} Signals {datetime.datetime.now()}'
-# os.mkdir(path)
-# os.chdir(path)
-# for i in range(M):
-#     #txt file
-#     SignalArr = ', '.join(map(str, norm_signals[i]))
-#     with open(f"Signal_{i+1}of{M}.txt", 'w') as file:
-#         file.write(SignalArr)
-#     #raw data
-#     optimal_signal_set[i].astype('int16').tofile(f"Signal_{i+1}of{M}")
-#     #wav file
-#     scipy.io.wavfile.write(f"Signal_{i+1}of{M}.wav", int(Fs) , optimal_signal_set[i].astype(np.int16))
-
-# os.chdir(sys.path[0])#return to parent dir
-
-
