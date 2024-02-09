@@ -71,16 +71,18 @@ namespace gr {
 
     
       std::cout << "Chirp gen done" << std::endl;
-
+    float sum_up;
+     float sum_down; 
     for (int id2=0; id2<(numsamples); id2++) {
       sum_up += abs(Up_array[id2]) * abs(Up_array[id2]);
       sum_down += abs(Down_array[id2]) * abs(Down_array[id2]);
     }
+ in_sum_up= 1/sum_up;
+ in_sum_down= 1/sum_down;
 
-    sum_up = gr_complex(1.0f,0.0f)/sqrt(sum_up);
-    sum_down = gr_complex(1.0f,0.0f)/sqrt(sum_down);
-    std::cout << "Sum_up: " << sum_up << std::endl;
-    std::cout << "Sum_down: " << sum_up << std::endl;
+    //sum_up = gr_complex(1.0f,0.0f)/(sum_up);
+    //sum_down = gr_complex(1.0f,0.0f)/(sum_down);
+
 
     }
 
@@ -133,6 +135,10 @@ float LFMChirpXCorr_impl::XCorr(const gr_complex* input, gr_complex* pattern)
     gr_complex* down = Down_array;
 
     int nInputLimit = ninput_items[0] - (numsamples); // number of limited input samples can be used
+    float sq_input[ninput_items[0]];
+    for (int index=0; index<(ninput_items[0]); index++) {
+    sq_input[index] = abs(in[index]) * abs(in[index]);
+    }
 
     for (int idx=0; idx < nInputLimit; idx++) {
   
@@ -142,17 +148,22 @@ float LFMChirpXCorr_impl::XCorr(const gr_complex* input, gr_complex* pattern)
       */
 
   //CorrFunction
-    const gr_complex* input = &in[idx];
-    gr_complex sum_Xup = 0, sum_Xdown = 0, sum_input = 0;
+  const gr_complex* input = &in[idx];
+  const float* _sq_input = &sq_input[idx];
+
+
+    gr_complex sum_Xup = 0, sum_Xdown = 0;
+    float sum_input = 0;
     for (int index=0; index<(numsamples); index++) {
-      sum_input += abs(input[index]) * abs(input[index]);
+      sum_input += _sq_input[index];
       sum_Xup += (input[index] * up[index]);
       sum_Xdown += (input[index] * down[index]);
     }
   //CorrFunction
-
-    XUp[idx]= real(abs(sum_Xup) / sqrt(sum_input) * sum_up);
-    XDown[idx]= real(abs(sum_Xdown) / sqrt(sum_input) * sum_down);
+    XUp[idx]= abs(sum_Xup)*abs(sum_Xup) / sum_input * in_sum_up;
+    XDown[idx]= abs(sum_Xdown)*abs(sum_Xdown) / sum_input * in_sum_down;
+    //XUp[idx]= real(abs(sum_Xup) / sqrt(sum_input) * sum_up);
+   // XDown[idx]= real(abs(sum_Xdown) / sqrt(sum_input) * sum_down);
   
     } 
 

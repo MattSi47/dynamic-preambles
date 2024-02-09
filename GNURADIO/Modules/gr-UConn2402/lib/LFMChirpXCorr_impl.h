@@ -20,8 +20,8 @@ namespace gr {
       int _B;
       float _dur;
 	    int numsamples;
-      gr_complex sum_up;
-      gr_complex sum_down;
+      float in_sum_up;
+      float in_sum_down;
 
       gr_complex* Up_array;
       gr_complex* Down_array;

@@ -15,6 +15,7 @@ list(APPEND UConn2402_sources
     CrossCorrDown_impl.cc
     LFMChirpXCorr_impl.cc
     #LFMChirpAppend_impl.cc
+    #XCorrBuffer_impl.cc
     )
 
 set(UConn2402_sources "${UConn2402_sources}" PARENT_SCOPE)
