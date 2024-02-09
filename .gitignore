@@ -1,1 +1,10 @@
 build/
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/__pycache__/__init__.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/__pycache__/base.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/__pycache__/doxyindex.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/__pycache__/text.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/generated/__pycache__/__init__.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/generated/__pycache__/compound.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/generated/__pycache__/compoundsuper.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/generated/__pycache__/index.cpython-310.pyc
+GNURADIO/Modules/gr-UConn2402/docs/doxygen/doxyxml/generated/__pycache__/indexsuper.cpython-310.pyc
