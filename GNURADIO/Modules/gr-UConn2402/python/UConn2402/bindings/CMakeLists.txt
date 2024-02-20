@@ -31,7 +31,7 @@ list(APPEND UConn2402_python_files
     CrossCorrUp_python.cc
     CrossCorrDown_python.cc
     LFMChirpXCorr_python.cc
-    python_bindings.cc)
+    Chirp_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(UConn2402
    ../../..

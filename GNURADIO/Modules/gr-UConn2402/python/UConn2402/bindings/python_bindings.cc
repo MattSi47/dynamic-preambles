@@ -24,6 +24,7 @@ namespace py = pybind11;
     void bind_CrossCorrUp(py::module& m);
     void bind_CrossCorrDown(py::module& m);
     void bind_LFMChirpXCorr(py::module& m);
+    void bind_Chirp(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -55,5 +56,6 @@ PYBIND11_MODULE(UConn2402_python, m)
     bind_CrossCorrUp(m);
     bind_CrossCorrDown(m);
     bind_LFMChirpXCorr(m);
+    bind_Chirp(m);
     // ) END BINDING_FUNCTION_CALLS
 }

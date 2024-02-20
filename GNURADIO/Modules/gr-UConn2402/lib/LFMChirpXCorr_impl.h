@@ -19,7 +19,7 @@ namespace gr {
       int _samp_rate;
       int _B;
       float _dur;
-	    int numsamples;
+	int numsamples;
       float in_sum_up;
       float in_sum_down;
 
