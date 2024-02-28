@@ -57,6 +57,9 @@ include(GrCompilerSettings)
 ########################################################################
 # Install directories
 ########################################################################
+find_package(Gnuradio COMPONENTS fft) #ADD BY UCONN
+##find_package(UHD "3.9.7") ##ADD BY UCONN
+
 include(GrVersion)
 
 include(GrPlatform) #define LIB_SUFFIX

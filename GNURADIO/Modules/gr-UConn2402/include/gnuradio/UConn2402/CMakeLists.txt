@@ -14,5 +14,6 @@ install(FILES
     CrossCorrUp.h
     CrossCorrDown.h
     LFMChirpXCorr.h
-    Chirp.h DESTINATION include/gnuradio/UConn2402
+    Chirp.h
+    DESTINATION include/gnuradio/UConn2402
 )

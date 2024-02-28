@@ -16,7 +16,8 @@ list(APPEND UConn2402_sources
     LFMChirpXCorr_impl.cc
     #LFMChirpAppend_impl.cc
     #XCorrBuffer_impl.cc
-    Chirp_impl.cc )
+    Chirp_impl.cc
+    )
 
 set(UConn2402_sources "${UConn2402_sources}" PARENT_SCOPE)
 if(NOT UConn2402_sources)
@@ -25,7 +26,7 @@ if(NOT UConn2402_sources)
 endif(NOT UConn2402_sources)
 
 add_library(gnuradio-UConn2402 SHARED ${UConn2402_sources})
-target_link_libraries(gnuradio-UConn2402 gnuradio::gnuradio-runtime)
+target_link_libraries(gnuradio-UConn2402 gnuradio::gnuradio-runtime gnuradio::gnuradio-fft)
 target_include_directories(gnuradio-UConn2402
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
     PUBLIC $<INSTALL_INTERFACE:include>

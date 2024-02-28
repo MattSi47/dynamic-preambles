@@ -9,5 +9,6 @@ install(FILES
     UConn2402_CrossCorrUp.block.yml
     UConn2402_CrossCorrDown.block.yml
     UConn2402_LFMChirpXCorr.block.yml
-    UConn2402_Chirp.block.yml DESTINATION share/gnuradio/grc/blocks
+    UConn2402_Chirp.block.yml
+    DESTINATION share/gnuradio/grc/blocks
 )
