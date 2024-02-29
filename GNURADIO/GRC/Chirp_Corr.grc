@@ -238,7 +238,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1344, 420.0]
+    coordinate: [1184, 476.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -251,6 +251,26 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: UConn2402_Chirp_0
+  id: UConn2402_Chirp
+  parameters:
+    B: '2000000'
+    affinity: ''
+    alias: ''
+    chirp_op: '1'
+    comment: ''
+    dur: '.000040'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pcklen: '"packet_len"'
+    samp_rate: '4000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [480, 260.0]
     rotation: 0
     state: enabled
 - name: UConn2402_LFMChirpXCorr_0
@@ -268,27 +288,62 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1088, 236.0]
+    coordinate: [1144, 284.0]
     rotation: 0
     state: enabled
-- name: blocks_vector_source_x_0
-  id: blocks_vector_source_x
+- name: blocks_complex_to_mag_squared_0
+  id: blocks_complex_to_mag_squared
   parameters:
     affinity: ''
     alias: ''
-    comment: Chirp Vector
+    comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    repeat: 'True'
-    tags: '[]'
-    type: complex
-    vector: Chirp
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 260.0]
+    coordinate: [880, 376.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_to_tagged_stream_0
+  id: blocks_stream_to_tagged_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    len_tag_key: '"packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    packet_len: '30'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 284.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_source_x_1
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: '[]'
+    type: complex
+    vector: (0, 0, 0)*10
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [24, 188.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
@@ -319,7 +374,7 @@ blocks:
     color8: dark red
     color9: dark green
     comment: ''
-    ctrlpanel: 'False'
+    ctrlpanel: 'True'
     entags: 'True'
     grid: 'False'
     gui_hint: ''
@@ -385,7 +440,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 140.0]
+    coordinate: [832, 196.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_1
@@ -856,7 +911,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [848, 388.0]
+    coordinate: [896, 476.0]
     rotation: 0
     state: disabled
 - name: uhd_usrp_source_0
@@ -1297,11 +1352,15 @@ blocks:
     state: disabled
 
 connections:
+- [UConn2402_Chirp_0, '0', UConn2402_LFMChirpXCorr_0, '0']
+- [UConn2402_Chirp_0, '0', blocks_complex_to_mag_squared_0, '0']
+- [UConn2402_Chirp_0, '0', qtgui_time_sink_x_0, '0']
+- [UConn2402_Chirp_0, '0', uhd_usrp_sink_0, '0']
 - [UConn2402_LFMChirpXCorr_0, '0', qtgui_time_sink_x_1, '0']
 - [UConn2402_LFMChirpXCorr_0, '1', qtgui_time_sink_x_1, '1']
-- [blocks_vector_source_x_0, '0', UConn2402_LFMChirpXCorr_0, '0']
-- [blocks_vector_source_x_0, '0', qtgui_time_sink_x_0, '0']
-- [blocks_vector_source_x_0, '0', uhd_usrp_sink_0, '0']
+- [blocks_complex_to_mag_squared_0, '0', UConn2402_LFMChirpXCorr_0, '1']
+- [blocks_stream_to_tagged_stream_0, '0', UConn2402_Chirp_0, '0']
+- [blocks_vector_source_x_1, '0', blocks_stream_to_tagged_stream_0, '0']
 - [uhd_usrp_source_0, '0', UConn2402_LFMChirpXCorr_0, '0']
 - [uhd_usrp_source_0, '0', qtgui_time_sink_x_2, '0']
 

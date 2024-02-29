@@ -132,7 +132,6 @@ int LFMChirpXCorr_impl::general_work(int noutput_items,
     int L = K - (numsamples-1);
     int nb = int((ninput_items[0] - (numsamples - 1)) / L);
     gr_complex fft_in[K];
-
     for (int i = 0; i < nb; ++i) {
         fft(&in[i * L], fft_in);
         gr_complex fft_up_out[K];
@@ -141,22 +140,45 @@ int LFMChirpXCorr_impl::general_work(int noutput_items,
         gr_complex Down_outputbuff[K];
         float absUp_outputbuff[K];
         float absDown_outputbuff[K];
-        float sumpwr = 0;
         for (int id = 0; id < K; ++id) {
             fft_up_out[id] = fft_upchirp[id] * fft_in[id];
             fft_down_out[id] = fft_downchirp[id] * fft_in[id];
-            sumpwr += pwr[i*L+id];
+            
             //*(1 / 160.0f) * gr_complex(1 / float(K), 0.0f)
         }
         ifft(&fft_up_out[0], Up_outputbuff);
         ifft(&fft_down_out[0], Down_outputbuff);
-        sumpwr = 1/(sumpwr) * 1/float(numsamples);
+        //sumpwr = 1/(sumpwr) * 1/float(numsamples);
         for (int idx = 0; idx < K; ++idx){
-            absUp_outputbuff[idx] = real(Up_outputbuff[idx])*sumpwr;
-            absDown_outputbuff[idx] = real(Down_outputbuff[idx])*sumpwr;
+            absUp_outputbuff[idx] = real(Up_outputbuff[idx]);
+            absDown_outputbuff[idx] = real(Down_outputbuff[idx]);
         }
-        memcpy(&XUp[i * L], &absUp_outputbuff[numsamples - 1], sizeof(float) * L);
-        memcpy(&XDown[i * L], &absDown_outputbuff[numsamples - 1], sizeof(float) * L);
+
+    
+        //Sum outputs of length L 
+        float pwr_oneblock[K]={0};
+        memcpy(&pwr_oneblock, &pwr[i*L], sizeof(float) * K);
+
+        //Sum first "numsamples" from block
+        float pwrsum[L]={0};
+        for (int j=0; j<numsamples; ++j){
+            pwrsum[0] += pwr_oneblock[j];
+        }
+
+        //Remaining L-1 samples and output 
+        XDown[i*L] = absDown_outputbuff[numsamples-1]/pwrsum[0];
+        XUp[i*L] = absUp_outputbuff[numsamples-1]/pwrsum[0];
+        for (int n=1; n<L; ++n){
+            pwrsum[n]=pwrsum[n-1]-pwr_oneblock[n-1]+pwr_oneblock[numsamples+n-1];
+            XDown[i*L+n] = absDown_outputbuff[numsamples-(n-1)]/pwrsum[n];
+            XUp[i*L+n] = absUp_outputbuff[numsamples-(n-1)]/pwrsum[n]; 
+        }
+
+
+
+
+        //memcpy(&XUp[i * L], &absUp_outputbuff[numsamples - 1], sizeof(float) * L);
+        //memcpy(&XDown[i * L], &absDown_outputbuff[numsamples - 1], sizeof(float) * L);
 
         // memcpy(&XUp[i * L], &Up_outputbuff[numsamples - 1], sizeof(gr_complex) * L);
        // memcpy(&XDown[i * L], &Down_outputbuff[numsamples - 1], sizeof(gr_complex) * L);

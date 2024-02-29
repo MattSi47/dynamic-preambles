@@ -86,18 +86,22 @@ int Chirp_impl::work(int noutput_items,
     const unsigned char* in = (const unsigned char*)input_items[0];
     unsigned char* out = (unsigned char*)output_items[0];
 
- if (noutput_items > numsamples) {
+
     // add preamble
-    memcpy((void*)out, Chirp, numsamples*sizeof(gr_complex));
+    memcpy(out, Chirp, numsamples*sizeof(gr_complex));
     out += numsamples*sizeof(gr_complex);
     n_produced += numsamples;
 
     // add current data
-    memcpy((void*)(out + numsamples), (const void*)in, ninput_items[0]*sizeof(gr_complex));
-    out += ninput_items[0]*sizeof(gr_complex);
-    n_produced += ninput_items[0];
+   // memcpy((void*)(out + numsamples), (const void*)in, ninput_items[0]*sizeof(gr_complex));
+  //  out += ninput_items[0]*sizeof(gr_complex);
+  //  n_produced += ninput_items[0];
     //*sizeof(gr_complex)
- }
+
+    memcpy(out, (const void*)in, ninput_items[0] * sizeof(gr_complex));
+    out += ninput_items[0] * sizeof(gr_complex);
+    n_produced += ninput_items[0];
+ 
 /*
     // add current data2
     memcpy(&out[numsamples*itemsize], (const void*)in, ninput_items[0] * itemsize);

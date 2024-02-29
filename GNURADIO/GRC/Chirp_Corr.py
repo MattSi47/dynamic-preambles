@@ -165,7 +165,7 @@ class Chirp_Corr(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0.enable_autoscale(False)
         self.qtgui_time_sink_x_0.enable_grid(False)
         self.qtgui_time_sink_x_0.enable_axis_labels(True)
-        self.qtgui_time_sink_x_0.enable_control_panel(False)
+        self.qtgui_time_sink_x_0.enable_control_panel(True)
         self.qtgui_time_sink_x_0.enable_stem_plot(False)
 
 
@@ -202,17 +202,24 @@ class Chirp_Corr(gr.top_block, Qt.QWidget):
         self._gain_range = Range(0, 1, .05, .8, 200)
         self._gain_win = RangeWidget(self._gain_range, self.set_gain, "Gain", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_layout.addWidget(self._gain_win)
-        self.blocks_vector_source_x_0 = blocks.vector_source_c(Chirp, True, 1, [])
+        self.blocks_vector_source_x_1 = blocks.vector_source_c((0, 0, 0)*10, True, 1, [])
+        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_gr_complex, 1, 30, "packet_len")
+        self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
         self.UConn2402_LFMChirpXCorr_0 = UConn2402.LFMChirpXCorr(4000000, 2000000, .000040)
+        self.UConn2402_Chirp_0 = UConn2402.Chirp(4000000, 2000000, .000040, 1, "packet_len")
 
 
         ##################################################
         # Connections
         ##################################################
+        self.connect((self.UConn2402_Chirp_0, 0), (self.UConn2402_LFMChirpXCorr_0, 0))
+        self.connect((self.UConn2402_Chirp_0, 0), (self.blocks_complex_to_mag_0, 0))
+        self.connect((self.UConn2402_Chirp_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1, 1))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1, 0))
-        self.connect((self.blocks_vector_source_x_0, 0), (self.UConn2402_LFMChirpXCorr_0, 0))
-        self.connect((self.blocks_vector_source_x_0, 0), (self.qtgui_time_sink_x_0, 0))
+        self.connect((self.blocks_complex_to_mag_0, 0), (self.UConn2402_LFMChirpXCorr_0, 1))
+        self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.UConn2402_Chirp_0, 0))
+        self.connect((self.blocks_vector_source_x_1, 0), (self.blocks_stream_to_tagged_stream_0, 0))
 
 
     def closeEvent(self, event):
@@ -243,7 +250,6 @@ class Chirp_Corr(gr.top_block, Qt.QWidget):
     def set_Chirp(self, Chirp):
         self.Chirp = Chirp
         self._Chirp_callback(self.Chirp)
-        self.blocks_vector_source_x_0.set_data(self.Chirp, [])
 
 
 

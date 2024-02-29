@@ -11,8 +11,8 @@
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
 list(APPEND UConn2402_sources
-    CrossCorrUp_impl.cc
-    CrossCorrDown_impl.cc
+    #CrossCorrUp_impl.cc
+    #CrossCorrDown_impl.cc
     LFMChirpXCorr_impl.cc
     #LFMChirpAppend_impl.cc
     #XCorrBuffer_impl.cc
