@@ -149,10 +149,13 @@ int LFMChirpXCorr_impl::general_work(int noutput_items,
         ifft(&fft_up_out[0], Up_outputbuff);
         ifft(&fft_down_out[0], Down_outputbuff);
         //sumpwr = 1/(sumpwr) * 1/float(numsamples);
+
+        /*
         for (int idx = 0; idx < K; ++idx){
             absUp_outputbuff[idx] = real(Up_outputbuff[idx]);
             absDown_outputbuff[idx] = real(Down_outputbuff[idx]);
         }
+        */
 
     
         //Sum outputs of length L 
@@ -166,12 +169,12 @@ int LFMChirpXCorr_impl::general_work(int noutput_items,
         }
 
         //Remaining L-1 samples and output 
-        XDown[i*L] = absDown_outputbuff[numsamples-1]/pwrsum[0];
-        XUp[i*L] = absUp_outputbuff[numsamples-1]/pwrsum[0];
+        XDown[i*L] = real(Down_outputbuff[numsamples-1])/pwrsum[0];
+        XUp[i*L] = real(Up_outputbuff[numsamples-1])/pwrsum[0];
         for (int n=1; n<L; ++n){
             pwrsum[n]=pwrsum[n-1]-pwr_oneblock[n-1]+pwr_oneblock[numsamples+n-1];
-            XDown[i*L+n] = absDown_outputbuff[numsamples-(n-1)]/pwrsum[n];
-            XUp[i*L+n] = absUp_outputbuff[numsamples-(n-1)]/pwrsum[n]; 
+            XDown[i*L+n] = real(Down_outputbuff[(numsamples-1)+n])/pwrsum[n];
+            XUp[i*L+n] = real(Up_outputbuff[(numsamples+1)+n])/pwrsum[n]; 
         }
 
 

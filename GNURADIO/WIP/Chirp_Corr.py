@@ -203,22 +203,25 @@ class Chirp_Corr(gr.top_block, Qt.QWidget):
         self._gain_win = RangeWidget(self._gain_range, self.set_gain, "Gain", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_layout.addWidget(self._gain_win)
         self.blocks_vector_source_x_1 = blocks.vector_source_c((0, 0, 0)*10, True, 1, [])
+        self.blocks_tag_gate_0 = blocks.tag_gate(gr.sizeof_gr_complex * 1, False)
+        self.blocks_tag_gate_0.set_single_key("")
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_gr_complex, 1, 30, "packet_len")
-        self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
+        self.blocks_complex_to_mag_squared_0 = blocks.complex_to_mag_squared(1)
         self.UConn2402_LFMChirpXCorr_0 = UConn2402.LFMChirpXCorr(4000000, 2000000, .000040)
-        self.UConn2402_Chirp_0 = UConn2402.Chirp(4000000, 2000000, .000040, 1, "packet_len")
+        self.UConn2402_Chirp_0 = UConn2402.Chirp(4000000, 2000000, .000040, 0, "packet_len")
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.UConn2402_Chirp_0, 0), (self.UConn2402_LFMChirpXCorr_0, 0))
-        self.connect((self.UConn2402_Chirp_0, 0), (self.blocks_complex_to_mag_0, 0))
+        self.connect((self.UConn2402_Chirp_0, 0), (self.blocks_tag_gate_0, 0))
         self.connect((self.UConn2402_Chirp_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1, 1))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1, 0))
-        self.connect((self.blocks_complex_to_mag_0, 0), (self.UConn2402_LFMChirpXCorr_0, 1))
+        self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1, 1))
+        self.connect((self.blocks_complex_to_mag_squared_0, 0), (self.UConn2402_LFMChirpXCorr_0, 1))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.UConn2402_Chirp_0, 0))
+        self.connect((self.blocks_tag_gate_0, 0), (self.UConn2402_LFMChirpXCorr_0, 0))
+        self.connect((self.blocks_tag_gate_0, 0), (self.blocks_complex_to_mag_squared_0, 0))
         self.connect((self.blocks_vector_source_x_1, 0), (self.blocks_stream_to_tagged_stream_0, 0))
 
 
