@@ -30,7 +30,7 @@ include(GrPybind)
 list(APPEND UConn2402_python_files
     LFMChirpXCorr_python.cc
     Chirp_python.cc
-    python_bindings.cc)
+    ArbitrarySync_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(UConn2402
    ../../..

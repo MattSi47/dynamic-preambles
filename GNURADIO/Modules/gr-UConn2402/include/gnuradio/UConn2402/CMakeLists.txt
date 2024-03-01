@@ -13,5 +13,5 @@ install(FILES
     api.h
     LFMChirpXCorr.h
     Chirp.h
-    DESTINATION include/gnuradio/UConn2402
+    ArbitrarySync.h DESTINATION include/gnuradio/UConn2402
 )

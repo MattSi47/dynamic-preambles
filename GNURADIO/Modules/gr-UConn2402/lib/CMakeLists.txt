@@ -17,7 +17,7 @@ list(APPEND UConn2402_sources
     #LFMChirpAppend_impl.cc
     #XCorrBuffer_impl.cc
     Chirp_impl.cc
-    )
+    ArbitrarySync_impl.cc )
 
 set(UConn2402_sources "${UConn2402_sources}" PARENT_SCOPE)
 if(NOT UConn2402_sources)

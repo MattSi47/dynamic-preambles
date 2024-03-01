@@ -8,5 +8,5 @@
 install(FILES
     UConn2402_LFMChirpXCorr.block.yml
     UConn2402_Chirp.block.yml
-    DESTINATION share/gnuradio/grc/blocks
+    UConn2402_ArbitrarySync.block.yml DESTINATION share/gnuradio/grc/blocks
 )
