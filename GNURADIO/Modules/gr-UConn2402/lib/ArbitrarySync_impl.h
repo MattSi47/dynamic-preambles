@@ -8,6 +8,7 @@
 #ifndef INCLUDED_UCONN2402_ARBITRARYSYNC_IMPL_H
 #define INCLUDED_UCONN2402_ARBITRARYSYNC_IMPL_H
 
+enum STATE_OPTIONS { STATE_IDLE, STATE_DATA };
 #include <gnuradio/UConn2402/ArbitrarySync.h>
 
 namespace gr {
@@ -18,6 +19,8 @@ namespace gr {
      private:
       float _threshold;
       int _samples;
+      int sampidx = 0; 
+      STATE_OPTIONS d_state;
       
      public:
       ArbitrarySync_impl(float threshold, int samples);

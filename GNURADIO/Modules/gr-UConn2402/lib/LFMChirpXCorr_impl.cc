@@ -151,7 +151,10 @@ int LFMChirpXCorr_impl::general_work(int noutput_items,
 
         // Sum outputs of length L
         float pwr_oneblock[K] = { 0 };
-        memcpy(&pwr_oneblock, &pwr[i * L], sizeof(float) * K);
+     for (int p = 0; p < K; ++p) {
+            pwr_oneblock[p] = abs(in[p+(i*L)]*in[p+(i*L)]);
+        }
+       //old version using pwr input>> memcpy(&pwr_oneblock, &pwr[i * L], sizeof(float) * K);
 
         // Sum first "numsamples" from block
         float pwrsum[L] = { 0 };
