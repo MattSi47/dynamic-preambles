@@ -20,6 +20,7 @@ namespace gr {
       float _threshold;
       int _samples;
       int sampidx = 0; 
+      int startindex = 0; 
       STATE_OPTIONS d_state;
       
      public:

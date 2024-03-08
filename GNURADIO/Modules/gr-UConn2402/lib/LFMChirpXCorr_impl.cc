@@ -24,8 +24,8 @@ LFMChirpXCorr::sptr LFMChirpXCorr::make(int samp_rate, int B, float dur)
  */
 LFMChirpXCorr_impl::LFMChirpXCorr_impl(int samp_rate, int B, float dur)
     : gr::block("LFMChirpXCorr",
-                gr::io_signature::makev(
-                    2, 2, std::vector<int>{ sizeof(gr_complex), sizeof(float) }),
+                gr::io_signature::make(
+                    1, 1, sizeof(gr_complex)),
                 gr::io_signature::make(2, 2, sizeof(float))),
       d_fft(K, 1),
       d_ifft(K, 1)
@@ -117,7 +117,7 @@ int LFMChirpXCorr_impl::general_work(int noutput_items,
                                      gr_vector_void_star& output_items)
 {
     const gr_complex* in = static_cast<const gr_complex*>(input_items[0]);
-    const float* pwr = static_cast<const float*>(input_items[1]);
+    //const float* pwr = static_cast<const float*>(input_items[1]);
     float* XUp = static_cast<float*>(output_items[0]);
     float* XDn = static_cast<float*>(output_items[1]);
 

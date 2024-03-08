@@ -45,9 +45,7 @@ inputs:
   dtype: complex
 #  vlen: ...
 #  optional: ...
-- label: pwr
-  domain: stream
-  dtype: float
+
 
 outputs:
 - label: XUp

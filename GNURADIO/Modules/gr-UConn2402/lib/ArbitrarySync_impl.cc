@@ -51,18 +51,16 @@ int ArbitrarySync_impl::general_work(int noutput_items,
     const gr_complex* in = static_cast<const gr_complex*>(input_items[0]);
     const float* corr = static_cast<const float*>(input_items[1]);
     gr_complex* out = static_cast<gr_complex*>(output_items[0]);
-
+    int ii = 0;
     switch (d_state) {
     case STATE_IDLE: {
 
-        int ii = 0;
 
         while (ii < noutput_items) {
 
             if (corr[ii] > _threshold) {
-
                 d_state = STATE_DATA;
-                std::cout << "Packet detected" << std::endl;
+                std::cout << "Packet detected at sample: " << startindex << "/" << noutput_items << " with a value of: " << corr[ii] << std::endl;
                 break;
             }
             out[ii] = gr_complex(0.0f, 0.0f);
@@ -75,22 +73,24 @@ int ArbitrarySync_impl::general_work(int noutput_items,
     }
 
     case STATE_DATA: {
-        int idx = 0;
-        while (idx < noutput_items) {
+        int proccessed = 0;
+        while (ii < noutput_items) {
 
-            out[idx] = in[idx];
+            out[ii] = in[ii];
             sampidx++;
-            idx++;
+            ii++;
+            proccessed++;
 
             if (sampidx >= _samples) {
                 std::cout << "Packet sent: " << sampidx <<std::endl;
                 sampidx = 0;
+                startindex = 0;
                 d_state = STATE_IDLE;
                 break;
             }
         }
-        consume_each(sampidx);
-        return (sampidx);
+        consume_each(proccessed);
+        return (proccessed);
     }
     default: {
         std::cout << "sync block state error" << std::endl;

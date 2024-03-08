@@ -220,193 +220,6 @@ blocks:
     coordinate: [32, 276.0]
     rotation: 0
     state: enabled
-- name: Chirp_0
-  id: variable_qtgui_chooser
-  parameters:
-    comment: ''
-    gui_hint: ''
-    label: Chirp
-    label0: Up Chirp
-    label1: Down Chirp
-    label2: ''
-    label3: ''
-    label4: ''
-    labels: '[]'
-    num_opts: '2'
-    option0: (complex(1,0), complex(6.21835e-05,-1), complex(-0.9998,-0.0200057),
-      complex(-0.0597992,0.99821), complex(0.992863,0.119261), complex(0.197824,-0.980237),
-      complex(-0.955745,-0.294195), complex(-0.405909,0.913914), complex(0.848732,0.528823),
-      complex(0.656627,-0.754216), complex(-0.62525,-0.780424), complex(-0.888578,0.458726),
-      complex(0.254945,0.966956), complex(0.999817,-0.0191353), complex(0.237122,-0.97148),
-      complex(-0.8689,-0.494988), complex(-0.728496,0.68505), complex(0.42276,0.906241),
-      complex(0.995161,-0.0982592), complex(0.25663,-0.96651), complex(-0.803666,-0.59508),
-      complex(-0.859905,0.510455), complex(0.117841,0.993033), complex(0.949434,0.313966),
-      complex(0.700952,-0.713208), complex(-0.311543,-0.950232), complex(-0.983787,-0.179339),
-      complex(-0.642168,0.766564), complex(0.330255,0.943892), complex(0.975853,0.218428),
-      complex(0.71517,-0.698951), complex(-0.176463,-0.984307), complex(-0.905162,-0.425067),
-      complex(-0.879753,0.475431), complex(-0.16005,0.987109), complex(0.66983,0.742514),
-      complex(0.999277,-0.0380146), complex(0.627093,-0.778945), complex(-0.156609,-0.987661),
-      complex(-0.826268,-0.563277), complex(-0.980666,0.19569), complex(-0.563333,0.82623),
-      complex(0.156486,0.98768), complex(0.778826,0.62724), complex(0.999287,-0.0377655),
-      complex(0.742721,-0.6696), complex(0.160419,-0.987049), complex(-0.475046,-0.879961),
-      complex(-0.904948,-0.425522), complex(-0.984406,0.175909), complex(-0.715605,0.698505),
-      complex(-0.219099,0.975703), complex(0.329553,0.944137), complex(0.76604,0.642793),
-      complex(0.983631,0.180197), complex(0.950523,-0.310653), complex(0.701663,-0.712509),
-      complex(0.314971,-0.949101), complex(-0.116723,-0.993164), complex(-0.509441,-0.860505),
-      complex(-0.802923,-0.596083), complex(-0.966174,-0.257892), complex(-0.995294,0.0968989),
-      complex(-0.906848,0.421458), complex(-0.729518,0.683961), complex(-0.496339,0.868129),
-      complex(-0.238691,0.971095), complex(0.0174496,0.999848), complex(0.253256,0.967399),
-      complex(0.457122,0.889404), complex(0.623793,0.78159), complex(0.752953,0.658075),
-      complex(0.847677,0.530513), complex(0.913078,0.407784), complex(0.955121,0.296217),
-      complex(0.979805,0.199957), complex(0.992593,0.121488), complex(0.99807,0.0620949),
-      complex(0.99975,0.0223724), complex(0.999997,0.00249211), complex(0.999997,0.00249211),
-      complex(0.99975,0.0223724), complex(0.99807,0.0621025), complex(0.992593,0.121488),
-      complex(0.979805,0.199957), complex(0.955121,0.296217), complex(0.913075,0.407791),
-      complex(0.847677,0.530513), complex(0.752948,0.658081), complex(0.623793,0.78159),
-      complex(0.457122,0.889404), complex(0.253263,0.967397), complex(0.0174572,0.999848),
-      complex(-0.238699,0.971094), complex(-0.496339,0.868129), complex(-0.729521,0.683959),
-      complex(-0.90685,0.421454), complex(-0.995295,0.0968913), complex(-0.966172,-0.2579),
-      complex(-0.802923,-0.596083), complex(-0.509435,-0.860509), complex(-0.116723,-0.993164),
-      complex(0.314978,-0.949099), complex(0.701663,-0.712509), complex(0.950523,-0.310653),
-      complex(0.983631,0.180197), complex(0.76604,0.642793), complex(0.329546,0.94414),
-      complex(-0.219099,0.975703), complex(-0.715605,0.698505), complex(-0.984408,0.175898),
-      complex(-0.904952,-0.425515), complex(-0.475039,-0.879965), complex(0.160431,-0.987047),
-      complex(0.742727,-0.669595), complex(0.999287,-0.0377541), complex(0.778824,0.627243),
-      complex(0.156482,0.987681), complex(-0.563336,0.826228), complex(-0.980668,0.195678),
-      complex(-0.826262,-0.563287), complex(-0.156598,-0.987662), complex(0.627101,-0.778938),
-      complex(0.999277,-0.038007), complex(0.669816,0.742527), complex(-0.160065,0.987106),
-      complex(-0.879758,0.475421), complex(-0.90516,-0.42507), complex(-0.176463,-0.984307),
-      complex(0.71517,-0.698951), complex(0.975849,0.218447), complex(0.330259,0.94389),
-      complex(-0.64218,0.766554), complex(-0.983787,-0.179339), complex(-0.311532,-0.950236),
-      complex(0.700952,-0.713208), complex(0.949427,0.313987), complex(0.117843,0.993032),
-      complex(-0.859908,0.51045), complex(-0.803657,-0.595092), complex(0.256637,-0.966508),
-      complex(0.995161,-0.0982573), complex(0.42275,0.906246), complex(-0.728497,0.685049),
-      complex(-0.868891,-0.495003), complex(0.237116,-0.971481), complex(0.999817,-0.0191258),
-      complex(0.254958,0.966952), complex(-0.888587,0.458708), complex(-0.625253,-0.780422),
-      complex(0.656632,-0.754211), complex(0.848729,0.528827), complex(-0.40592,0.913909),
-      complex(-0.955742,-0.294204), complex(0.19784,-0.980234), complex(0.992865,0.119246),
-      complex(-0.0598135,0.99821), complex(-0.9998,-0.0200121), complex(7.18395e-05,-1),
-      complex(1,0))
-    option1: (complex(1,0), complex(6.21835e-05,1), complex(-0.9998,0.0200057), complex(-0.0597992,-0.99821),
-      complex(0.992863,-0.119261), complex(0.197824,0.980237), complex(-0.955745,0.294195),
-      complex(-0.405909,-0.913914), complex(0.848732,-0.528823), complex(0.656627,0.754216),
-      complex(-0.62525,0.780424), complex(-0.888578,-0.458726), complex(0.254945,-0.966956),
-      complex(0.999817,0.0191353), complex(0.237122,0.97148), complex(-0.8689,0.494988),
-      complex(-0.728496,-0.68505), complex(0.42276,-0.906241), complex(0.995161,0.0982592),
-      complex(0.25663,0.96651), complex(-0.803666,0.59508), complex(-0.859905,-0.510455),
-      complex(0.117841,-0.993033), complex(0.949434,-0.313966), complex(0.700952,0.713208),
-      complex(-0.311543,0.950232), complex(-0.983787,0.179339), complex(-0.642168,-0.766564),
-      complex(0.330255,-0.943892), complex(0.975853,-0.218428), complex(0.71517,0.698951),
-      complex(-0.176463,0.984307), complex(-0.905162,0.425067), complex(-0.879753,-0.475431),
-      complex(-0.16005,-0.987109), complex(0.66983,-0.742514), complex(0.999277,0.0380146),
-      complex(0.627093,0.778945), complex(-0.156609,0.987661), complex(-0.826268,0.563277),
-      complex(-0.980666,-0.19569), complex(-0.563333,-0.82623), complex(0.156486,-0.98768),
-      complex(0.778826,-0.62724), complex(0.999287,0.0377655), complex(0.742721,0.6696),
-      complex(0.160419,0.987049), complex(-0.475046,0.879961), complex(-0.904948,0.425522),
-      complex(-0.984406,-0.175909), complex(-0.715605,-0.698505), complex(-0.219099,-0.975703),
-      complex(0.329553,-0.944137), complex(0.76604,-0.642793), complex(0.983631,-0.180197),
-      complex(0.950523,0.310653), complex(0.701663,0.712509), complex(0.314971,0.949101),
-      complex(-0.116723,0.993164), complex(-0.509441,0.860505), complex(-0.802923,0.596083),
-      complex(-0.966174,0.257892), complex(-0.995294,-0.0968989), complex(-0.906848,-0.421458),
-      complex(-0.729518,-0.683961), complex(-0.496339,-0.868129), complex(-0.238691,-0.971095),
-      complex(0.0174496,-0.999848), complex(0.253256,-0.967399), complex(0.457122,-0.889404),
-      complex(0.623793,-0.78159), complex(0.752953,-0.658075), complex(0.847677,-0.530513),
-      complex(0.913078,-0.407784), complex(0.955121,-0.296217), complex(0.979805,-0.199957),
-      complex(0.992593,-0.121488), complex(0.99807,-0.0620949), complex(0.99975,-0.0223724),
-      complex(0.999997,-0.00249211), complex(0.999997,-0.00249211), complex(0.99975,-0.0223724),
-      complex(0.99807,-0.0621025), complex(0.992593,-0.121488), complex(0.979805,-0.199957),
-      complex(0.955121,-0.296217), complex(0.913075,-0.407791), complex(0.847677,-0.530513),
-      complex(0.752948,-0.658081), complex(0.623793,-0.78159), complex(0.457122,-0.889404),
-      complex(0.253263,-0.967397), complex(0.0174572,-0.999848), complex(-0.238699,-0.971094),
-      complex(-0.496339,-0.868129), complex(-0.729521,-0.683959), complex(-0.90685,-0.421454),
-      complex(-0.995295,-0.0968913), complex(-0.966172,0.2579), complex(-0.802923,0.596083),
-      complex(-0.509435,0.860509), complex(-0.116723,0.993164), complex(0.314978,0.949099),
-      complex(0.701663,0.712509), complex(0.950523,0.310653), complex(0.983631,-0.180197),
-      complex(0.76604,-0.642793), complex(0.329546,-0.94414), complex(-0.219099,-0.975703),
-      complex(-0.715605,-0.698505), complex(-0.984408,-0.175898), complex(-0.904952,0.425515),
-      complex(-0.475039,0.879965), complex(0.160431,0.987047), complex(0.742727,0.669595),
-      complex(0.999287,0.0377541), complex(0.778824,-0.627243), complex(0.156482,-0.987681),
-      complex(-0.563336,-0.826228), complex(-0.980668,-0.195678), complex(-0.826262,0.563287),
-      complex(-0.156598,0.987662), complex(0.627101,0.778938), complex(0.999277,0.038007),
-      complex(0.669816,-0.742527), complex(-0.160065,-0.987106), complex(-0.879758,-0.475421),
-      complex(-0.90516,0.42507), complex(-0.176463,0.984307), complex(0.71517,0.698951),
-      complex(0.975849,-0.218447), complex(0.330259,-0.94389), complex(-0.64218,-0.766554),
-      complex(-0.983787,0.179339), complex(-0.311532,0.950236), complex(0.700952,0.713208),
-      complex(0.949427,-0.313987), complex(0.117843,-0.993032), complex(-0.859908,-0.51045),
-      complex(-0.803657,0.595092), complex(0.256637,0.966508), complex(0.995161,0.0982573),
-      complex(0.42275,-0.906246), complex(-0.728497,-0.685049), complex(-0.868891,0.495003),
-      complex(0.237116,0.971481), complex(0.999817,0.0191258), complex(0.254958,-0.966952),
-      complex(-0.888587,-0.458708), complex(-0.625253,0.780422), complex(0.656632,0.754211),
-      complex(0.848729,-0.528827), complex(-0.40592,-0.913909), complex(-0.955742,0.294204),
-      complex(0.19784,0.980234), complex(0.992865,-0.119246), complex(-0.0598135,-0.99821),
-      complex(-0.9998,0.0200121), complex(7.18395e-05,1), complex(1,0))
-    option2: '2'
-    option3: '3'
-    option4: '4'
-    options: '[0, 1, 2]'
-    orient: Qt.QVBoxLayout
-    type: raw
-    value: (complex(1,0), complex(6.21835e-05,-1), complex(-0.9998,-0.0200057), complex(-0.0597992,0.99821),
-      complex(0.992863,0.119261), complex(0.197824,-0.980237), complex(-0.955745,-0.294195),
-      complex(-0.405909,0.913914), complex(0.848732,0.528823), complex(0.656627,-0.754216),
-      complex(-0.62525,-0.780424), complex(-0.888578,0.458726), complex(0.254945,0.966956),
-      complex(0.999817,-0.0191353), complex(0.237122,-0.97148), complex(-0.8689,-0.494988),
-      complex(-0.728496,0.68505), complex(0.42276,0.906241), complex(0.995161,-0.0982592),
-      complex(0.25663,-0.96651), complex(-0.803666,-0.59508), complex(-0.859905,0.510455),
-      complex(0.117841,0.993033), complex(0.949434,0.313966), complex(0.700952,-0.713208),
-      complex(-0.311543,-0.950232), complex(-0.983787,-0.179339), complex(-0.642168,0.766564),
-      complex(0.330255,0.943892), complex(0.975853,0.218428), complex(0.71517,-0.698951),
-      complex(-0.176463,-0.984307), complex(-0.905162,-0.425067), complex(-0.879753,0.475431),
-      complex(-0.16005,0.987109), complex(0.66983,0.742514), complex(0.999277,-0.0380146),
-      complex(0.627093,-0.778945), complex(-0.156609,-0.987661), complex(-0.826268,-0.563277),
-      complex(-0.980666,0.19569), complex(-0.563333,0.82623), complex(0.156486,0.98768),
-      complex(0.778826,0.62724), complex(0.999287,-0.0377655), complex(0.742721,-0.6696),
-      complex(0.160419,-0.987049), complex(-0.475046,-0.879961), complex(-0.904948,-0.425522),
-      complex(-0.984406,0.175909), complex(-0.715605,0.698505), complex(-0.219099,0.975703),
-      complex(0.329553,0.944137), complex(0.76604,0.642793), complex(0.983631,0.180197),
-      complex(0.950523,-0.310653), complex(0.701663,-0.712509), complex(0.314971,-0.949101),
-      complex(-0.116723,-0.993164), complex(-0.509441,-0.860505), complex(-0.802923,-0.596083),
-      complex(-0.966174,-0.257892), complex(-0.995294,0.0968989), complex(-0.906848,0.421458),
-      complex(-0.729518,0.683961), complex(-0.496339,0.868129), complex(-0.238691,0.971095),
-      complex(0.0174496,0.999848), complex(0.253256,0.967399), complex(0.457122,0.889404),
-      complex(0.623793,0.78159), complex(0.752953,0.658075), complex(0.847677,0.530513),
-      complex(0.913078,0.407784), complex(0.955121,0.296217), complex(0.979805,0.199957),
-      complex(0.992593,0.121488), complex(0.99807,0.0620949), complex(0.99975,0.0223724),
-      complex(0.999997,0.00249211), complex(0.999997,0.00249211), complex(0.99975,0.0223724),
-      complex(0.99807,0.0621025), complex(0.992593,0.121488), complex(0.979805,0.199957),
-      complex(0.955121,0.296217), complex(0.913075,0.407791), complex(0.847677,0.530513),
-      complex(0.752948,0.658081), complex(0.623793,0.78159), complex(0.457122,0.889404),
-      complex(0.253263,0.967397), complex(0.0174572,0.999848), complex(-0.238699,0.971094),
-      complex(-0.496339,0.868129), complex(-0.729521,0.683959), complex(-0.90685,0.421454),
-      complex(-0.995295,0.0968913), complex(-0.966172,-0.2579), complex(-0.802923,-0.596083),
-      complex(-0.509435,-0.860509), complex(-0.116723,-0.993164), complex(0.314978,-0.949099),
-      complex(0.701663,-0.712509), complex(0.950523,-0.310653), complex(0.983631,0.180197),
-      complex(0.76604,0.642793), complex(0.329546,0.94414), complex(-0.219099,0.975703),
-      complex(-0.715605,0.698505), complex(-0.984408,0.175898), complex(-0.904952,-0.425515),
-      complex(-0.475039,-0.879965), complex(0.160431,-0.987047), complex(0.742727,-0.669595),
-      complex(0.999287,-0.0377541), complex(0.778824,0.627243), complex(0.156482,0.987681),
-      complex(-0.563336,0.826228), complex(-0.980668,0.195678), complex(-0.826262,-0.563287),
-      complex(-0.156598,-0.987662), complex(0.627101,-0.778938), complex(0.999277,-0.038007),
-      complex(0.669816,0.742527), complex(-0.160065,0.987106), complex(-0.879758,0.475421),
-      complex(-0.90516,-0.42507), complex(-0.176463,-0.984307), complex(0.71517,-0.698951),
-      complex(0.975849,0.218447), complex(0.330259,0.94389), complex(-0.64218,0.766554),
-      complex(-0.983787,-0.179339), complex(-0.311532,-0.950236), complex(0.700952,-0.713208),
-      complex(0.949427,0.313987), complex(0.117843,0.993032), complex(-0.859908,0.51045),
-      complex(-0.803657,-0.595092), complex(0.256637,-0.966508), complex(0.995161,-0.0982573),
-      complex(0.42275,0.906246), complex(-0.728497,0.685049), complex(-0.868891,-0.495003),
-      complex(0.237116,-0.971481), complex(0.999817,-0.0191258), complex(0.254958,0.966952),
-      complex(-0.888587,0.458708), complex(-0.625253,-0.780422), complex(0.656632,-0.754211),
-      complex(0.848729,0.528827), complex(-0.40592,0.913909), complex(-0.955742,-0.294204),
-      complex(0.19784,-0.980234), complex(0.992865,0.119246), complex(-0.0598135,0.99821),
-      complex(-0.9998,-0.0200121), complex(7.18395e-05,-1), complex(1,0))
-    widget: combo_box
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [744, 596.0]
-    rotation: 0
-    state: true
 - name: freq
   id: variable_qtgui_chooser
   parameters:
@@ -542,6 +355,23 @@ blocks:
     coordinate: [760, 12.0]
     rotation: 0
     state: enabled
+- name: UConn2402_ArbitrarySync_0
+  id: UConn2402_ArbitrarySync
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples: '7000'
+    threshold: '0.8'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [296.0, 640]
+    rotation: 90
+    state: true
 - name: UConn2402_Chirp_0
   id: UConn2402_Chirp
   parameters:
@@ -577,24 +407,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [352, 740.0]
+    coordinate: [344, 884.0]
     rotation: 0
-    state: enabled
-- name: blocks_complex_to_mag_squared_0
-  id: blocks_complex_to_mag_squared
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [280, 664.0]
-    rotation: 180
     state: enabled
 - name: blocks_file_sink_0
   id: blocks_file_sink
@@ -637,33 +451,13 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     msg: pmt.intern("Hello World! Hello World!\n")
-    period: '1000'
+    period: '2000'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
     coordinate: [48, 180.0]
     rotation: 0
-    state: enabled
-- name: foo_packet_pad_0
-  id: foo_packet_pad
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    debug: 'False'
-    delay: 'False'
-    delay_sec: '0.001'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    pad_front: '2000'
-    pad_tail: '2000'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [544, 588.0]
-    rotation: 180
     state: disabled
 - name: foo_wireshark_connector_0
   id: foo_wireshark_connector
@@ -679,7 +473,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [760, 372.0]
+    coordinate: [720, 340.0]
     rotation: 0
     state: disabled
 - name: ieee802_15_4_mac_0
@@ -756,14 +550,14 @@ blocks:
     bus_structure: null
     coordinate: [344, 76.0]
     rotation: 180
-    state: disabled
+    state: enabled
 - name: network_socket_pdu_1
   id: network_socket_pdu
   parameters:
     affinity: ''
     alias: ''
-    comment: nc -u -l 127.0.0.2 52002
-    host: 127.0.0.2
+    comment: nc -u -l localhost 52002
+    host: 127.0.0.1
     maxoutbuf: '0'
     minoutbuf: '0'
     mtu: '10000'
@@ -774,7 +568,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [576, 76.0]
+    coordinate: [608, 60.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0
@@ -943,8 +737,8 @@ blocks:
     style8: '1'
     style9: '1'
     tr_chan: '0'
-    tr_delay: '0'
-    tr_level: '0.8'
+    tr_delay: '.000040'
+    tr_level: '.8'
     tr_mode: qtgui.TRIG_MODE_NORM
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
@@ -961,14 +755,14 @@ blocks:
     width8: '1'
     width9: '1'
     ylabel: Amplitude
-    ymax: '150'
+    ymax: '1.1'
     ymin: '-1'
     yunit: '""'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [664, 756.0]
+    coordinate: [672, 868.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_2
@@ -1041,7 +835,7 @@ blocks:
     style9: '1'
     tr_chan: '0'
     tr_delay: '0'
-    tr_level: '0.0'
+    tr_level: '0.5'
     tr_mode: qtgui.TRIG_MODE_FREE
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
@@ -1065,8 +859,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [32, 612.0]
-    rotation: 180
+    coordinate: [448, 588.0]
+    rotation: 0
     state: enabled
 - name: uhd_usrp_sink_0
   id: uhd_usrp_sink
@@ -1105,7 +899,7 @@ blocks:
     ant7: '"TX/RX"'
     ant8: '"TX/RX"'
     ant9: '"TX/RX"'
-    bw0: 2e6
+    bw0: '0'
     bw1: '0'
     bw10: '0'
     bw11: '0'
@@ -1328,7 +1122,7 @@ blocks:
     start_time: '-1.0'
     stream_args: ''
     stream_chans: '[]'
-    sync: pc_clock
+    sync: none
     time_source0: ''
     time_source1: ''
     time_source2: ''
@@ -1382,7 +1176,7 @@ blocks:
     ant7: ''
     ant8: ''
     ant9: ''
-    bw0: 2e6
+    bw0: '0'
     bw1: '0'
     bw10: '0'
     bw11: '0'
@@ -1488,7 +1282,7 @@ blocks:
     dc_offs7: 0+0j
     dc_offs8: 0+0j
     dc_offs9: 0+0j
-    dc_offs_enb0: disabled
+    dc_offs_enb0: default
     dc_offs_enb1: default
     dc_offs_enb10: default
     dc_offs_enb11: default
@@ -1618,7 +1412,7 @@ blocks:
     iq_imbal7: 0+0j
     iq_imbal8: 0+0j
     iq_imbal9: 0+0j
-    iq_imbal_enb0: disabled
+    iq_imbal_enb0: default
     iq_imbal_enb1: default
     iq_imbal_enb10: default
     iq_imbal_enb11: default
@@ -1778,34 +1572,31 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [32, 444.0]
+    coordinate: [72, 748.0]
     rotation: 0
     state: enabled
 
 connections:
+- [UConn2402_ArbitrarySync_0, '0', ieee802_15_4_oqpsk_phy_0, '0']
+- [UConn2402_ArbitrarySync_0, '0', qtgui_time_sink_x_2, '0']
 - [UConn2402_Chirp_0, '0', qtgui_time_sink_x_0_0, '0']
 - [UConn2402_Chirp_0, '0', uhd_usrp_sink_0, '0']
+- [UConn2402_LFMChirpXCorr_0, '0', UConn2402_ArbitrarySync_0, '1']
 - [UConn2402_LFMChirpXCorr_0, '0', qtgui_time_sink_x_1, '0']
 - [UConn2402_LFMChirpXCorr_0, '1', qtgui_time_sink_x_1, '1']
-- [blocks_complex_to_mag_squared_0, '0', UConn2402_LFMChirpXCorr_0, '1']
 - [blocks_message_strobe_0, strobe, ieee802_15_4_rime_stack_0, bcin]
-- [foo_packet_pad_0, '0', UConn2402_LFMChirpXCorr_0, '0']
-- [foo_packet_pad_0, '0', ieee802_15_4_oqpsk_phy_0, '0']
 - [foo_wireshark_connector_0, '0', blocks_file_sink_0, '0']
 - [ieee802_15_4_mac_0, app out, ieee802_15_4_rime_stack_0, fromMAC]
 - [ieee802_15_4_mac_0, pdu out, foo_wireshark_connector_0, in]
 - [ieee802_15_4_mac_0, pdu out, ieee802_15_4_oqpsk_phy_0, txin]
 - [ieee802_15_4_oqpsk_phy_0, '0', UConn2402_Chirp_0, '0']
-- [ieee802_15_4_oqpsk_phy_0, '0', foo_packet_pad_0, '0']
 - [ieee802_15_4_oqpsk_phy_0, rxout, ieee802_15_4_mac_0, pdu in]
 - [ieee802_15_4_rime_stack_0, bcout, blocks_message_debug_0, print]
 - [ieee802_15_4_rime_stack_0, bcout, network_socket_pdu_1, pdus]
 - [ieee802_15_4_rime_stack_0, toMAC, ieee802_15_4_mac_0, app in]
 - [network_socket_pdu_0, pdus, ieee802_15_4_rime_stack_0, bcin]
+- [uhd_usrp_source_0, '0', UConn2402_ArbitrarySync_0, '0']
 - [uhd_usrp_source_0, '0', UConn2402_LFMChirpXCorr_0, '0']
-- [uhd_usrp_source_0, '0', blocks_complex_to_mag_squared_0, '0']
-- [uhd_usrp_source_0, '0', ieee802_15_4_oqpsk_phy_0, '0']
-- [uhd_usrp_source_0, '0', qtgui_time_sink_x_2, '0']
 
 metadata:
   file_format: 1
