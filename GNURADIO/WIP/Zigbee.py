@@ -49,7 +49,7 @@ import ieee802_15_4
 
 from gnuradio import qtgui
 
-class transceiver_OQPSK(gr.top_block, Qt.QWidget):
+class Zigbee(gr.top_block, Qt.QWidget):
 
     def __init__(self):
         gr.top_block.__init__(self, "IEEE 802.15.4 Transceiver using OQPSK PHY", catch_exceptions=True)
@@ -72,7 +72,7 @@ class transceiver_OQPSK(gr.top_block, Qt.QWidget):
         self.top_grid_layout = Qt.QGridLayout()
         self.top_layout.addLayout(self.top_grid_layout)
 
-        self.settings = Qt.QSettings("GNU Radio", "transceiver_OQPSK")
+        self.settings = Qt.QSettings("GNU Radio", "Zigbee")
 
         try:
             if StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
@@ -367,7 +367,7 @@ class transceiver_OQPSK(gr.top_block, Qt.QWidget):
 
 
     def closeEvent(self, event):
-        self.settings = Qt.QSettings("GNU Radio", "transceiver_OQPSK")
+        self.settings = Qt.QSettings("GNU Radio", "Zigbee")
         self.settings.setValue("geometry", self.saveGeometry())
         self.stop()
         self.wait()
@@ -426,7 +426,7 @@ class transceiver_OQPSK(gr.top_block, Qt.QWidget):
 
 
 
-def main(top_block_cls=transceiver_OQPSK, options=None):
+def main(top_block_cls=Zigbee, options=None):
 
     if StrictVersion("4.5.0") <= StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
         style = gr.prefs().get_string('qtgui', 'style', 'raster')
