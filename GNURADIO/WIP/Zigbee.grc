@@ -630,7 +630,7 @@ blocks:
     is_pair: 'False'
     is_static: 'True'
     key: pressed
-    label: Send Zigbee Message (RF0)
+    label: Send Zigbee Message (RF1)
     maxoutbuf: '0'
     minoutbuf: '0'
     type: string
