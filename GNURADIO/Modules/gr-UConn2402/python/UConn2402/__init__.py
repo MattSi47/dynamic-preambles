@@ -21,6 +21,7 @@ except ModuleNotFoundError:
 
 # import any pure python here
 from .GUIMessagePrefixer import GUIMessagePrefixer
+from .StatusMessage import StatusMessage
 
 
 

@@ -23,7 +23,7 @@ GR_PYTHON_INSTALL(
     FILES
     __init__.py
     GUIMessagePrefixer.py
-    DESTINATION ${GR_PYTHON_DIR}/gnuradio/UConn2402
+    StatusMessage.py DESTINATION ${GR_PYTHON_DIR}/gnuradio/UConn2402
 )
 
 ########################################################################

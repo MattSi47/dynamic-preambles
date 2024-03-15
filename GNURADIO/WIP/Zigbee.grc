@@ -538,7 +538,7 @@ blocks:
     is_pair: 'False'
     is_static: 'True'
     key: pressed
-    label: Send Wifi Message (RF0)
+    label: Send Zigbee Message (RF0)
     maxoutbuf: '0'
     minoutbuf: '0'
     type: string
@@ -560,7 +560,7 @@ blocks:
     is_pair: 'False'
     is_static: 'True'
     key: pressed
-    label: Send Wifi Message (RF0)
+    label: Send Zigbee Message (RF0)
     maxoutbuf: '0'
     minoutbuf: '0'
     type: string

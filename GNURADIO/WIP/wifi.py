@@ -388,14 +388,14 @@ class wifi(gr.top_block, Qt.QWidget):
             self.Messaging_grid_layout_0.setRowStretch(r, 1)
         for c in range(0, 1):
             self.Messaging_grid_layout_0.setColumnStretch(c, 1)
-        self.qtgui_edit_box_msg_0_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Wifi Message (RF1)', False, True, 'pressed', None)
+        self.qtgui_edit_box_msg_0_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Zigbee Message (RF1)', False, True, 'pressed', None)
         self._qtgui_edit_box_msg_0_0_win = sip.wrapinstance(self.qtgui_edit_box_msg_0_0.qwidget(), Qt.QWidget)
         self.Messaging_grid_layout_1.addWidget(self._qtgui_edit_box_msg_0_0_win, 0, 0, 1, 1)
         for r in range(0, 1):
             self.Messaging_grid_layout_1.setRowStretch(r, 1)
         for c in range(0, 1):
             self.Messaging_grid_layout_1.setColumnStretch(c, 1)
-        self.qtgui_edit_box_msg_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Wifi Message (RF0)', False, True, 'pressed', None)
+        self.qtgui_edit_box_msg_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Zigbee Message (RF0)', False, True, 'pressed', None)
         self._qtgui_edit_box_msg_0_win = sip.wrapinstance(self.qtgui_edit_box_msg_0.qwidget(), Qt.QWidget)
         self.Messaging_grid_layout_0.addWidget(self._qtgui_edit_box_msg_0_win, 0, 0, 1, 1)
         for r in range(0, 1):
