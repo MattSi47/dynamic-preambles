@@ -475,6 +475,72 @@ blocks:
     coordinate: [480, 460.0]
     rotation: 0
     state: enabled
+- name: UConn2402_StatusMessage_0
+  id: UConn2402_StatusMessage
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '100'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 1052.0]
+    rotation: 0
+    state: disabled
+- name: UConn2402_StatusMessage_0_0
+  id: UConn2402_StatusMessage
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '100'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1528, 1468.0]
+    rotation: 180
+    state: disabled
+- name: blocks_message_strobe_0
+  id: blocks_message_strobe
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    msg: pmt.intern("AP BURST| 100pckt|")
+    period: '1000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [600, 1044.0]
+    rotation: 0
+    state: disabled
+- name: blocks_message_strobe_0_0
+  id: blocks_message_strobe
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    msg: pmt.intern("AP BURST| 100pckt|")
+    period: '1000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1784, 1508.0]
+    rotation: 180
+    state: disabled
 - name: blocks_multiply_const_vxx_0
   id: blocks_multiply_const_vxx
   parameters:
@@ -671,7 +737,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1504, 1644.0]
+    coordinate: [1496, 1596.0]
     rotation: 0
     state: enabled
 - name: qtgui_edit_box_msg_0_0
@@ -2230,6 +2296,10 @@ connections:
 - [UConn2402_LFMChirpXCorr_0_0, '0', UConn2402_ArbitrarySync2_0, '1']
 - [UConn2402_LFMChirpXCorr_0_0, '0', qtgui_time_sink_x_1_0, '0']
 - [UConn2402_LFMChirpXCorr_0_0, '1', qtgui_time_sink_x_1_0, '1']
+- [UConn2402_StatusMessage_0, status, ieee802_15_4_rime_stack_0, bcin]
+- [UConn2402_StatusMessage_0_0, status, ieee802_11_mac_0, app in]
+- [blocks_message_strobe_0, strobe, UConn2402_StatusMessage_0, strobe]
+- [blocks_message_strobe_0_0, strobe, UConn2402_StatusMessage_0_0, strobe]
 - [blocks_multiply_const_vxx_0, '0', uhd_usrp_sink_0_0, '0']
 - [blocks_tagged_stream_multiply_length_0, '0', uhd_usrp_sink_0, '0']
 - [ieee802_11_mac_0, app out, virtual_sink_0_0, '0']

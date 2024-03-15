@@ -4,7 +4,7 @@ category: '[UConn2402]'
 
 templates:
   imports: from gnuradio import UConn2402
-  make: UConn2402.StatusMessage(${msg}, ${interval})
+  make: UConn2402.StatusMessage(${n})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -13,14 +13,11 @@ templates:
 #     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
 #     * default
 parameters:
-- id: msg
-  label: Status Message
-  dtype: string
-  default: 'Device active'
-- id: interval
-  label: Interval (s)
-  dtype: float
-  default: '1.0'
+- id: n
+  label: Message Limit
+  dtype: int
+  default: '100'
+
 #- id: ...
 #  label: ...
 #  dtype: ...
@@ -32,8 +29,10 @@ parameters:
 #      * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
 #      * vlen (optional - data stream vector length. Default is 1)
 #      * optional (optional - set to 1 for optional inputs. Default is 0)
-
-
+inputs:
+- domain: message
+  id: strobe
+  optional: false
 outputs:
 - domain: message
   id: status

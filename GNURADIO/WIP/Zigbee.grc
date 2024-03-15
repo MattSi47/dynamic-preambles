@@ -269,12 +269,12 @@ blocks:
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    prefix: 'Wifi-Device1: '
+    prefix: 'Zigbee-Device1: '
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 400.0]
+    coordinate: [224, 464.0]
     rotation: 0
     state: enabled
 - name: UConn2402_GUIMessagePrefixer_0_0
@@ -285,12 +285,12 @@ blocks:
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    prefix: 'Wifi-Device1: '
+    prefix: 'Zigbee-Device2: '
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [584, 1360.0]
+    coordinate: [552, 1472.0]
     rotation: 0
     state: enabled
 - name: UConn2402_LFMChirpXCorr_0
@@ -329,6 +329,76 @@ blocks:
     coordinate: [712, 1972.0]
     rotation: 0
     state: enabled
+- name: UConn2402_StatusMessage_0
+  id: UConn2402_StatusMessage
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [504, 236.0]
+    rotation: 0
+    state: disabled
+- name: UConn2402_StatusMessage_0_0
+  id: UConn2402_StatusMessage
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 1188.0]
+    rotation: 0
+    state: disabled
+- name: blocks_message_strobe_random_0
+  id: blocks_message_strobe_random
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    dist: blocks.STROBE_POISSON
+    maxoutbuf: '0'
+    mean: '3000'
+    minoutbuf: '0'
+    msg: pmt.intern("Zigbee-Device1")
+    std: '3000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [136, 212.0]
+    rotation: 0
+    state: disabled
+- name: blocks_message_strobe_random_0_0
+  id: blocks_message_strobe_random
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    dist: blocks.STROBE_POISSON
+    maxoutbuf: '0'
+    mean: '3000'
+    minoutbuf: '0'
+    msg: pmt.intern("Zigbee-Device2")
+    std: '3000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [520, 1164.0]
+    rotation: 0
+    state: disabled
 - name: blocks_multiply_const_vxx_0
   id: blocks_multiply_const_vxx
   parameters:
@@ -547,7 +617,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 276.0]
+    coordinate: [224, 340.0]
     rotation: 180
     state: enabled
 - name: qtgui_edit_box_msg_0_0
@@ -569,7 +639,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [584, 1236.0]
+    coordinate: [552, 1348.0]
     rotation: 180
     state: enabled
 - name: qtgui_time_sink_x_0_0_1
@@ -1970,6 +2040,10 @@ connections:
 - [UConn2402_LFMChirpXCorr_0_0, '0', UConn2402_ArbitrarySync2_0_0, '1']
 - [UConn2402_LFMChirpXCorr_0_0, '0', qtgui_time_sink_x_1_0_0_0_0, '0']
 - [UConn2402_LFMChirpXCorr_0_0, '1', qtgui_time_sink_x_1_0_0_0_0, '1']
+- [UConn2402_StatusMessage_0, status, ieee802_15_4_rime_stack_0, bcin]
+- [UConn2402_StatusMessage_0_0, status, ieee802_15_4_rime_stack_0_0, bcin]
+- [blocks_message_strobe_random_0, strobe, UConn2402_StatusMessage_0, strobe]
+- [blocks_message_strobe_random_0_0, strobe, UConn2402_StatusMessage_0_0, strobe]
 - [blocks_multiply_const_vxx_0, '0', uhd_usrp_sink_0, '1']
 - [blocks_multiply_const_vxx_0_0, '0', uhd_usrp_sink_0_0, '0']
 - [ieee802_15_4_mac_0, app out, ieee802_15_4_rime_stack_0, fromMAC]

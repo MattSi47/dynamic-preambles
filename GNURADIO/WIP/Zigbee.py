@@ -30,6 +30,7 @@ from gnuradio.filter import firdes
 import sip
 from gnuradio import UConn2402
 from gnuradio import blocks
+import pmt
 from gnuradio import gr
 from gnuradio.fft import window
 import signal
@@ -374,14 +375,14 @@ class Zigbee(gr.top_block, Qt.QWidget):
             self.Messaging_grid_layout_0.setRowStretch(r, 1)
         for c in range(0, 1):
             self.Messaging_grid_layout_0.setColumnStretch(c, 1)
-        self.qtgui_edit_box_msg_0_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Wifi Message (RF0)', False, True, 'pressed', None)
+        self.qtgui_edit_box_msg_0_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Zigbee Message (RF0)', False, True, 'pressed', None)
         self._qtgui_edit_box_msg_0_0_win = sip.wrapinstance(self.qtgui_edit_box_msg_0_0.qwidget(), Qt.QWidget)
         self.Messaging_grid_layout_1.addWidget(self._qtgui_edit_box_msg_0_0_win, 0, 0, 1, 1)
         for r in range(0, 1):
             self.Messaging_grid_layout_1.setRowStretch(r, 1)
         for c in range(0, 1):
             self.Messaging_grid_layout_1.setColumnStretch(c, 1)
-        self.qtgui_edit_box_msg_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Wifi Message (RF0)', False, True, 'pressed', None)
+        self.qtgui_edit_box_msg_0 = qtgui.edit_box_msg(qtgui.STRING, '', 'Send Zigbee Message (RF0)', False, True, 'pressed', None)
         self._qtgui_edit_box_msg_0_win = sip.wrapinstance(self.qtgui_edit_box_msg_0.qwidget(), Qt.QWidget)
         self.Messaging_grid_layout_0.addWidget(self._qtgui_edit_box_msg_0_win, 0, 0, 1, 1)
         for r in range(0, 1):
@@ -398,10 +399,14 @@ class Zigbee(gr.top_block, Qt.QWidget):
         self.ieee802_15_4_mac_0 = ieee802_15_4.mac(True,0x8841,0,0x1aaa,0xffff,0x3344)
         self.blocks_multiply_const_vxx_0_0 = blocks.multiply_const_cc(0)
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_cc(0)
+        self.blocks_message_strobe_random_0_0 = blocks.message_strobe_random(pmt.intern("Zigbee-Device2"), blocks.STROBE_POISSON, 3000, 3000)
+        self.blocks_message_strobe_random_0 = blocks.message_strobe_random(pmt.intern("Zigbee-Device1"), blocks.STROBE_POISSON, 3000, 3000)
+        self.UConn2402_StatusMessage_0_0 = UConn2402.StatusMessage(0)
+        self.UConn2402_StatusMessage_0 = UConn2402.StatusMessage(0)
         self.UConn2402_LFMChirpXCorr_0_0 = UConn2402.LFMChirpXCorr(4000000, 2000000, .000040)
         self.UConn2402_LFMChirpXCorr_0 = UConn2402.LFMChirpXCorr(4000000, 2000000, .000040)
-        self.UConn2402_GUIMessagePrefixer_0_0 = UConn2402.GUIMessagePrefixer('Wifi-Device1: ')
-        self.UConn2402_GUIMessagePrefixer_0 = UConn2402.GUIMessagePrefixer('Wifi-Device1: ')
+        self.UConn2402_GUIMessagePrefixer_0_0 = UConn2402.GUIMessagePrefixer('Zigbee-Device2: ')
+        self.UConn2402_GUIMessagePrefixer_0 = UConn2402.GUIMessagePrefixer('Zigbee-Device1: ')
         self.UConn2402_Chirp_0_0 = UConn2402.Chirp(4000000, 2000000, .000040, 1, "packet_len")
         self.UConn2402_Chirp_0_0.set_min_output_buffer(65536)
         self.UConn2402_Chirp_0 = UConn2402.Chirp(4000000, 2000000, .000040, 1, "packet_len")
@@ -417,6 +422,10 @@ class Zigbee(gr.top_block, Qt.QWidget):
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0, 'clear'), (self.qtgui_edit_box_msg_0, 'val'))
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0_0, 'msg_out'), (self.ieee802_15_4_rime_stack_0_0, 'bcin'))
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0_0, 'clear'), (self.qtgui_edit_box_msg_0_0, 'val'))
+        self.msg_connect((self.UConn2402_StatusMessage_0, 'status'), (self.ieee802_15_4_rime_stack_0, 'bcin'))
+        self.msg_connect((self.UConn2402_StatusMessage_0_0, 'status'), (self.ieee802_15_4_rime_stack_0_0, 'bcin'))
+        self.msg_connect((self.blocks_message_strobe_random_0, 'strobe'), (self.UConn2402_StatusMessage_0, 'strobe'))
+        self.msg_connect((self.blocks_message_strobe_random_0_0, 'strobe'), (self.UConn2402_StatusMessage_0_0, 'strobe'))
         self.msg_connect((self.ieee802_15_4_mac_0, 'pdu out'), (self.ieee802_15_4_oqpsk_phy_0, 'txin'))
         self.msg_connect((self.ieee802_15_4_mac_0, 'app out'), (self.ieee802_15_4_rime_stack_0, 'fromMAC'))
         self.msg_connect((self.ieee802_15_4_mac_0_0, 'pdu out'), (self.ieee802_15_4_oqpsk_phy_0_0, 'txin'))
@@ -443,8 +452,8 @@ class Zigbee(gr.top_block, Qt.QWidget):
         self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0_0, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1_0_0_0, 1))
         self.connect((self.UConn2402_LFMChirpXCorr_0_0, 0), (self.UConn2402_ArbitrarySync2_0_0, 1))
-        self.connect((self.UConn2402_LFMChirpXCorr_0_0, 0), (self.qtgui_time_sink_x_1_0_0_0_0, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0_0, 1), (self.qtgui_time_sink_x_1_0_0_0_0, 1))
+        self.connect((self.UConn2402_LFMChirpXCorr_0_0, 0), (self.qtgui_time_sink_x_1_0_0_0_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.uhd_usrp_sink_0, 1))
         self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.uhd_usrp_sink_0_0, 0))
         self.connect((self.ieee802_15_4_oqpsk_phy_0, 0), (self.UConn2402_Chirp_0, 0))

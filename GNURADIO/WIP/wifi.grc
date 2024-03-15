@@ -420,7 +420,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [712, 440.0]
+    coordinate: [696, 440.0]
     rotation: 0
     state: enabled
 - name: UConn2402_GUIMessagePrefixer_0_0
@@ -475,6 +475,76 @@ blocks:
     coordinate: [1760, 1372.0]
     rotation: 180
     state: enabled
+- name: UConn2402_StatusMessage_0
+  id: UConn2402_StatusMessage
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [992, 220.0]
+    rotation: 0
+    state: disabled
+- name: UConn2402_StatusMessage_0_0
+  id: UConn2402_StatusMessage
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [952, 924.0]
+    rotation: 0
+    state: disabled
+- name: blocks_message_strobe_random_0
+  id: blocks_message_strobe_random
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    dist: blocks.STROBE_POISSON
+    maxoutbuf: '0'
+    mean: '3000'
+    minoutbuf: '0'
+    msg: pmt.intern("Wifi-Device1")
+    std: '3000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [624, 196.0]
+    rotation: 0
+    state: disabled
+- name: blocks_message_strobe_random_0_0
+  id: blocks_message_strobe_random
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    dist: blocks.STROBE_POISSON
+    maxoutbuf: '0'
+    mean: '3000'
+    minoutbuf: '0'
+    msg: pmt.intern("Wifi-Device2")
+    std: '3000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [632, 900.0]
+    rotation: 0
+    state: disabled
 - name: blocks_multiply_const_vxx_0_0
   id: blocks_multiply_const_vxx
   parameters:
@@ -655,7 +725,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [704, 308.0]
+    coordinate: [696, 324.0]
     rotation: 180
     state: enabled
 - name: qtgui_edit_box_msg_0_0
@@ -2116,6 +2186,10 @@ connections:
 - [UConn2402_LFMChirpXCorr_0_0, '0', qtgui_time_sink_x_1_0_0_0, '0']
 - [UConn2402_LFMChirpXCorr_0_0, '1', UConn2402_ArbitrarySync2_0_0, '1']
 - [UConn2402_LFMChirpXCorr_0_0, '1', qtgui_time_sink_x_1_0_0_0, '1']
+- [UConn2402_StatusMessage_0, status, ieee802_11_mac_0, app in]
+- [UConn2402_StatusMessage_0_0, status, ieee802_11_mac_0_0, app in]
+- [blocks_message_strobe_random_0, strobe, UConn2402_StatusMessage_0, strobe]
+- [blocks_message_strobe_random_0_0, strobe, UConn2402_StatusMessage_0_0, strobe]
 - [blocks_multiply_const_vxx_0_0, '0', uhd_usrp_sink_0_1, '1']
 - [blocks_multiply_const_vxx_0_0_0, '0', uhd_usrp_sink_0_1_0, '0']
 - [blocks_multiply_const_vxx_1, '0', uhd_usrp_sink_0_1, '0']
