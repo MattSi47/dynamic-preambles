@@ -30,7 +30,6 @@ from gnuradio.filter import firdes
 import sip
 from gnuradio import UConn2402
 from gnuradio import blocks
-import pmt
 from gnuradio import gr
 from gnuradio.fft import window
 import signal
@@ -399,10 +398,6 @@ class Zigbee(gr.top_block, Qt.QWidget):
         self.ieee802_15_4_mac_0 = ieee802_15_4.mac(True,0x8841,0,0x1aaa,0xffff,0x3344)
         self.blocks_multiply_const_vxx_0_0 = blocks.multiply_const_cc(0)
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_cc(0)
-        self.blocks_message_strobe_random_0_0 = blocks.message_strobe_random(pmt.intern("Zigbee-Device2"), blocks.STROBE_POISSON, 3000, 3000)
-        self.blocks_message_strobe_random_0 = blocks.message_strobe_random(pmt.intern("Zigbee-Device1"), blocks.STROBE_POISSON, 3000, 3000)
-        self.UConn2402_StatusMessage_0_0 = UConn2402.StatusMessage(0)
-        self.UConn2402_StatusMessage_0 = UConn2402.StatusMessage(0)
         self.UConn2402_LFMChirpXCorr_0_0 = UConn2402.LFMChirpXCorr(4000000, 2000000, .000040)
         self.UConn2402_LFMChirpXCorr_0 = UConn2402.LFMChirpXCorr(4000000, 2000000, .000040)
         self.UConn2402_GUIMessagePrefixer_0_0 = UConn2402.GUIMessagePrefixer('Zigbee-Device2: ')
@@ -422,10 +417,6 @@ class Zigbee(gr.top_block, Qt.QWidget):
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0, 'clear'), (self.qtgui_edit_box_msg_0, 'val'))
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0_0, 'msg_out'), (self.ieee802_15_4_rime_stack_0_0, 'bcin'))
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0_0, 'clear'), (self.qtgui_edit_box_msg_0_0, 'val'))
-        self.msg_connect((self.UConn2402_StatusMessage_0, 'status'), (self.ieee802_15_4_rime_stack_0, 'bcin'))
-        self.msg_connect((self.UConn2402_StatusMessage_0_0, 'status'), (self.ieee802_15_4_rime_stack_0_0, 'bcin'))
-        self.msg_connect((self.blocks_message_strobe_random_0, 'strobe'), (self.UConn2402_StatusMessage_0, 'strobe'))
-        self.msg_connect((self.blocks_message_strobe_random_0_0, 'strobe'), (self.UConn2402_StatusMessage_0_0, 'strobe'))
         self.msg_connect((self.ieee802_15_4_mac_0, 'pdu out'), (self.ieee802_15_4_oqpsk_phy_0, 'txin'))
         self.msg_connect((self.ieee802_15_4_mac_0, 'app out'), (self.ieee802_15_4_rime_stack_0, 'fromMAC'))
         self.msg_connect((self.ieee802_15_4_mac_0_0, 'pdu out'), (self.ieee802_15_4_oqpsk_phy_0_0, 'txin'))
