@@ -20,4 +20,9 @@ except ModuleNotFoundError:
     pass
 
 # import any pure python here
+from .GUIMessagePrefixer import GUIMessagePrefixer
+from .StatusMessage import StatusMessage
+
+
+
 #

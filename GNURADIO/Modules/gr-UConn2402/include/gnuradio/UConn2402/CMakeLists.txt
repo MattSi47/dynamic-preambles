@@ -11,8 +11,8 @@
 ########################################################################
 install(FILES
     api.h
-    CrossCorrUp.h
-    CrossCorrDown.h
     LFMChirpXCorr.h
-    DESTINATION include/gnuradio/UConn2402
+    Chirp.h
+    ArbitrarySync.h
+    ArbitrarySync2.h DESTINATION include/gnuradio/UConn2402
 )

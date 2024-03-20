@@ -16,12 +16,12 @@
 
 
  
- static const char *__doc_gr_UConn2402_CrossCorrDown = R"doc()doc";
+ static const char *__doc_gr_UConn2402_ArbitrarySync = R"doc()doc";
 
 
- static const char *__doc_gr_UConn2402_CrossCorrDown_CrossCorrDown = R"doc()doc";
+ static const char *__doc_gr_UConn2402_ArbitrarySync_ArbitrarySync = R"doc()doc";
 
 
- static const char *__doc_gr_UConn2402_CrossCorrDown_make = R"doc()doc";
+ static const char *__doc_gr_UConn2402_ArbitrarySync_make = R"doc()doc";
 
   

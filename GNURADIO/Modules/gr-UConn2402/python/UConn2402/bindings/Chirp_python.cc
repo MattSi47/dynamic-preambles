@@ -13,8 +13,8 @@
 /* If manual edits are made, the following tags should be modified accordingly.    */
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
-/* BINDTOOL_HEADER_FILE(CrossCorrDown.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(9109e67fc06c0d1289cf6662e6dc0c09)                     */
+/* BINDTOOL_HEADER_FILE(Chirp.h)                                        */
+/* BINDTOOL_HEADER_FILE_HASH(ad95fec3127be2d0b0b7287799dfa225)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -23,21 +23,26 @@
 
 namespace py = pybind11;
 
-#include <gnuradio/UConn2402/CrossCorrDown.h>
+#include <gnuradio/UConn2402/Chirp.h>
 // pydoc.h is automatically generated in the build directory
-#include <CrossCorrDown_pydoc.h>
+#include <Chirp_pydoc.h>
 
-void bind_CrossCorrDown(py::module& m)
+void bind_Chirp(py::module& m)
 {
 
-    using CrossCorrDown    = gr::UConn2402::CrossCorrDown;
+    using Chirp    = ::gr::UConn2402::Chirp;
 
 
-    py::class_<CrossCorrDown, gr::block, gr::basic_block,
-        std::shared_ptr<CrossCorrDown>>(m, "CrossCorrDown", D(CrossCorrDown))
+    py::class_<Chirp, gr::tagged_stream_block, gr::block, gr::basic_block,
+        std::shared_ptr<Chirp>>(m, "Chirp", D(Chirp))
 
-        .def(py::init(&CrossCorrDown::make),
-           D(CrossCorrDown,make)
+        .def(py::init(&Chirp::make),
+           py::arg("samp_rate"),
+           py::arg("B"),
+           py::arg("dur"),
+           py::arg("chirp_op"),
+           py::arg("pcklen"),
+           D(Chirp,make)
         )
         
 

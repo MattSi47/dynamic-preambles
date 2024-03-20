@@ -6,8 +6,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 install(FILES
-    UConn2402_CrossCorrUp.block.yml
-    UConn2402_CrossCorrDown.block.yml
     UConn2402_LFMChirpXCorr.block.yml
-    DESTINATION share/gnuradio/grc/blocks
+    UConn2402_Chirp.block.yml
+    UConn2402_ArbitrarySync.block.yml
+    UConn2402_GUIMessagePrefixer.block.yml
+    UConn2402_ArbitrarySync2.block.yml
+    UConn2402_StatusMessage.block.yml DESTINATION share/gnuradio/grc/blocks
 )

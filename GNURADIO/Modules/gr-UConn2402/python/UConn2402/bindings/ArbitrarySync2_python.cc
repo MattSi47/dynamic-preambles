@@ -13,8 +13,8 @@
 /* If manual edits are made, the following tags should be modified accordingly.    */
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
-/* BINDTOOL_HEADER_FILE(CrossCorrUp.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(c046b6b96d6781cd94584d155bd50c6d)                     */
+/* BINDTOOL_HEADER_FILE(ArbitrarySync2.h)                                        */
+/* BINDTOOL_HEADER_FILE_HASH(c7f1b385f089a885c7c3b4166b1e1e3a)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -23,21 +23,23 @@
 
 namespace py = pybind11;
 
-#include <gnuradio/UConn2402/CrossCorrUp.h>
+#include <gnuradio/UConn2402/ArbitrarySync2.h>
 // pydoc.h is automatically generated in the build directory
-#include <CrossCorrUp_pydoc.h>
+#include <ArbitrarySync2_pydoc.h>
 
-void bind_CrossCorrUp(py::module& m)
+void bind_ArbitrarySync2(py::module& m)
 {
 
-    using CrossCorrUp    = gr::UConn2402::CrossCorrUp;
+    using ArbitrarySync2    = ::gr::UConn2402::ArbitrarySync2;
 
 
-    py::class_<CrossCorrUp, gr::block, gr::basic_block,
-        std::shared_ptr<CrossCorrUp>>(m, "CrossCorrUp", D(CrossCorrUp))
+    py::class_<ArbitrarySync2, gr::block, gr::basic_block,
+        std::shared_ptr<ArbitrarySync2>>(m, "ArbitrarySync2", D(ArbitrarySync2))
 
-        .def(py::init(&CrossCorrUp::make),
-           D(CrossCorrUp,make)
+        .def(py::init(&ArbitrarySync2::make),
+           py::arg("threshold"),
+           py::arg("samples"),
+           D(ArbitrarySync2,make)
         )
         
 

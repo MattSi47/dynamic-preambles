@@ -22,7 +22,8 @@ add_subdirectory(bindings)
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    DESTINATION ${GR_PYTHON_DIR}/gnuradio/UConn2402
+    GUIMessagePrefixer.py
+    StatusMessage.py DESTINATION ${GR_PYTHON_DIR}/gnuradio/UConn2402
 )
 
 ########################################################################
@@ -39,3 +40,4 @@ add_custom_target(
   COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}
           ${CMAKE_BINARY_DIR}/test_modules/gnuradio/UConn2402/
 )
+GR_ADD_TEST(qa_ArbitrarySync2 ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_ArbitrarySync2.py)
