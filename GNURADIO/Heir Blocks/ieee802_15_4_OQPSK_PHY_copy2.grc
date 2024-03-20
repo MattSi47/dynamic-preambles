@@ -323,7 +323,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [770, 589]
+    coordinate: [1048, 596.0]
     rotation: 0
     state: enabled
 - name: foo_packet_pad2_0
@@ -376,7 +376,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1006, 621]
+    coordinate: [1288, 628.0]
     rotation: 0
     state: enabled
 - name: import_0
@@ -392,6 +392,25 @@ blocks:
     coordinate: [296, 12]
     rotation: 0
     state: enabled
+- name: interp_fir_filter_xxx_0
+  id: interp_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_delay: '0'
+    taps: '[.5,.5]'
+    type: fff
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [808, 612.0]
+    rotation: 0
+    state: true
 - name: note_0
   id: note
   parameters:
@@ -477,7 +496,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1175, 621]
+    coordinate: [1456, 628.0]
     rotation: 0
     state: enabled
 - name: pad_source_0
@@ -568,7 +587,7 @@ connections:
 - [blocks_packed_to_unpacked_xx_0, '0', advoqpsk_chiptosym_0, '0']
 - [blocks_packed_to_unpacked_xx_0, '0', digital_chunks_to_symbols_xx_0, '0']
 - [blocks_repeat_0, '0', blocks_multiply_xx_0, '1']
-- [blocks_sub_xx_0, '0', digital_clock_recovery_mm_xx_0, '0']
+- [blocks_sub_xx_0, '0', interp_fir_filter_xxx_0, '0']
 - [blocks_tag_gate_0, '0', blocks_float_to_complex_0, '1']
 - [blocks_tagged_stream_multiply_length_0, '0', foo_packet_pad2_0, '0']
 - [blocks_vector_source_x_0, '0', blocks_multiply_xx_0, '0']
@@ -577,6 +596,7 @@ connections:
 - [foo_packet_pad2_0, '0', blocks_complex_to_float_0, '0']
 - [ieee802_15_4_access_code_prefixer_0, out, pdu_pdu_to_tagged_stream_0, pdus]
 - [ieee802_15_4_packet_sink_0, out, pad_sink_1, in]
+- [interp_fir_filter_xxx_0, '0', digital_clock_recovery_mm_xx_0, '0']
 - [pad_source_0, '0', analog_quadrature_demod_cf_0, '0']
 - [pad_source_1, out, ieee802_15_4_access_code_prefixer_0, in]
 - [pdu_pdu_to_tagged_stream_0, '0', blocks_packed_to_unpacked_xx_0, '0']

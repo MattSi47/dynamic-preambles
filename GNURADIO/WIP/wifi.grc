@@ -490,7 +490,7 @@ blocks:
     bus_structure: null
     coordinate: [992, 220.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: UConn2402_StatusMessage_0_0
   id: UConn2402_StatusMessage
   parameters:
@@ -506,7 +506,7 @@ blocks:
     bus_structure: null
     coordinate: [952, 924.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: blocks_message_strobe_random_0
   id: blocks_message_strobe_random
   parameters:
@@ -525,7 +525,7 @@ blocks:
     bus_structure: null
     coordinate: [624, 196.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: blocks_message_strobe_random_0_0
   id: blocks_message_strobe_random
   parameters:
@@ -544,7 +544,7 @@ blocks:
     bus_structure: null
     coordinate: [632, 900.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: blocks_multiply_const_vxx_0_0
   id: blocks_multiply_const_vxx
   parameters:

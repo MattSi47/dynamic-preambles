@@ -30,6 +30,7 @@ from gnuradio.filter import firdes
 import sip
 from gnuradio import UConn2402
 from gnuradio import blocks
+import pmt
 from gnuradio import gr
 from gnuradio.fft import window
 import signal
@@ -412,6 +413,10 @@ class wifi(gr.top_block, Qt.QWidget):
         self.blocks_multiply_const_vxx_0_0_0.set_min_output_buffer(100000)
         self.blocks_multiply_const_vxx_0_0 = blocks.multiply_const_cc(0.2)
         self.blocks_multiply_const_vxx_0_0.set_min_output_buffer(100000)
+        self.blocks_message_strobe_random_0_0 = blocks.message_strobe_random(pmt.intern("Wifi-Device2"), blocks.STROBE_POISSON, 3000, 3000)
+        self.blocks_message_strobe_random_0 = blocks.message_strobe_random(pmt.intern("Wifi-Device1"), blocks.STROBE_POISSON, 3000, 3000)
+        self.UConn2402_StatusMessage_0_0 = UConn2402.StatusMessage(0)
+        self.UConn2402_StatusMessage_0 = UConn2402.StatusMessage(0)
         self.UConn2402_LFMChirpXCorr_0_0 = UConn2402.LFMChirpXCorr(5000000, 2000000, .000040)
         self.UConn2402_LFMChirpXCorr_0 = UConn2402.LFMChirpXCorr(5000000, 2000000, .000040)
         self.UConn2402_GUIMessagePrefixer_0_0 = UConn2402.GUIMessagePrefixer('Wifi-Device2: ')
@@ -431,6 +436,10 @@ class wifi(gr.top_block, Qt.QWidget):
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0, 'clear'), (self.qtgui_edit_box_msg_0, 'val'))
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0_0, 'msg_out'), (self.ieee802_11_mac_0_0, 'app in'))
         self.msg_connect((self.UConn2402_GUIMessagePrefixer_0_0, 'clear'), (self.qtgui_edit_box_msg_0_0, 'val'))
+        self.msg_connect((self.UConn2402_StatusMessage_0, 'status'), (self.ieee802_11_mac_0, 'app in'))
+        self.msg_connect((self.UConn2402_StatusMessage_0_0, 'status'), (self.ieee802_11_mac_0_0, 'app in'))
+        self.msg_connect((self.blocks_message_strobe_random_0, 'strobe'), (self.UConn2402_StatusMessage_0, 'strobe'))
+        self.msg_connect((self.blocks_message_strobe_random_0_0, 'strobe'), (self.UConn2402_StatusMessage_0_0, 'strobe'))
         self.msg_connect((self.ieee802_11_mac_0, 'app out'), (self.UConn2402_ArbitrarySync2_0, 'stop'))
         self.msg_connect((self.ieee802_11_mac_0, 'app out'), (self.network_socket_pdu_0_0, 'pdus'))
         self.msg_connect((self.ieee802_11_mac_0, 'phy out'), (self.wifi_phy_hier_0, 'mac_in'))
@@ -448,11 +457,11 @@ class wifi(gr.top_block, Qt.QWidget):
         self.connect((self.UConn2402_Chirp_0_0, 0), (self.blocks_multiply_const_vxx_0_0, 0))
         self.connect((self.UConn2402_Chirp_0_0, 0), (self.blocks_multiply_const_vxx_1, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.UConn2402_ArbitrarySync2_0, 1))
-        self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1_0_0, 1))
+        self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0_0, 1), (self.UConn2402_ArbitrarySync2_0_0, 1))
-        self.connect((self.UConn2402_LFMChirpXCorr_0_0, 0), (self.qtgui_time_sink_x_1_0_0_0, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0_0, 1), (self.qtgui_time_sink_x_1_0_0_0, 1))
+        self.connect((self.UConn2402_LFMChirpXCorr_0_0, 0), (self.qtgui_time_sink_x_1_0_0_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.uhd_usrp_sink_0_1, 1))
         self.connect((self.blocks_multiply_const_vxx_0_0_0, 0), (self.uhd_usrp_sink_0_1_0, 0))
         self.connect((self.blocks_multiply_const_vxx_1, 0), (self.uhd_usrp_sink_0_1, 0))

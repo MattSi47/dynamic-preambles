@@ -13,8 +13,8 @@ import math
 from gnuradio import blocks
 from gnuradio import digital
 from gnuradio import filter
-from gnuradio import gr
 from gnuradio.filter import firdes
+from gnuradio import gr
 from gnuradio.fft import window
 import sys
 import signal
@@ -49,6 +49,8 @@ class ieee802_15_4_oqpsk_phy(gr.hier_block2):
         ##################################################
         self.single_pole_iir_filter_xx_0 = filter.single_pole_iir_filter_ff(0.00016, 1)
         self.pdu_pdu_to_tagged_stream_0 = pdu.pdu_to_tagged_stream(gr.types.byte_t, 'packet_len')
+        self.interp_fir_filter_xxx_0 = filter.interp_fir_filter_fff(1, [.5,.5])
+        self.interp_fir_filter_xxx_0.declare_sample_delay(0)
         self.ieee802_15_4_packet_sink_0 = ieee802_15_4.packet_sink(10)
         self.ieee802_15_4_access_code_prefixer_0 = ieee802_15_4.access_code_prefixer(0x00,0x000000a7)
         self.foo_packet_pad2_0 = foo.packet_pad2(False, False, 0.001, 0, 8)
@@ -87,12 +89,13 @@ class ieee802_15_4_oqpsk_phy(gr.hier_block2):
         self.connect((self.blocks_multiply_xx_0, 0), (self.blocks_tagged_stream_multiply_length_0, 0))
         self.connect((self.blocks_packed_to_unpacked_xx_0, 0), (self.advoqpsk_chiptosym_0, 0))
         self.connect((self.blocks_repeat_0, 0), (self.blocks_multiply_xx_0, 1))
-        self.connect((self.blocks_sub_xx_0, 0), (self.digital_clock_recovery_mm_xx_0, 0))
+        self.connect((self.blocks_sub_xx_0, 0), (self.interp_fir_filter_xxx_0, 0))
         self.connect((self.blocks_tag_gate_0, 0), (self.blocks_float_to_complex_0, 1))
         self.connect((self.blocks_tagged_stream_multiply_length_0, 0), (self.foo_packet_pad2_0, 0))
         self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_multiply_xx_0, 0))
         self.connect((self.digital_clock_recovery_mm_xx_0, 0), (self.ieee802_15_4_packet_sink_0, 0))
         self.connect((self.foo_packet_pad2_0, 0), (self.blocks_complex_to_float_0, 0))
+        self.connect((self.interp_fir_filter_xxx_0, 0), (self.digital_clock_recovery_mm_xx_0, 0))
         self.connect((self, 0), (self.analog_quadrature_demod_cf_0, 0))
         self.connect((self.pdu_pdu_to_tagged_stream_0, 0), (self.blocks_packed_to_unpacked_xx_0, 0))
         self.connect((self.single_pole_iir_filter_xx_0, 0), (self.blocks_sub_xx_0, 1))
