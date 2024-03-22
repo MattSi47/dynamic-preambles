@@ -12,31 +12,30 @@ os.chdir(sys.path[0])
 from pymoo.core.problem import Problem
 from pymoo.algorithms.moo.nsga2 import NSGA2
 from pymoo.optimize import minimize
-from pymoo.visualization.scatter import Scatter
+# from pymoo.visualization.scatter import Scatter
 
 from pymoo.algorithms.soo.nonconvex.ga import GA
 from pymoo.operators.crossover.sbx import SBX
 from pymoo.operators.mutation.pm import PM
-from pymoo.operators.repair.rounding import RoundingRepair
-from pymoo.operators.sampling.rnd import IntegerRandomSampling
-#issue: original optimization used nearly unlimited precision. Here we limit to 12 bit integers (-2048 to 2047)
-
+# from pymoo.operators.repair.rounding import RoundingRepair
+from pymoo.operators.sampling.rnd import FloatRandomSampling
 
 class preamble_optimization(Problem):
     def __init__(self, M, N):
         
         # number of samples per signal
-        self.N = N
+        self.N = round(N)
         # of signals to optimize
-        self.M = M
+        self.M = round(M)
         
-        self.K = np.floor(N/2)
-        super().__init__(n_var=2*self.K, n_obj=2, xl=-10, xu=10, vtype=float, elementwise_evaluation=True)
+        # num coeffs per signal
+        self.K = round(np.floor(N/2))
+        super().__init__(n_var=2*self.K*self.M, n_obj=2, xl=-10, xu=10, vtype=float, elementwise_evaluation=True)
 
         # of form:
         # [
-        #     [alpha1, beta1, alpha2, beta2,..., alphaK, betaK], #gen 0
-        #     [alpha1, beta1, alpha2, beta2,..., alphaK, betaK], #gen 1
+        #     [[max_ISL1, max_max_crosscorr1], [max_ISL2, max_max_crosscorr1], ...], #gen 0
+        #     [[max_ISL1, max_max_crosscorr1], [max_ISL2, max_max_crosscorr1], ...], #gen 1
         #     ...
         # ]
 
@@ -47,9 +46,10 @@ class preamble_optimization(Problem):
 
     #generates waveform for ONE signal set worth of coefficients   
     def gen_waveforms(self, a_mat, b_mat):
+        # print(f'shape of b_mat: {np.shape(b_mat)}')
         n = np.linspace(0, self.N-1, self.N)
         phi = 0*n
-        signals = np.zeros((self.M, self.N))
+        signals = np.zeros((self.M, self.N), dtype='complex_')
         for m in range(0, self.M):
             #vectors of a_k and b_k coeffs
             a_vec = a_mat[m]
@@ -57,26 +57,34 @@ class preamble_optimization(Problem):
             
             phi_m = np.zeros(self.N)
 
-            for k in range(0, self.K):
+            for k in range(1, self.K+1):
                 factor = self.N/(2*np.pi*k)
-                alpha = a_vec[k]*factor
-                beta = b_vec*factor
+                # arrays are 0-based
+                alpha = a_vec[k-1]*factor
+                beta = b_vec[k-1]*factor
 
-                phi_m = phi + alpha*np.sin(2*np.pi*k*n/N) - beta*np.cos(2*np.pi*k*n/N)
+                phi_m = phi + alpha*np.sin(2*np.pi*k*n/self.N) - beta*np.cos(2*np.pi*k*n/self.N)
             # emulate 12 bit system (plus or minus 2048 max)
-            s_m_tilde = round(2047 * np.exp(1j*2*np.pi * phi_m))
+            s_m_tilde = np.round(2047 * np.exp(1j*2*np.pi * phi_m))
             #normalize to unit energy for conveniance
-            signals[m] = s_m_tilde/np.sqrt(np.sum(np.square(s_m_tilde)))
+            signals[m] = s_m_tilde/np.sqrt(np.sum(np.square(np.abs(s_m_tilde))))
         
         return signals
 
-    # TODO: change to ISR (or PSR) metric
-    def autocorr_obj_fn(self, S):
-        norm_S = [Sn / np.sqrt(np.sum(np.square(Sn))) for Sn in S]
-        sig_ac_sorted = [sorted(signal.correlate(Sn, Sn), reverse=True) for Sn in norm_S]
-        # maximize distance between largest and second largest value
-        min_alpha = min([sorted_list[0]-sorted_list[1] for sorted_list in sig_ac_sorted])
-        return -min_alpha
+    # Want to minimize the max ISR
+    def ISL_obj_fn(self, signals):
+        signals_AC = [signal.correlate(s_m, s_m) for s_m in signals]
+        #location of mainlobe at max AC value:
+        ISLs = []
+        for m in range(self.M):
+            ACmag_m = np.abs(signals_AC[m])
+
+            ISL_acc = 0
+            for l in range(self.N-1, 2*self.N-1):
+                ISL_acc = ISL_acc + ACmag_m[l]
+            
+            ISLs.append(ISL_acc)
+        return max(ISLs)
     
     # want to minimize the maximum cross correlation between 2 signals:
     def crosscorr_obj_fn(self, signals):
@@ -92,24 +100,69 @@ class preamble_optimization(Problem):
         max_max_xcorr = max(max_crosscorr)
         return max_max_xcorr
     
+    def flat_coeffs_to_4D(self, coeff_flat_arr):
+        #print(f'length of coeff_flat_arr in flat_coeffs_to_4D = {len(coeff_flat_arr)}, shape = {np.shape(coeff_flat_arr)}')
+        #print(f'num coeffs per set in flat_coeffs_to_4D = {len(coeff_flat_arr[0])}')
+
+        # J x M x 2K arrays of coefficients for all signal sets within generation
+        generation_coeffs = [np.array(np.reshape(coeff_set, (round(self.M), 2*self.K))) for coeff_set in coeff_flat_arr]
+        #print(f'Shape of generation_coeffs in flat_coeffs_to_4D: {np.shape(generation_coeffs)}')
+        
+        coeffs = [np.hsplit(coeff_set, 2) for coeff_set in generation_coeffs]
+        #print(f'coeffs shape in flat_coeffs_to_4D: {np.shape(coeffs)}')
+        # J x M x K
+        generation_A_mat = []
+        generation_B_mat = []
+
+        for coeff_set in coeffs:
+            generation_A_mat.append(coeff_set[0])
+            generation_B_mat.append(coeff_set[1])
+
+        # dimensions: 2 x J x M x K
+        return([generation_A_mat,generation_B_mat])
+    
     # TODO: FIX
     # Calls evaluation function on each generation of results, outputs those results
-    # S_new_gen_flat_array has dimensions (num designs per gen) x (M*N)
-    def _evaluate(self, S_new_gen_flat_array, out, *args, **kwargs):
-        #Array of entire generation of M x N array of signal row vectors
-        S_generation = np.array([np.reshape(Si, (self.M, self.N)) for Si in S_new_gen_flat_array])
+    # coeff_flat_arr has dimensions (num designs per gen) x (2*K)
+    def _evaluate(self, coeff_flat_arr, out, *args, **kwargs):
+        # print(f'length of coeff_flat_arr = {len(coeff_flat_arr)}, shape = {np.shape(coeff_flat_arr)}')
+        # print(f'num coeffs per set = {len(coeff_flat_arr[0])}')
+
+        # # J x M x 2K arrays of coefficients for all signal sets within generation
+        # generation_coeffs = [np.array(np.reshape(coeff_set, (round(self.M), 2*self.K))) for coeff_set in coeff_flat_arr]
+        # print(f'Shape of generation_coeffs in _evaluate: {np.shape(generation_coeffs)}')
+        
+        # coeffs = [np.hsplit(coeff_set, 2) for coeff_set in generation_coeffs]
+        # print(f'coeffs shape: {np.shape(coeffs)}')
+        # # J x M x K
+        # generation_A_mat = []
+        # generation_B_mat = []
+
+        # for coeff_set in coeffs:
+        #     generation_A_mat.append(coeff_set[0])
+        #     generation_B_mat.append(coeff_set[1])
+
+        generation_all_coeffs = self.flat_coeffs_to_4D(coeff_flat_arr)
+        #print(f'Shape of generation_all_coeffs in _evaluate: {np.shape(generation_all_coeffs)}')
+        generation_A_mat = generation_all_coeffs[0]
+        generation_B_mat = generation_all_coeffs[1]
+        
+
+        #print(f'Shape of generation_B_mat in _evaluate: {np.shape(generation_B_mat)}')
         gen_results = []
         self.data.append([])
-        for Si in S_generation:
 
-            worst_autocorr = self.autocorr_obj_fn(Si)
-            worst_crosscorr = self.crosscorr_obj_fn(Si)
-            
-            #undo the (-) to make it a maximin from the minimax
-            self.data[self._gen_num].append([-worst_autocorr, worst_crosscorr])
-            gen_results.append([worst_autocorr, worst_crosscorr])
+        #print(len(generation_all_coeffs))
 
+        for j in range(len(generation_all_coeffs[0])):
+            signal_set = self.gen_waveforms(generation_A_mat[j], generation_B_mat[j])
+            max_ISL = self.ISL_obj_fn(signal_set)
+            max_max_crosscorr = self.crosscorr_obj_fn(signal_set)
+            self.data[self._gen_num].append([max_ISL, max_max_crosscorr])
+            gen_results.append([max_ISL, max_max_crosscorr])
+        print(self._gen_num)
         self._gen_num += 1
+        #print(f'shape of gen_results: {np.shape(gen_results)}')
         out["F"] = np.array(gen_results)
 
 if __name__ == "__main__":
@@ -121,7 +174,7 @@ if __name__ == "__main__":
     # 40uS symbol period
     T_sig = 40e-6 
     # number of signals to optimize
-    M = 6
+    M = 4
     # number of samples per signal
     N = int(T_sig/Ts)
     # Create an instance of the optimization problem
@@ -130,20 +183,20 @@ if __name__ == "__main__":
 
     # Choose the optimization algorithm (NSGA-II in this case)
     algorithm = NSGA2(
-        pop_size=500,
-        sampling=IntegerRandomSampling(),
-        crossover=SBX(prob=1.0, eta=3.0, vtype=int, repair=RoundingRepair()),
-        mutation=PM(prob=1.0, eta=3.0, vtype=int, repair=RoundingRepair())
+        pop_size=25,
+        sampling=FloatRandomSampling(),
+        crossover=SBX(prob=1.0, eta=3.0, vtype=float),
+        mutation=PM(prob=1.0, eta=3.0, vtype=float)
     )
 
     # Perform the optimization
     result = minimize(problem, algorithm)
 
-    pareto_set = np.array([np.array(np.reshape(sig_set, (M, N))) for sig_set in result.X])
+    pareto_set = np.array(result.X)
     optimization_history = np.array(problem.data)
 
     #save data set
     timestamp = datetime.datetime.now()
     format_timestamp = timestamp.strftime("%Y-%m-%d_%H-%M-%S")
-    np.save(f"pareto-signals_M{M}-N{N}_{format_timestamp}.npy", pareto_set)
-    np.save(f"optimization-data_{format_timestamp}.npy", optimization_history)
+    np.save(f"opt_signals/pareto-signals_M{M}-N{N}_{format_timestamp}.npy", pareto_set)
+    np.save(f"opt_signals/optimization-data_{format_timestamp}.npy", optimization_history)
