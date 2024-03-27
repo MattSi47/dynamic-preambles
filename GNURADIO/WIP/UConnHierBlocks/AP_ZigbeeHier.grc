@@ -347,9 +347,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 584.0]
+    coordinate: [680, 544.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: UConn2402_ArbitrarySync2_1
   id: UConn2402_ArbitrarySync2
   parameters:
@@ -366,7 +366,7 @@ blocks:
     bus_structure: null
     coordinate: [744, 1368.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: UConn2402_Chirp_0
   id: UConn2402_Chirp
   parameters:
@@ -384,9 +384,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2064, 1372.0]
+    coordinate: [1688, 1356.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: UConn2402_Chirp_0_0
   id: UConn2402_Chirp
   parameters:
@@ -404,9 +404,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1536, 580.0]
+    coordinate: [2144, 548.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: UConn2402_GUIMessagePrefixer_0
   id: UConn2402_GUIMessagePrefixer
   parameters:
@@ -422,7 +422,7 @@ blocks:
     bus_structure: null
     coordinate: [1504, 1520.0]
     rotation: 180
-    state: true
+    state: disabled
 - name: UConn2402_GUIMessagePrefixer_0_0
   id: UConn2402_GUIMessagePrefixer
   parameters:
@@ -436,9 +436,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [696, 808.0]
+    coordinate: [656, 800.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: UConn2402_LFMChirpXCorr_0
   id: UConn2402_LFMChirpXCorr
   parameters:
@@ -456,7 +456,7 @@ blocks:
     bus_structure: null
     coordinate: [536, 1132.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: UConn2402_LFMChirpXCorr_0_0
   id: UConn2402_LFMChirpXCorr
   parameters:
@@ -472,9 +472,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [368, 404.0]
+    coordinate: [240, 364.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: UConn2402_StatusMessage_0
   id: UConn2402_StatusMessage
   parameters:
@@ -556,9 +556,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2040, 1268.0]
+    coordinate: [1496, 1292.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_tagged_stream_multiply_length_0
   id: blocks_tagged_stream_multiply_length
   parameters:
@@ -575,7 +575,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1984, 784.0]
+    coordinate: [1640, 568.0]
     rotation: 0
     state: true
 - name: graph
@@ -629,7 +629,7 @@ blocks:
     bus_structure: null
     coordinate: [1144, 1444.0]
     rotation: 180
-    state: enabled
+    state: disabled
 - name: ieee802_15_4_mac_0
   id: ieee802_15_4_mac
   parameters:
@@ -702,9 +702,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2912, 1132.0]
+    coordinate: [2304, 796.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: note_0
   id: note
   parameters:
@@ -716,6 +716,82 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [1648, 20.0]
+    rotation: 0
+    state: true
+- name: pad_sink_0
+  id: pad_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: out
+    num_streams: '1'
+    optional: 'False'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1944, 580.0]
+    rotation: 0
+    state: true
+- name: pad_sink_1
+  id: pad_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: out
+    num_streams: '1'
+    optional: 'False'
+    type: message
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1440, 820.0]
+    rotation: 0
+    state: true
+- name: pad_source_0
+  id: pad_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: in
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_streams: '1'
+    optional: 'False'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [944, 564.0]
+    rotation: 0
+    state: true
+- name: pad_source_1
+  id: pad_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: in
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_streams: '1'
+    optional: 'False'
+    type: message
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [920, 820.0]
     rotation: 0
     state: true
 - name: qtgui_edit_box_msg_0
@@ -739,7 +815,7 @@ blocks:
     bus_structure: null
     coordinate: [1496, 1596.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_edit_box_msg_0_0
   id: qtgui_edit_box_msg
   parameters:
@@ -759,9 +835,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [696, 884.0]
+    coordinate: [688, 892.0]
     rotation: 180
-    state: true
+    state: disabled
 - name: qtgui_time_sink_x_0_0_1
   id: qtgui_time_sink_x
   parameters:
@@ -856,9 +932,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1720, 1236.0]
+    coordinate: [1768, 1188.0]
     rotation: 180
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_0_0_1_0
   id: qtgui_time_sink_x
   parameters:
@@ -953,9 +1029,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1544, 444.0]
+    coordinate: [2112, 332.0]
     rotation: 180
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_1_0
   id: qtgui_time_sink_x
   parameters:
@@ -1050,9 +1126,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 324.0]
+    coordinate: [600, 284.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_1_0_0
   id: qtgui_time_sink_x
   parameters:
@@ -1149,7 +1225,7 @@ blocks:
     bus_structure: null
     coordinate: [824, 1220.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: rational_resampler_xxx_0
   id: rational_resampler_xxx
   parameters:
@@ -1167,9 +1243,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [316.0, 696]
+    coordinate: [292.0, 752]
     rotation: 90
-    state: true
+    state: disabled
 - name: rational_resampler_xxx_1
   id: rational_resampler_xxx
   parameters:
@@ -1187,7 +1263,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1728, 756.0]
+    coordinate: [1384, 540.0]
     rotation: 0
     state: true
 - name: uhd_usrp_sink_0
@@ -1464,9 +1540,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2496, 676.0]
+    coordinate: [2488, 524.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: uhd_usrp_sink_0_0
   id: uhd_usrp_sink
   parameters:
@@ -1741,9 +1817,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2376, 1356.0]
+    coordinate: [2104, 1332.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: uhd_usrp_source_0
   id: uhd_usrp_source
   parameters:
@@ -2179,7 +2255,7 @@ blocks:
     bus_structure: null
     coordinate: [72, 964.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: virtual_sink_0
   id: virtual_sink
   parameters:
@@ -2190,9 +2266,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1368, 820.0]
+    coordinate: [1600, 828.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: virtual_sink_0_0
   id: virtual_sink
   parameters:
@@ -2205,7 +2281,7 @@ blocks:
     bus_structure: null
     coordinate: [840, 1540.0]
     rotation: 180
-    state: true
+    state: disabled
 - name: virtual_source_0
   id: virtual_source
   parameters:
@@ -2216,9 +2292,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2640, 1212.0]
+    coordinate: [2032, 876.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: virtual_source_0_0
   id: virtual_source
   parameters:
@@ -2231,7 +2307,7 @@ blocks:
     bus_structure: null
     coordinate: [464, 1484.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: virtual_source_1
   id: virtual_source
   parameters:
@@ -2242,9 +2318,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2632, 1068.0]
+    coordinate: [2024, 732.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: virtual_source_1_0
   id: virtual_source
   parameters:
@@ -2255,9 +2331,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [504, 636.0]
+    coordinate: [424, 684.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: wifi_phy_hier_0
   id: wifi_phy_hier
   parameters:
@@ -2277,19 +2353,17 @@ blocks:
     bus_structure: null
     coordinate: [1144, 1260.0]
     rotation: 0
-    state: enabled
+    state: disabled
 
 connections:
-- [UConn2402_ArbitrarySync2_0, '0', ieee802_15_4_oqpsk_phy_0, '0']
 - [UConn2402_ArbitrarySync2_1, '0', wifi_phy_hier_0, '0']
-- [UConn2402_Chirp_0, '0', blocks_multiply_const_vxx_0, '0']
 - [UConn2402_Chirp_0, '0', qtgui_time_sink_x_0_0_1, '0']
+- [UConn2402_Chirp_0, '0', uhd_usrp_sink_0_0, '0']
 - [UConn2402_Chirp_0_0, '0', qtgui_time_sink_x_0_0_1_0, '0']
-- [UConn2402_Chirp_0_0, '0', rational_resampler_xxx_1, '0']
+- [UConn2402_Chirp_0_0, '0', uhd_usrp_sink_0, '0']
 - [UConn2402_GUIMessagePrefixer_0, clear, qtgui_edit_box_msg_0, val]
 - [UConn2402_GUIMessagePrefixer_0, msg_out, ieee802_11_mac_0, app in]
 - [UConn2402_GUIMessagePrefixer_0_0, clear, qtgui_edit_box_msg_0_0, val]
-- [UConn2402_GUIMessagePrefixer_0_0, msg_out, ieee802_15_4_rime_stack_0, bcin]
 - [UConn2402_LFMChirpXCorr_0, '0', qtgui_time_sink_x_1_0_0, '0']
 - [UConn2402_LFMChirpXCorr_0, '1', UConn2402_ArbitrarySync2_1, '1']
 - [UConn2402_LFMChirpXCorr_0, '1', qtgui_time_sink_x_1_0_0, '1']
@@ -2300,16 +2374,18 @@ connections:
 - [UConn2402_StatusMessage_0_0, status, ieee802_11_mac_0, app in]
 - [blocks_message_strobe_0, strobe, UConn2402_StatusMessage_0, strobe]
 - [blocks_message_strobe_0_0, strobe, UConn2402_StatusMessage_0_0, strobe]
-- [blocks_multiply_const_vxx_0, '0', uhd_usrp_sink_0_0, '0']
-- [blocks_tagged_stream_multiply_length_0, '0', uhd_usrp_sink_0, '0']
+- [blocks_multiply_const_vxx_0, '0', UConn2402_Chirp_0, '0']
+- [blocks_tagged_stream_multiply_length_0, '0', pad_sink_0, '0']
 - [ieee802_11_mac_0, app out, virtual_sink_0_0, '0']
 - [ieee802_11_mac_0, phy out, wifi_phy_hier_0, mac_in]
 - [ieee802_15_4_mac_0, app out, ieee802_15_4_rime_stack_0, fromMAC]
 - [ieee802_15_4_mac_0, pdu out, ieee802_15_4_oqpsk_phy_0, txin]
-- [ieee802_15_4_oqpsk_phy_0, '0', UConn2402_Chirp_0_0, '0']
+- [ieee802_15_4_oqpsk_phy_0, '0', rational_resampler_xxx_1, '0']
 - [ieee802_15_4_oqpsk_phy_0, rxout, ieee802_15_4_mac_0, pdu in]
-- [ieee802_15_4_rime_stack_0, bcout, virtual_sink_0, '0']
+- [ieee802_15_4_rime_stack_0, bcout, pad_sink_1, in]
 - [ieee802_15_4_rime_stack_0, toMAC, ieee802_15_4_mac_0, app in]
+- [pad_source_0, '0', ieee802_15_4_oqpsk_phy_0, '0']
+- [pad_source_1, out, ieee802_15_4_rime_stack_0, bcin]
 - [qtgui_edit_box_msg_0, msg, UConn2402_GUIMessagePrefixer_0, msg_in]
 - [qtgui_edit_box_msg_0_0, msg, UConn2402_GUIMessagePrefixer_0_0, msg_in]
 - [rational_resampler_xxx_0, '0', UConn2402_ArbitrarySync2_0, '0']
@@ -2322,7 +2398,7 @@ connections:
 - [virtual_source_0_0, '0', UConn2402_ArbitrarySync2_1, stop]
 - [virtual_source_1, '0', network_socket_pdu_0_0, pdus]
 - [virtual_source_1_0, '0', UConn2402_ArbitrarySync2_0, stop]
-- [wifi_phy_hier_0, '0', UConn2402_Chirp_0, '0']
+- [wifi_phy_hier_0, '0', blocks_multiply_const_vxx_0, '0']
 - [wifi_phy_hier_0, mac_out, ieee802_11_mac_0, phy in]
 
 metadata:
