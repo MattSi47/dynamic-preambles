@@ -15,5 +15,6 @@ install(FILES
     Chirp.h
     ArbitrarySync.h
     ArbitrarySync2.h
-    Preamble.h DESTINATION include/gnuradio/UConn2402
+    Preamble.h
+    fftXCorr.h DESTINATION include/gnuradio/UConn2402
 )

@@ -32,7 +32,8 @@ list(APPEND UConn2402_python_files
     Chirp_python.cc
     ArbitrarySync_python.cc
     ArbitrarySync2_python.cc
-    Preamble_python.cc python_bindings.cc)
+    Preamble_python.cc
+    fftXCorr_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(UConn2402
    ../../..

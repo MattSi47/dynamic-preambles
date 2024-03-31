@@ -53,7 +53,7 @@ Preamble_impl::Preamble_impl(const char* filename, const std::string& pcklen)
         if (std::sscanf(token.c_str(), "(%lf|%lf)", &real, &imag) == 2) {
             d_preamble.emplace_back(real, imag);
         } else {
-            std::cerr << "Invaild File Format| Error parsing token: " << token << std::endl;
+            std::cerr << "Invalid File Format| Error parsing token: " << token << std::endl;
         }
     }
     std::cerr << "Preamble length: " << d_preamble.size() << " samples" << std::endl;
