@@ -25,6 +25,7 @@ namespace py = pybind11;
     void bind_Chirp(py::module& m);
     void bind_ArbitrarySync(py::module& m);
     void bind_ArbitrarySync2(py::module& m);
+    void bind_Preamble(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -57,5 +58,6 @@ PYBIND11_MODULE(UConn2402_python, m)
     bind_Chirp(m);
     bind_ArbitrarySync(m);
     bind_ArbitrarySync2(m);
+    bind_Preamble(m);
     // ) END BINDING_FUNCTION_CALLS
 }
