@@ -1,0 +1,37 @@
+id: wifiAP
+label: 'Wi-Fi Physical Layer '
+category: '[GRC Hier Blocks]'
+
+parameters:
+-   id: freq
+    label: frequency
+    dtype: real
+    default: '0'
+    hide: none
+
+inputs:
+-   label: in
+    dtype: complex
+    vlen: 1
+-   label: msg_in
+    domain: message
+    dtype: message
+
+outputs:
+-   label: msg_out
+    domain: message
+    dtype: message
+-   label: out
+    dtype: complex
+    vlen: 1
+
+templates:
+    imports: 'from wifiAP import wifiAP  # grc-generated hier_block'
+    make: "wifiAP(\n    freq=${ freq },\n)"
+    callbacks:
+    - set_freq(${ freq })
+
+documentation: /home/uconnsd2402/Documents/GitHub/dynamic-preambles/GNURADIO/WIP/UConnHierBlocks/wifiAP.py
+grc_source: /home/uconnsd2402/Documents/GitHub/dynamic-preambles/GNURADIO/WIP/UConnHierBlocks/AP_WiFiHier.grc
+
+file_format: 1

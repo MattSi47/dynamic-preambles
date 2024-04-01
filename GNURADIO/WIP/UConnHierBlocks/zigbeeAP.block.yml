@@ -1,0 +1,31 @@
+id: zigbeeAP
+label: Zigbee Physical Layer
+category: '[GRC Hier Blocks]'
+
+parameters: []
+
+inputs:
+-   label: in
+    dtype: complex
+    vlen: 1
+-   label: msg_in
+    domain: message
+    dtype: message
+
+outputs:
+-   label: out
+    dtype: complex
+    vlen: 1
+-   label: msg_out
+    domain: message
+    dtype: message
+
+templates:
+    imports: 'from zigbeeAP import zigbeeAP  # grc-generated hier_block'
+    make: zigbeeAP()
+    callbacks: []
+
+documentation: /home/uconnsd2402/Documents/GitHub/dynamic-preambles/GNURADIO/WIP/UConnHierBlocks/zigbeeAP.py
+grc_source: /home/uconnsd2402/Documents/GitHub/dynamic-preambles/GNURADIO/WIP/UConnHierBlocks/AP_ZigbeeHier.grc
+
+file_format: 1
