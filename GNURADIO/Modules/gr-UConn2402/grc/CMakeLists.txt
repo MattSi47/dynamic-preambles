@@ -11,5 +11,7 @@ install(FILES
     UConn2402_ArbitrarySync.block.yml
     UConn2402_GUIMessagePrefixer.block.yml
     UConn2402_ArbitrarySync2.block.yml
-    UConn2402_StatusMessage.block.yml DESTINATION share/gnuradio/grc/blocks
+    UConn2402_StatusMessage.block.yml
+    UConn2402_Preamble.block.yml
+    UConn2402_fftXCorr.block.yml DESTINATION share/gnuradio/grc/blocks
 )

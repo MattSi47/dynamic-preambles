@@ -18,7 +18,9 @@ list(APPEND UConn2402_sources
     #XCorrBuffer_impl.cc
     Chirp_impl.cc
     ArbitrarySync_impl.cc
-    ArbitrarySync2_impl.cc )
+    ArbitrarySync2_impl.cc
+    Preamble_impl.cc
+    fftXCorr_impl.cc )
 
 set(UConn2402_sources "${UConn2402_sources}" PARENT_SCOPE)
 if(NOT UConn2402_sources)
