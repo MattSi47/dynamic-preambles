@@ -29,6 +29,7 @@ private:
 public:
     fftXCorr_impl(const char* filename);
     ~fftXCorr_impl();
+    void open(const char* filename);
 
     // Where all the action really happens
     void forecast(int noutput_items, gr_vector_int& ninput_items_required);

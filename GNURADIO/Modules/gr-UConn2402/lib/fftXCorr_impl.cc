@@ -31,6 +31,40 @@ fftXCorr_impl::fftXCorr_impl(const char* filename)
       d_fft(K, 1),
       d_ifft(K, 1)
 {
+    open(filename);
+}
+
+/*
+ * Our virtual destructor.
+ */
+fftXCorr_impl::~fftXCorr_impl() {}
+
+void fftXCorr_impl::fft(const gr_complex* sig, gr_complex* res)
+{
+    memcpy(d_fft.get_inbuf(), sig, sizeof(gr_complex) * K);
+    d_fft.execute();
+    memcpy(res, d_fft.get_outbuf(), sizeof(gr_complex) * K);
+}
+void fftXCorr_impl::ifft(const gr_complex* sig, gr_complex* res)
+{
+    memcpy(d_ifft.get_inbuf(), sig, sizeof(gr_complex) * K);
+    d_ifft.execute();
+    memcpy(res, d_ifft.get_outbuf(), sizeof(gr_complex) * K);
+}
+void fftXCorr_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)
+{
+    ninput_items_required[0] = noutput_items + (numsamples - 1);
+}
+
+void fftXCorr_impl::open(const char* filename){
+    
+    d_preamble.clear();
+
+    for (int i = 0; i < K; ++i) {
+        fft_preamble[i] = gr_complex(0.0f, 0.0f);
+    }
+
+
     std::ifstream file(filename);
     if (!file.is_open()) {
         std::cerr << "Error opening file: " << filename << std::endl;
@@ -73,27 +107,6 @@ fftXCorr_impl::fftXCorr_impl(const char* filename)
         }
         fft(&d_preamble[0], &fft_preamble[0]);
     }
-}
-
-/*
- * Our virtual destructor.
- */
-fftXCorr_impl::~fftXCorr_impl() {}
-void fftXCorr_impl::fft(const gr_complex* sig, gr_complex* res)
-{
-    memcpy(d_fft.get_inbuf(), sig, sizeof(gr_complex) * K);
-    d_fft.execute();
-    memcpy(res, d_fft.get_outbuf(), sizeof(gr_complex) * K);
-}
-void fftXCorr_impl::ifft(const gr_complex* sig, gr_complex* res)
-{
-    memcpy(d_ifft.get_inbuf(), sig, sizeof(gr_complex) * K);
-    d_ifft.execute();
-    memcpy(res, d_ifft.get_outbuf(), sizeof(gr_complex) * K);
-}
-void fftXCorr_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required)
-{
-    ninput_items_required[0] = noutput_items + (numsamples - 1);
 }
 
 int fftXCorr_impl::general_work(int noutput_items,

@@ -26,6 +26,7 @@ protected:
 public:
     Preamble_impl(const char* filename, const std::string& pcklen);
     ~Preamble_impl();
+    void open(const char* filename);
 
     // Where all the action really happens
     int work(int noutput_items,

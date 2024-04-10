@@ -5,6 +5,8 @@ category: '[UConn2402]'
 templates:
   imports: from gnuradio import UConn2402
   make: UConn2402.Preamble(${file}, ${pcklen})
+  callbacks:
+  - open(${file})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:

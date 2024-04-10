@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(Preamble.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(61e9dcb15f8b68ab97ac004f30855f11)                     */
+/* BINDTOOL_HEADER_FILE_HASH(f89097ba02df61ee4911446ffc5cdf89)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -44,6 +44,13 @@ void bind_Preamble(py::module& m)
         
 
 
+
+
+        
+        .def("open",&Preamble::open,       
+            py::arg("filename"),
+            D(Preamble,open)
+        )
 
         ;
 

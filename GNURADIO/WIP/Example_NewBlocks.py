@@ -21,6 +21,7 @@ if __name__ == '__main__':
             print("Warning: failed to XInitThreads()")
 
 from PyQt5 import Qt
+from PyQt5.QtCore import QObject, pyqtSlot
 from gnuradio import qtgui
 from gnuradio.filter import firdes
 import sip
@@ -75,10 +76,36 @@ class Example_NewBlocks(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.samp_rate = samp_rate = 5e6
+        self.filepath = filepath = '/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv'
 
         ##################################################
         # Blocks
         ##################################################
+        # Create the options list
+        self._filepath_options = ['/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv', 'test']
+        # Create the labels list
+        self._filepath_labels = ['UpChirp', 'test']
+        # Create the combo box
+        # Create the radio buttons
+        self._filepath_group_box = Qt.QGroupBox("preamble" + ": ")
+        self._filepath_box = Qt.QHBoxLayout()
+        class variable_chooser_button_group(Qt.QButtonGroup):
+            def __init__(self, parent=None):
+                Qt.QButtonGroup.__init__(self, parent)
+            @pyqtSlot(int)
+            def updateButtonChecked(self, button_id):
+                self.button(button_id).setChecked(True)
+        self._filepath_button_group = variable_chooser_button_group()
+        self._filepath_group_box.setLayout(self._filepath_box)
+        for i, _label in enumerate(self._filepath_labels):
+            radio_button = Qt.QRadioButton(_label)
+            self._filepath_box.addWidget(radio_button)
+            self._filepath_button_group.addButton(radio_button, i)
+        self._filepath_callback = lambda i: Qt.QMetaObject.invokeMethod(self._filepath_button_group, "updateButtonChecked", Qt.Q_ARG("int", self._filepath_options.index(i)))
+        self._filepath_callback(self.filepath)
+        self._filepath_button_group.buttonClicked[int].connect(
+            lambda i: self.set_filepath(self._filepath_options[i]))
+        self.top_layout.addWidget(self._filepath_group_box)
         self.qtgui_time_sink_x_1_0_0_0 = qtgui.time_sink_f(
             1024, #size
             5000000, #samp_rate
@@ -230,8 +257,8 @@ class Example_NewBlocks(gr.top_block, Qt.QWidget):
         self.blocks_throttle_0_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_gr_complex, 1, 15, "packet_len")
-        self.UConn2402_fftXCorr_0 = UConn2402.fftXCorr('/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv')
-        self.UConn2402_Preamble_0 = UConn2402.Preamble('/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv', "packet_len")
+        self.UConn2402_fftXCorr_0 = UConn2402.fftXCorr(filepath)
+        self.UConn2402_Preamble_0 = UConn2402.Preamble(filepath, "packet_len")
         self.UConn2402_LFMChirpXCorr_0 = UConn2402.LFMChirpXCorr(5000000, 2000000, .000040)
         self.UConn2402_Chirp_0 = UConn2402.Chirp(5000000, 2000000, .000040, 1, "packet_len")
 
@@ -240,8 +267,8 @@ class Example_NewBlocks(gr.top_block, Qt.QWidget):
         # Connections
         ##################################################
         self.connect((self.UConn2402_Chirp_0, 0), (self.blocks_throttle_0_0, 0))
-        self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0, 0))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1_0_0, 1))
+        self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0, 0))
         self.connect((self.UConn2402_Preamble_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.UConn2402_fftXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.UConn2402_Chirp_0, 0))
@@ -268,6 +295,15 @@ class Example_NewBlocks(gr.top_block, Qt.QWidget):
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
         self.blocks_throttle_0_0.set_sample_rate(self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
+
+    def get_filepath(self):
+        return self.filepath
+
+    def set_filepath(self, filepath):
+        self.filepath = filepath
+        self._filepath_callback(self.filepath)
+        self.UConn2402_Preamble_0.open(self.filepath)
+        self.UConn2402_fftXCorr_0.open(self.filepath)
 
 
 

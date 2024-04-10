@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(fftXCorr.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(f2609af68d112515a4b8983d7944ae82)                     */
+/* BINDTOOL_HEADER_FILE_HASH(39c197fd66ca51ae3b8c07c764a34f29)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,18 +30,26 @@ namespace py = pybind11;
 void bind_fftXCorr(py::module& m)
 {
 
-    using fftXCorr    = gr::UConn2402::fftXCorr;
+    using fftXCorr    = ::gr::UConn2402::fftXCorr;
 
 
     py::class_<fftXCorr, gr::block, gr::basic_block,
         std::shared_ptr<fftXCorr>>(m, "fftXCorr", D(fftXCorr))
 
         .def(py::init(&fftXCorr::make),
+           py::arg("filename"),
            D(fftXCorr,make)
         )
         
 
 
+
+
+        
+        .def("open",&fftXCorr::open,       
+            py::arg("filename"),
+            D(fftXCorr,open)
+        )
 
         ;
 

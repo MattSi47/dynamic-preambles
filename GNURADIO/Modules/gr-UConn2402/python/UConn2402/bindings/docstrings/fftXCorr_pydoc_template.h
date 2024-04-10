@@ -19,9 +19,15 @@
  static const char *__doc_gr_UConn2402_fftXCorr = R"doc()doc";
 
 
- static const char *__doc_gr_UConn2402_fftXCorr_fftXCorr = R"doc()doc";
+ static const char *__doc_gr_UConn2402_fftXCorr_fftXCorr_0 = R"doc()doc";
+
+
+ static const char *__doc_gr_UConn2402_fftXCorr_fftXCorr_1 = R"doc()doc";
 
 
  static const char *__doc_gr_UConn2402_fftXCorr_make = R"doc()doc";
+
+
+ static const char *__doc_gr_UConn2402_fftXCorr_open = R"doc()doc";
 
   

@@ -33,6 +33,36 @@ options:
     state: enabled
 
 blocks:
+- name: filepath
+  id: variable_qtgui_chooser
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: preamble
+    label0: UpChirp
+    label1: test
+    label2: ''
+    label3: ''
+    label4: ''
+    labels: '[]'
+    num_opts: '2'
+    option0: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv
+    option1: test
+    option2: '2'
+    option3: '3'
+    option4: '4'
+    options: '[0, 1, 2]'
+    orient: Qt.QHBoxLayout
+    type: string
+    value: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv
+    widget: radio_buttons
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [504, 12.0]
+    rotation: 0
+    state: true
 - name: samp_rate
   id: variable
   parameters:
@@ -89,7 +119,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: "Change file path for your computer\n (.../dynamic-preambles/GNURADIO/WIP/UpChirp.csv)"
-    file: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv
+    file: filepath
     maxoutbuf: '0'
     minoutbuf: '0'
     pcklen: '"packet_len"'
@@ -106,7 +136,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: "Change file path for your computer\n (.../dynamic-preambles/GNURADIO/WIP/UpChirp.csv)"
-    file: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/WIP/UpChirp.csv
+    file: filepath
     maxoutbuf: '0'
     minoutbuf: '0'
   states:

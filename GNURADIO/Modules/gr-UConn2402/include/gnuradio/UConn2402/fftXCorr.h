@@ -33,6 +33,8 @@ namespace gr {
        * creating new instances.
        */
       static sptr make(const char* filename);
+
+      virtual void open(const char* filename) = 0;
     };
 
   } // namespace UConn2402
