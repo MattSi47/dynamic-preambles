@@ -11,7 +11,7 @@ def instr(message, tag):
     if (tag + ": ") in message or (tag + "| ") in message:
         return True
     return False
-def APCheck():
+def APCheck(message):
     if ("AP-") in message:
         return True
     return False
@@ -44,7 +44,7 @@ def print_output(window, port, messages):
                             window.addstr(1+i,1,"LOOPBACK", curses.A_BOLD|curses.color_pair(2))
                             window.addstr(1+i,1+len("LOOPBACK"),"--> ", curses.A_BOLD|curses.A_BLINK|curses.color_pair(2))
                             window.addstr(1+i,1+len("LOOPBACK--> "),message)
-                        elif APCheck():
+                        elif APCheck(message):
                             window.addstr(1+i,1,">", curses.A_BLINK) 
                             window.addstr(1+i,2,message,curses.A_BOLD|curses.color_pair(3)) 
                         else:
@@ -54,7 +54,7 @@ def print_output(window, port, messages):
                         if instr(message, tag_loopback):
                             window.addstr(1+i,1,"LOOPBACK--> ", curses.A_BOLD|curses.A_DIM|curses.color_pair(2))
                             window.addstr(1+i,1+len("LOOPBACK--> "),message, curses.A_DIM)
-                        elif APCheck():
+                        elif APCheck(message):
                             window.addstr(1+i,1,message,curses.A_BOLD|curses.color_pair(3)|curses.A_DIM) 
                         else:
                             window.addstr(1+i,1,message, curses.A_DIM)
@@ -69,7 +69,7 @@ def print_output(window, port, messages):
         window.refresh()
 
 
-def main(stdscr,Name1):
+def main(stdscr,Name1, Port):
     curses.curs_set(0)
     stdscr.clear()
 
@@ -95,7 +95,7 @@ def main(stdscr,Name1):
 
     global Device1
 
-    win.addstr(0, (half_width - len(Device1)//2), Device1 + "\n", curses.A_STANDOUT|curses.A_BOLD)
+    win.addstr(0, (half_width - len(Device1)//2), Device1 + " (Rx)" + "\n", curses.A_STANDOUT|curses.A_BOLD)
     win.refresh()
 
 
@@ -103,18 +103,19 @@ def main(stdscr,Name1):
     txt.refresh()
 
 
-    messages = []  # List to store messages of port 52001
+    messages = []  # List to store messages of port 
 
-    print_output(txt, 52001, messages)
+    print_output(txt, Port, messages)
 
 
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python3 1Device.py <Device Name>")
+    if len(sys.argv) != 3:
+        print("Usage: python3 1Device.py <Device Name> <Port>")
         sys.exit(1)
     
     Device1 = sys.argv[1]
+    Port = sys.argv[1]
 
-    curses.wrapper(main, Device1)
+    curses.wrapper(main, Device1, Port)
