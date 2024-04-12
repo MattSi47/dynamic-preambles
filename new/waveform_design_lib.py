@@ -6,17 +6,45 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from paretoset import paretoset
 from adjustText import adjust_text
+from matplotlib import cm
 
 #### Signal modification tools ####
-def xcorr(x, y):
-    corr = signal.correlate(x, y, mode='full', method='fft')
-    return np.abs(corr)
 
-def normalize(S):
-    S_norm = np.zeros_like(S)
+def chirp_fn(T, B, f0, f1):
+    Ts = 1/B
+    N = round(T*B)
+    chirp_sig = np.zeros(N, dtype=np.complex64)
+    for n in range(N):
+        chirp_sig[n] = np.exp(1j*2*np.pi*((f0-f1)/T)*(n*Ts)**2 + f0*T)
+    return chirp_sig
+
+def preamble_set_out(S, title):
+    N = len(S[0])
+    S_txt = ""
     for m in range(len(S)):
-        energy = np.vdot(S[m],S[m])
-        S_norm[m] = S[m]/np.sqrt(energy)
+        S_txt = ""
+        for n in range(N):
+            S_txt += f"({np.real(S[m][n])}|{np.imag(S[m][n])})"
+            if not n == N-1:
+                S_txt += ","
+        with open(f'{title}_{m}.csv', 'w') as f:
+            f.write(S_txt)
+
+def xcorr(x, y):
+    corr = np.abs(signal.correlate(x, y, mode='full', method="fft"))
+    return corr
+
+def normalize(sig):
+    #mag = np.sqrt(np.vdot(sig,sig))
+    mag = np.linalg.norm(sig)
+    x = sig/mag
+    # print(f"Max of norm sig:{max(x)}")
+    return x
+
+def normalize_set(S):
+    S_norm = np.zeros((len(S),len(S[0])))
+    for m in range(len(S)):
+        S_norm[m] = normalize(S[m])
     return S_norm
 
 # Treat Im and Re components seperately due to SDR hardware
@@ -60,20 +88,33 @@ def round_bits(S, B, S_range_pm1=False):
     return S_digitized
 
 #### Objective functions and measures ####
-
-# from 10.6 of "Basic Radar Analysis" (2e):
-# u is incoming signal, v is filter
-def doppler_af_slice(u, v, f_cfo):
-    cfo_mod = np.exp(1j*2*np.pi*f_cfo*np.arange(len(u)))
-    Fv = np.fft.fft(v)
-    Fu_cfo = np.fft.fft(u*cfo_mod)
-    AF_cfo_slice = np.abs(np.fft.ifft(Fu_cfo*Fv))
-    return np.fft.fftshift(AF_cfo_slice)
+def ambiguity_fn(filt_in, sig_in, freqs, B, norm_inputs=False):
+    #print(f"filt_in: {filt_in}")
+    if not norm_inputs:
+        filt = normalize(filt_in)
+        sig = normalize(sig_in)
+    else:
+        filt = filt_in
+        sig = sig_in
+    #print(f"filt: {filt}")
+    Ts = 1/B
+    K = len(filt)+len(sig)-1
+    I = len(freqs)
+    af = np.zeros((I,K))
+    n = np.arange(len(sig))
+    for i in range(I):
+        sig_CFO = sig*np.exp(1j*2*np.pi*freqs[i]*n*Ts)
+        # plot_complex(sig_CFO, f"sig_CFO {i}, cfo={freqs[i]}")
+        #print(f"dot: {np.vdot(sig_CFO,filt)}")
+        af[i] = xcorr(filt, sig_CFO) #np.abs(signal.correlate(filt, sig_CFO, mode='full', method="fft"))
+        # plot_complex(af[i], f"CC mag {i}")
+    
+    return af
 
 def psl(S,i,j, S_is_normalized=False):
     S_=None
     if not S_is_normalized:
-        S_ = normalize(S)
+        S_ = normalize_set(S)
     else:
         S_ = S
      
@@ -88,7 +129,7 @@ def psl(S,i,j, S_is_normalized=False):
 def max_cc_val(S, S_is_normalized=False):
     S_=None
     if not S_is_normalized:
-        S_ = normalize(S)
+        S_ = normalize_set(S)
     else:
         S_ = S
     M = len(S_)
@@ -102,7 +143,7 @@ def max_cc_val(S, S_is_normalized=False):
 def max_ac_sidelobe(S, S_is_normalized=False):
     S_=None
     if not S_is_normalized:
-        S_ = normalize(S)
+        S_ = normalize_set(S)
     else:
         S_ = S
     M = len(S_)
@@ -155,7 +196,7 @@ def plot_pareto_scatter(data):
     pareto_ind = np.where(pareto_mask)[0].tolist()
     # Add index labels
     labels = [plt.text(x_coords[i], y_coords[i], str(i), ha="right", va="top", color="black") for i in pareto_ind]
-    adjust_text(labels, force_points=1)
+    adjust_text(labels, arrowprops=dict(arrowstyle='->', color='black'))
 
     # Labels and title 
     plt.xlabel("Max autocorrelation sidelobe value")
@@ -165,7 +206,7 @@ def plot_pareto_scatter(data):
     plt.show()
 
 
-def plot_complex(complex_signal):
+def plot_complex(complex_signal,title=""):
     # Extract real and imaginary parts
     real_part = np.real(complex_signal)
     imaginary_part = np.imag(complex_signal)
@@ -177,18 +218,20 @@ def plot_complex(complex_signal):
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6), sharex=True)
 
     # Plot real part
-    ax1.plot(samples, real_part, linefmt='b-', markerfmt='bo', basefmt=' ')
+    ax1.plot(samples, real_part)
     ax1.set_ylabel('Real Part')
     ax1.grid(True)
 
     # Plot imaginary part
-    ax2.stem(samples, imaginary_part, linefmt='r-', markerfmt='ro', basefmt=' ')
+    ax2.plot(samples, imaginary_part)
     ax2.set_xlabel('Sample Index')
     ax2.set_ylabel('Imaginary Part')
     ax2.grid(True)
 
-    plt.suptitle('Stacked Stem Plots of Real (Blue) and Imaginary (Red) Components')
+    plt.suptitle(title)
     plt.show()
+
+    
 
 
 def corr_plot(S, title):
@@ -199,7 +242,8 @@ def corr_plot(S, title):
     for m in range(M):
         for j in range(M):
             if m <= j:  # Only plot upper triangular part to avoid duplication
-                corr_fn = np.abs(np.correlate(S[m], S[j], mode='full'))
+                corr_fn = xcorr(normalize(S[m]), normalize(S[j])) # np.abs(signal.correlate(S[m], S[j], mode='full', method="fft"))
+                print(f"Max of corr {m}, {j}:{max(corr_fn)}")
                 lag_range = np.arange(-N + 1, N)
                 axs[m, j].plot(lag_range, corr_fn)
                 axs[m, j].set_xlabel("Lag (k)")
@@ -239,6 +283,73 @@ def plot_2_cplx(signal1,signal2,N):
 
     plt.legend()
     plt.show()
+
+def plot_ambiguity(filter, sig, B, cfo_freqs,title=""):
+    # Length of the correlation operation
+    K = len(filter) + len(sig) - 1
+    
+    # since 0 is assumed to be first full overlap between 2 signals
+    if K%2 == 0:
+        k_upper = K/2
+        k_lower = -k_upper + 1
+    else:
+        k_upper = (K-1)/2
+        k_lower = -k_upper
+        
+    delay = np.linspace(k_lower, k_upper, num=K)  # Time axis for the signal
+    cfo_freqs = np.linspace(cfo_freqs[-1], cfo_freqs[0], num=len(cfo_freqs))  # Frequency axis
+
+    Ts = 1/B
+    # Compute the ambiguity function surface
+    AF = ambiguity_fn(filter, sig, np.array(cfo_freqs), B)
+
+    #===========================#
+    # Plotting the surface
+    fig = plt.figure(figsize=(10,20))
+    fig.clf()
+
+    ax3d = fig.add_subplot(111, projection='3d')
+    ax3d.clear()
+
+    x_coords = delay
+    y_coords = cfo_freqs/1000
+    mesh_z = AF
+    (mesh_x, mesh_y) = np.meshgrid(x_coords, y_coords)
+
+    surface_z = np.vstack((np.zeros(len(AF[0])), AF[-1])) #don't know
+    (surface_x, surface_y) = np.meshgrid(x_coords, [0,0])
+    # makes the "front cover" of the plot
+    ax3d.plot_surface(surface_x, surface_y, surface_z, linewidth=0, edgecolor="black", color="black", shade=False, alpha=1)
+    
+    #plot AF
+    ax3d.plot_surface(mesh_x, mesh_y, mesh_z, linewidth=1, color="whitesmoke", edgecolor="black", shade=True, alpha=1)
+
+    # visual stuff
+    ax3d.view_init(elev=35, azim=135)
+    ax3d.set_zlim([0, 1])
+
+    ax3d.set_xlabel(' Sample lag $ \\it k$ ', fontsize=12)
+    ax3d.set_ylabel(' CFO (kHz), $\\it f$ ', fontsize=12)
+    ax3d.set_zlabel(' $|\\it\\chi(\\it\\k,\\it f)|$ ', fontsize=12)
+    fig.suptitle(f"{title}", fontsize=18, )
+    # Adjusting plot layout to center the plot and title
+    plt.subplots_adjust(top=0.95, left=0.05, right=0.95)
+    plt.show()
+    fig.savefig(f"{title}.png", format="png")
+
+    # Plotting the 2D colormap
+    plt.figure(figsize=(8, 6))  # Set the figure size (width, height)
+    plt.imshow(AF.T, extent=[min(delay), max(delay), min(cfo_freqs), max(cfo_freqs)/1000], aspect='auto', cmap='viridis')
+    plt.colorbar(label='Magnitude')
+    plt.xlabel('Sample lag $ \\it k$')
+    plt.ylabel('CFO (kHz), $\\it f$ (kHz)')
+    plt.title(f"Ambiguity Function: {title}")
+    plt.grid(True)
+
+    # Saving and displaying the plot
+    plt.tight_layout()
+    plt.show()
+    plt.savefig(f"{title}_2D.png", format="png")
 
 #### No work ####
 # def multican(N,M,X0=None,epsilon=1e-3):
