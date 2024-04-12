@@ -267,8 +267,8 @@ class Example_NewBlocks(gr.top_block, Qt.QWidget):
         # Connections
         ##################################################
         self.connect((self.UConn2402_Chirp_0, 0), (self.blocks_throttle_0_0, 0))
-        self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1_0_0, 1))
         self.connect((self.UConn2402_LFMChirpXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0, 0))
+        self.connect((self.UConn2402_LFMChirpXCorr_0, 1), (self.qtgui_time_sink_x_1_0_0, 1))
         self.connect((self.UConn2402_Preamble_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.UConn2402_fftXCorr_0, 0), (self.qtgui_time_sink_x_1_0_0_0, 0))
         self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.UConn2402_Chirp_0, 0))

@@ -19,7 +19,7 @@ class fftXCorr_impl : public fftXCorr
 private:
     std::vector<gr_complex> d_preamble;
     int numsamples = 0;
-    int K = 512; //FFT is stable at 512 on most computers...  DO NOT INCREASE
+    int K = 512; //FFT is stable at 512 MAX on most computers...  DO NOT INCREASE
     gr_complex fft_preamble[512];
 
     // fft
