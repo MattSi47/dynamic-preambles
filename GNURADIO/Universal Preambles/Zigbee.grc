@@ -46,10 +46,8 @@ blocks:
     label4: ''
     labels: '[]'
     num_opts: '2'
-    option0: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
-    option1: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv
+    option0: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
+    option1: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv
     option2: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
       Preambles/Preambles/SigSet696_MonteCarlo1k_2.csv
     option3: '3'
@@ -57,8 +55,7 @@ blocks:
     options: '[0, 1, 2]'
     orient: Qt.QHBoxLayout
     type: string
-    value: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
+    value: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
     widget: radio_buttons
   states:
     bus_sink: false
@@ -80,10 +77,8 @@ blocks:
     label4: ''
     labels: '[]'
     num_opts: '2'
-    option0: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
-    option1: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv
+    option0: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
+    option1: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv
     option2: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
       Preambles/Preambles/SigSet696_MonteCarlo1k_2.csv
     option3: '3'
@@ -91,8 +86,7 @@ blocks:
     options: '[0, 1, 2]'
     orient: Qt.QHBoxLayout
     type: string
-    value: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
+    value: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_3.csv
     widget: radio_buttons
   states:
     bus_sink: false
@@ -269,7 +263,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [304.0, 672]
+    coordinate: [256.0, 752]
     rotation: 90
     state: enabled
 - name: UConn2402_ArbitrarySync2_0_0
@@ -286,7 +280,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728.0, 1672]
+    coordinate: [632.0, 1752]
     rotation: 90
     state: enabled
 - name: UConn2402_GUIMessagePrefixer_0
@@ -1143,10 +1137,10 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [212.0, 976]
-    rotation: 90
+    coordinate: [384, 628.0]
+    rotation: 0
     state: true
-- name: rational_resampler_xxx_0_1
+- name: rational_resampler_xxx_0_0
   id: rational_resampler_xxx
   parameters:
     affinity: ''
@@ -1163,7 +1157,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [568, 1876.0]
+    coordinate: [696, 1596.0]
     rotation: 0
     state: true
 - name: rational_resampler_xxx_1
@@ -2198,8 +2192,8 @@ blocks:
     state: enabled
 
 connections:
-- [UConn2402_ArbitrarySync2_0, '0', ieee802_15_4_oqpsk_phy_0, '0']
-- [UConn2402_ArbitrarySync2_0_0, '0', ieee802_15_4_oqpsk_phy_0_0, '0']
+- [UConn2402_ArbitrarySync2_0, '0', rational_resampler_xxx_0, '0']
+- [UConn2402_ArbitrarySync2_0_0, '0', rational_resampler_xxx_0_0, '0']
 - [UConn2402_GUIMessagePrefixer_0, clear, qtgui_edit_box_msg_0, val]
 - [UConn2402_GUIMessagePrefixer_0, msg_out, ieee802_15_4_rime_stack_0, bcin]
 - [UConn2402_GUIMessagePrefixer_0_0, clear, qtgui_edit_box_msg_0_0, val]
@@ -2238,14 +2232,14 @@ connections:
 - [ieee802_15_4_rime_stack_0_0, toMAC, ieee802_15_4_mac_0_0, app in]
 - [qtgui_edit_box_msg_0, msg, UConn2402_GUIMessagePrefixer_0, msg_in]
 - [qtgui_edit_box_msg_0_0, msg, UConn2402_GUIMessagePrefixer_0_0, msg_in]
-- [rational_resampler_xxx_0, '0', UConn2402_ArbitrarySync2_0, '0']
-- [rational_resampler_xxx_0_1, '0', UConn2402_ArbitrarySync2_0_0, '0']
+- [rational_resampler_xxx_0, '0', ieee802_15_4_oqpsk_phy_0, '0']
+- [rational_resampler_xxx_0_0, '0', ieee802_15_4_oqpsk_phy_0_0, '0']
 - [rational_resampler_xxx_1, '0', blocks_tagged_stream_multiply_length_0, '0']
 - [rational_resampler_xxx_1_0, '0', blocks_tagged_stream_multiply_length_0_0, '0']
+- [uhd_usrp_source_0_0, '0', UConn2402_ArbitrarySync2_0, '0']
 - [uhd_usrp_source_0_0, '0', UConn2402_fftXCorr_0, '0']
-- [uhd_usrp_source_0_0, '0', rational_resampler_xxx_0, '0']
+- [uhd_usrp_source_0_0, '1', UConn2402_ArbitrarySync2_0_0, '0']
 - [uhd_usrp_source_0_0, '1', UConn2402_fftXCorr_0_0, '0']
-- [uhd_usrp_source_0_0, '1', rational_resampler_xxx_0_1, '0']
 
 metadata:
   file_format: 1

@@ -131,19 +131,15 @@ blocks:
     label4: ''
     labels: '[]'
     num_opts: '3'
-    option0: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
-    option1: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_1.csv
-    option2: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_2.csv
+    option0: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
+    option1: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_1.csv
+    option2: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_2.csv
     option3: '3'
     option4: '4'
     options: '[0, 1, 2]'
     orient: Qt.QHBoxLayout
     type: string
-    value: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
+    value: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
     widget: radio_buttons
   states:
     bus_sink: false
