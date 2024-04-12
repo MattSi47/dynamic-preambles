@@ -23,7 +23,7 @@ def print_output(window, port, messages):
     tag_loopback = Device1
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.bind(('localhost', port))
+        s.bind(('localhost', int(port)))
         
 
         # Loop to continuously receive data
@@ -116,6 +116,6 @@ if __name__ == "__main__":
         sys.exit(1)
     
     Device1 = sys.argv[1]
-    Port = sys.argv[1]
+    Port = sys.argv[2]
 
     curses.wrapper(main, Device1, Port)
