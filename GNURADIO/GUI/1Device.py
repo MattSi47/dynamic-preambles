@@ -11,6 +11,10 @@ def instr(message, tag):
     if (tag + ": ") in message or (tag + "| ") in message:
         return True
     return False
+def APCheck():
+    if ("AP-") in message:
+        return True
+    return False
 
 def print_output(window, port, messages):
     global half_width
@@ -40,7 +44,7 @@ def print_output(window, port, messages):
                             window.addstr(1+i,1,"LOOPBACK", curses.A_BOLD|curses.color_pair(2))
                             window.addstr(1+i,1+len("LOOPBACK"),"--> ", curses.A_BOLD|curses.A_BLINK|curses.color_pair(2))
                             window.addstr(1+i,1+len("LOOPBACK--> "),message)
-                        elif instr(message,"AP"):
+                        elif APCheck():
                             window.addstr(1+i,1,">", curses.A_BLINK) 
                             window.addstr(1+i,2,message,curses.A_BOLD|curses.color_pair(3)) 
                         else:
@@ -50,7 +54,7 @@ def print_output(window, port, messages):
                         if instr(message, tag_loopback):
                             window.addstr(1+i,1,"LOOPBACK--> ", curses.A_BOLD|curses.A_DIM|curses.color_pair(2))
                             window.addstr(1+i,1+len("LOOPBACK--> "),message, curses.A_DIM)
-                        elif instr(message,"AP"):
+                        elif APCheck():
                             window.addstr(1+i,1,message,curses.A_BOLD|curses.color_pair(3)|curses.A_DIM) 
                         else:
                             window.addstr(1+i,1,message, curses.A_DIM)
