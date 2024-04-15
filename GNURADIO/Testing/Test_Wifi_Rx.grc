@@ -122,6 +122,24 @@ blocks:
     coordinate: [512, 160.0]
     rotation: 0
     state: true
+- name: UConn2402_LFMChirpXCorr_0
+  id: UConn2402_LFMChirpXCorr
+  parameters:
+    B: '2000000'
+    affinity: ''
+    alias: ''
+    comment: ''
+    dur: '.000040'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: '5000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [304, 4.0]
+    rotation: 0
+    state: enabled
 - name: UConn2402_fftXCorr_0
   id: UConn2402_fftXCorr
   parameters:
@@ -136,9 +154,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 92.0]
+    coordinate: [304, 84.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: blocks_null_sink_0
   id: blocks_null_sink
   parameters:
@@ -155,6 +173,23 @@ blocks:
     bus_structure: null
     coordinate: [912, 16.0]
     rotation: 180
+    state: true
+- name: blocks_null_sink_1
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [552, 8.0]
+    rotation: 0
     state: true
 - name: ieee802_11_mac_0
   id: ieee802_11_mac
@@ -653,10 +688,14 @@ blocks:
 
 connections:
 - [UConn2402_ArbitrarySync2_0, '0', wifi_phy_hier_0, '0']
+- [UConn2402_LFMChirpXCorr_0, '0', blocks_null_sink_1, '0']
+- [UConn2402_LFMChirpXCorr_0, '1', UConn2402_ArbitrarySync2_0, '1']
 - [UConn2402_fftXCorr_0, '0', UConn2402_ArbitrarySync2_0, '1']
+- [ieee802_11_mac_0, app out, UConn2402_ArbitrarySync2_0, stop]
 - [ieee802_11_mac_0, app out, network_socket_pdu_0_0, pdus]
 - [ieee802_11_mac_0, phy out, wifi_phy_hier_0, mac_in]
 - [uhd_usrp_source_0, '0', UConn2402_ArbitrarySync2_0, '0']
+- [uhd_usrp_source_0, '0', UConn2402_LFMChirpXCorr_0, '0']
 - [uhd_usrp_source_0, '0', UConn2402_fftXCorr_0, '0']
 - [wifi_phy_hier_0, '0', blocks_null_sink_0, '0']
 - [wifi_phy_hier_0, mac_out, ieee802_11_mac_0, phy in]
