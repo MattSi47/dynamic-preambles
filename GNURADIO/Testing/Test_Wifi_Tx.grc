@@ -45,7 +45,7 @@ blocks:
     start: '0'
     step: '1000'
     stop: 50e3
-    value: '0'
+    value: 2e3
     widget: counter_slider
   states:
     bus_sink: false
@@ -164,9 +164,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [584, 380.0]
+    coordinate: [688, 412.0]
     rotation: 180
-    state: enabled
+    state: disabled
 - name: UConn2402_Preamble_0
   id: UConn2402_Preamble
   parameters:
@@ -182,9 +182,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [600, 300.0]
+    coordinate: [384, 412.0]
     rotation: 180
-    state: disabled
+    state: enabled
 - name: UConn2402_StatusMessage_0
   id: UConn2402_StatusMessage
   parameters:
@@ -210,7 +210,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     msg: pmt.intern("Message")
-    period: '250'
+    period: '100'
   states:
     bus_sink: false
     bus_source: false
@@ -224,7 +224,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    const: '0.2'
+    const: '0.1'
     maxoutbuf: '0'
     minoutbuf: '100000'
     type: complex
@@ -233,7 +233,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [312, 404.0]
+    coordinate: [608, 268.0]
     rotation: 180
     state: enabled
 - name: blocks_null_source_0
@@ -273,7 +273,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [368, 212.0]
+    coordinate: [328, 220.0]
     rotation: 180
     state: disabled
 - name: ieee802_11_mac_0
@@ -594,16 +594,16 @@ blocks:
 
 connections:
 - [UConn2402_Chirp_0_0, '0', blocks_multiply_const_vxx_0_0_0, '0']
-- [UConn2402_Preamble_0, '0', blocks_multiply_const_vxx_0_0_0, '0']
 - [UConn2402_Preamble_0, '0', channels_channel_model_0, '0']
+- [UConn2402_Preamble_0, '0', uhd_usrp_sink_0_1_0, '0']
 - [UConn2402_StatusMessage_0, status, ieee802_11_mac_0, app in]
 - [blocks_message_strobe_0, strobe, UConn2402_StatusMessage_0, strobe]
-- [blocks_multiply_const_vxx_0_0_0, '0', uhd_usrp_sink_0_1_0, '0']
+- [blocks_multiply_const_vxx_0_0_0, '0', UConn2402_Preamble_0, '0']
 - [blocks_null_source_0, '0', wifi_phy_hier_0, '0']
 - [channels_channel_model_0, '0', blocks_multiply_const_vxx_0_0_0, '0']
 - [ieee802_11_mac_0, phy out, wifi_phy_hier_0, mac_in]
 - [wifi_phy_hier_0, '0', UConn2402_Chirp_0_0, '0']
-- [wifi_phy_hier_0, '0', UConn2402_Preamble_0, '0']
+- [wifi_phy_hier_0, '0', blocks_multiply_const_vxx_0_0_0, '0']
 - [wifi_phy_hier_0, mac_out, ieee802_11_mac_0, phy in]
 
 metadata:

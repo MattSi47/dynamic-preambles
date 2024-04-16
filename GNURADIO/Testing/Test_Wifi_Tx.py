@@ -89,12 +89,12 @@ class Test_Wifi_Tx(gr.top_block, Qt.QWidget):
         self.freq = freq = 5890000000
         self.encoding = encoding = 0
         self.chan_est = chan_est = 0
-        self.cfo = cfo = 0
+        self.cfo = cfo = 2e3
 
         ##################################################
         # Blocks
         ##################################################
-        self._cfo_range = Range(0, 50e3, 1000, 0, 200)
+        self._cfo_range = Range(0, 50e3, 1000, 2e3, 200)
         self._cfo_win = RangeWidget(self._cfo_range, self.set_cfo, "CFO", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_layout.addWidget(self._cfo_win)
         self.wifi_phy_hier_0 = wifi_phy_hier(
@@ -124,9 +124,9 @@ class Test_Wifi_Tx(gr.top_block, Qt.QWidget):
         self.top_layout.addWidget(self._noise_win)
         self.ieee802_11_mac_0 = ieee802_11.mac([0x12, 0x34, 0x56, 0x78, 0x90, 0xab], [0x30, 0x14, 0x4a, 0xe6, 0x46, 0xe4], [0x42, 0x42, 0x42, 0x42, 0x42, 0x42])
         self.blocks_null_source_0 = blocks.null_source(gr.sizeof_gr_complex*1)
-        self.blocks_multiply_const_vxx_0_0_0 = blocks.multiply_const_cc(0.2)
+        self.blocks_multiply_const_vxx_0_0_0 = blocks.multiply_const_cc(0.1)
         self.blocks_multiply_const_vxx_0_0_0.set_min_output_buffer(100000)
-        self.blocks_message_strobe_0 = blocks.message_strobe(pmt.intern("Message"), 250)
+        self.blocks_message_strobe_0 = blocks.message_strobe(pmt.intern("Message"), 100)
         self.UConn2402_StatusMessage_0 = UConn2402.StatusMessage(1000)
         self.UConn2402_Preamble_0 = UConn2402.Preamble('/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv', "packet_len")
         self.UConn2402_Preamble_0.set_min_output_buffer(100000)
@@ -139,10 +139,10 @@ class Test_Wifi_Tx(gr.top_block, Qt.QWidget):
         self.msg_connect((self.blocks_message_strobe_0, 'strobe'), (self.UConn2402_StatusMessage_0, 'strobe'))
         self.msg_connect((self.ieee802_11_mac_0, 'phy out'), (self.wifi_phy_hier_0, 'mac_in'))
         self.msg_connect((self.wifi_phy_hier_0, 'mac_out'), (self.ieee802_11_mac_0, 'phy in'))
-        self.connect((self.UConn2402_Preamble_0, 0), (self.blocks_multiply_const_vxx_0_0_0, 0))
-        self.connect((self.blocks_multiply_const_vxx_0_0_0, 0), (self.uhd_usrp_sink_0_1_0, 0))
+        self.connect((self.UConn2402_Preamble_0, 0), (self.uhd_usrp_sink_0_1_0, 0))
+        self.connect((self.blocks_multiply_const_vxx_0_0_0, 0), (self.UConn2402_Preamble_0, 0))
         self.connect((self.blocks_null_source_0, 0), (self.wifi_phy_hier_0, 0))
-        self.connect((self.wifi_phy_hier_0, 0), (self.UConn2402_Preamble_0, 0))
+        self.connect((self.wifi_phy_hier_0, 0), (self.blocks_multiply_const_vxx_0_0_0, 0))
 
 
     def closeEvent(self, event):
