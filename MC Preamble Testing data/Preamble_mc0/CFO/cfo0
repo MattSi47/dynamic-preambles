@@ -1,0 +1,2938 @@
+MAPPER: encoding: 0
+chunks_to_symbols :info: set_min_output_buffer on block 7 to 207744
+fft_v_fftw :info: set_min_output_buffer on block 9 to 2077440
+ofdm_cyclic_prefixer :info: set_min_output_buffer on block 11 to 2077440
+ofdm_carrier_allocator_cvc :info: set_min_output_buffer on block 12 to 207744
+chunks_to_symbols :info: set_min_output_buffer on block 13 to 415488
+tagged_stream_mux :info: set_min_output_buffer on block 14 to 207744
+Press Enter to quit: Packet detected at sample: 0/2048 with a value of: 0.901355
+pdu len 47
+Packet sent: 7901
+Packet detected at sample: 0/2048 with a value of: 0.714436
+pdu len 47
+Packet sent: 3891
+Packet detected at sample: 0/2048 with a value of: 0.737669
+pdu len 47
+Packet sent: 4519
+Packet detected at sample: 0/2048 with a value of: 0.952698
+pdu len 47
+Packet sent: 2809
+Packet detected at sample: 0/256 with a value of: 0.945732
+pdu len 47
+Packet sent: 4385
+Packet detected at sample: 0/16 with a value of: 0.607109
+pdu len 47
+Packet sent: 4087
+Packet detected at sample: 0/2048 with a value of: 0.961609
+pdu len 47
+Packet sent: 3518
+Packet detected at sample: 0/1024 with a value of: 0.966504
+pdu len 47
+Packet sent: 3186
+Packet detected at sample: 0/512 with a value of: 0.968799
+pdu len 47
+Packet sent: 4690
+Packet detected at sample: 0/2048 with a value of: 0.874705
+pdu len 47
+Packet sent: 4635
+Packet detected at sample: 0/1024 with a value of: 0.890724
+pdu len 47
+Packet sent: 3865
+Packet detected at sample: 0/1024 with a value of: 0.902193
+pdu len 47
+Packet sent: 3143
+Packet detected at sample: 0/2048 with a value of: 0.841225
+pdu len 47
+Packet sent: 2717
+Packet detected at sample: 0/1024 with a value of: 0.966634
+pdu len 47
+Packet sent: 4014
+Packet detected at sample: 0/1024 with a value of: 0.936522
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.888178
+pdu len 47
+Packet sent: 2915
+Packet detected at sample: 0/2048 with a value of: 0.872811
+pdu len 47
+Packet sent: 2595
+Packet detected at sample: 0/2048 with a value of: 0.906466
+pdu len 47
+Packet sent: 3609
+Packet detected at sample: 0/2048 with a value of: 0.918967
+pdu len 47
+Packet sent: 3565
+Packet detected at sample: 0/2048 with a value of: 0.72607
+pdu len 47
+Packet sent: 2790
+Packet detected at sample: 0/256 with a value of: 0.863443
+pdu len 47
+Packet sent: 4311
+Packet detected at sample: 0/64 with a value of: 0.948496
+pdu len 47
+Packet sent: 4115
+Packet detected at sample: 0/2048 with a value of: 0.95396
+pdu len 47
+Packet sent: 5632
+Packet detected at sample: 0/512 with a value of: 0.906983
+pdu len 47
+Packet sent: 4574
+Packet detected at sample: 0/256 with a value of: 0.920661
+pdu len 47
+Packet sent: 4210
+Packet detected at sample: 0/1024 with a value of: 0.731216
+pdu len 47
+Packet sent: 3755
+Packet detected at sample: 0/1024 with a value of: 0.754976
+pdu len 47
+Packet sent: 3465
+Packet detected at sample: 0/512 with a value of: 0.948188
+pdu len 47
+Packet sent: 4408
+Packet detected at sample: 0/1 with a value of: 0.955501
+pdu len 47
+Packet sent: 4071
+Packet detected at sample: 0/1024 with a value of: 0.68698
+pdu len 47
+Packet sent: 3741
+Packet detected at sample: 0/2048 with a value of: 0.834475
+pdu len 47
+Packet sent: 3207
+Packet detected at sample: 0/2048 with a value of: 0.852356
+pdu len 47
+Packet sent: 4642
+Packet detected at sample: 0/1024 with a value of: 0.939464
+pdu len 47
+Packet sent: 3967
+Packet detected at sample: 0/2048 with a value of: 0.776731
+pdu len 47
+Packet sent: 3257
+Packet detected at sample: 0/2048 with a value of: 0.969066
+pdu len 47
+Packet sent: 3181
+Packet detected at sample: 0/2048 with a value of: 0.690035
+pdu len 47
+Packet sent: 2707
+Packet detected at sample: 0/256 with a value of: 0.713097
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.854536
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.660292
+pdu len 47
+Packet sent: 3176
+Packet detected at sample: 0/512 with a value of: 0.882072
+pdu len 47
+Packet sent: 4669
+Packet detected at sample: 0/2048 with a value of: 0.754775
+pdu len 47
+Packet sent: 4030
+Packet detected at sample: 0/512 with a value of: 0.910608
+pdu len 47
+Packet sent: 4433
+Packet detected at sample: 0/1024 with a value of: 0.707226
+pdu len 47
+Packet sent: 5214
+Packet detected at sample: 0/2048 with a value of: 0.682739
+pdu len 47
+Packet sent: 4798
+Packet detected at sample: 0/128 with a value of: 0.892483
+pdu len 47
+Packet sent: 4173
+Packet detected at sample: 0/128 with a value of: 0.969604
+pdu len 47
+Packet sent: 4106
+Packet detected at sample: 0/2048 with a value of: 0.938334
+pdu len 47
+Packet sent: 3082
+Packet detected at sample: 0/2048 with a value of: 0.928842
+pdu len 47
+Packet sent: 6513
+Packet detected at sample: 0/2048 with a value of: 0.829219
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.680743
+pdu len 47
+Packet sent: 3524
+Packet detected at sample: 0/2048 with a value of: 0.942107
+pdu len 47
+Packet sent: 2943
+Packet detected at sample: 0/256 with a value of: 0.770656
+pdu len 47
+Packet sent: 5577
+Packet detected at sample: 0/2048 with a value of: 0.8042
+pdu len 47
+Packet sent: 3678
+Packet detected at sample: 0/2048 with a value of: 0.913173
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.701547
+pdu len 47
+Packet sent: 3160
+Packet detected at sample: 0/512 with a value of: 0.678896
+pdu len 47
+Packet sent: 4568
+Packet detected at sample: 0/256 with a value of: 0.891653
+pdu len 47
+Packet sent: 4213
+Packet detected at sample: 0/1024 with a value of: 0.875611
+pdu len 47
+Packet sent: 3527
+Packet detected at sample: 0/1024 with a value of: 0.806123
+pdu len 47
+Packet sent: 3300
+Packet detected at sample: 0/2048 with a value of: 0.721304
+pdu len 47
+Packet sent: 4620
+Packet detected at sample: 0/128 with a value of: 0.965928
+pdu len 47
+Packet sent: 4164
+Packet detected at sample: 0/1024 with a value of: 0.957174
+pdu len 47
+Packet sent: 3627
+Packet detected at sample: 0/2048 with a value of: 0.951272
+pdu len 47
+Packet sent: 3126
+Packet detected at sample: 0/2048 with a value of: 0.943494
+pdu len 47
+Packet sent: 2632
+Packet detected at sample: 0/2048 with a value of: 0.857795
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.719542
+pdu len 47
+Packet sent: 3238
+Packet detected at sample: 0/2048 with a value of: 0.961674
+pdu len 47
+Packet sent: 2776
+Packet detected at sample: 0/512 with a value of: 0.749574
+pdu len 47
+Packet sent: 4456
+Packet detected at sample: 0/256 with a value of: 0.878621
+pdu len 47
+Packet sent: 4267
+Packet detected at sample: 0/2048 with a value of: 0.970041
+pdu len 47
+Packet sent: 3484
+Packet detected at sample: 0/512 with a value of: 0.682327
+pdu len 47
+Packet sent: 3022
+Packet detected at sample: 0/512 with a value of: 0.962916
+pdu len 47
+Packet sent: 4434
+Packet detected at sample: 0/1024 with a value of: 0.966864
+pdu len 47
+Packet sent: 3796
+Packet detected at sample: 0/1024 with a value of: 0.803162
+pdu len 47
+Packet sent: 4516
+Packet detected at sample: 0/512 with a value of: 0.644716
+pdu len 47
+Packet sent: 4779
+Packet detected at sample: 0/2048 with a value of: 0.953892
+pdu len 47
+Packet sent: 4324
+Packet detected at sample: 0/1024 with a value of: 0.852581
+pdu len 47
+Packet sent: 3636
+Packet detected at sample: 0/1024 with a value of: 0.923122
+pdu len 47
+Packet sent: 3346
+Packet detected at sample: 0/2048 with a value of: 0.96954
+pdu len 47
+Packet sent: 2540
+Packet detected at sample: 0/2048 with a value of: 0.797633
+pdu len 47
+Packet sent: 4649
+Packet detected at sample: 0/2048 with a value of: 0.63927
+pdu len 47
+Packet sent: 3577
+Packet detected at sample: 0/2048 with a value of: 0.939642
+pdu len 47
+Packet sent: 3523
+Packet detected at sample: 0/2048 with a value of: 0.816888
+pdu len 47
+Packet sent: 2797
+Packet detected at sample: 0/64 with a value of: 0.920991
+pdu len 47
+Packet sent: 4138
+Packet detected at sample: 0/2048 with a value of: 0.931524
+pdu len 47
+Packet sent: 3686
+Packet detected at sample: 0/2048 with a value of: 0.970917
+pdu len 47
+Packet sent: 3383
+Packet detected at sample: 0/1024 with a value of: 0.970874
+pdu len 47
+Packet sent: 3237
+Packet detected at sample: 0/512 with a value of: 0.750075
+pdu len 47
+Packet sent: 4457
+Packet detected at sample: 0/128 with a value of: 0.928699
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.96382
+pdu len 47
+Packet sent: 3333
+Packet detected at sample: 0/512 with a value of: 0.683765
+pdu len 47
+Packet sent: 4726
+Packet detected at sample: 0/128 with a value of: 0.941379
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.779795
+pdu len 47
+Packet sent: 4198
+Packet detected at sample: 0/2048 with a value of: 0.864246
+pdu len 47
+Packet sent: 3323
+Packet detected at sample: 0/2048 with a value of: 0.911129
+pdu len 47
+Packet sent: 4757
+Packet detected at sample: 0/2048 with a value of: 0.716314
+pdu len 47
+Packet sent: 4432
+Packet detected at sample: 0/2048 with a value of: 0.741639
+pdu len 47
+Packet sent: 3391
+Packet detected at sample: 0/2048 with a value of: 0.792663
+pdu len 47
+Packet sent: 3019
+Packet detected at sample: 0/2048 with a value of: 0.885256
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.957351
+pdu len 47
+Packet sent: 4037
+Packet detected at sample: 0/2048 with a value of: 0.962276
+pdu len 47
+Packet sent: 3747
+Packet detected at sample: 0/512 with a value of: 0.704582
+pdu len 47
+Packet sent: 3004
+Packet detected at sample: 0/256 with a value of: 0.933534
+pdu len 47
+Packet sent: 4391
+Packet detected at sample: 0/2048 with a value of: 0.941936
+pdu len 47
+Packet sent: 4065
+Packet detected at sample: 0/1024 with a value of: 0.970478
+pdu len 47
+Packet sent: 3738
+Packet detected at sample: 0/1024 with a value of: 0.74902
+pdu len 47
+Packet sent: 3440
+Packet detected at sample: 0/2048 with a value of: 0.845393
+pdu len 47
+Packet sent: 4416
+Packet detected at sample: 0/1024 with a value of: 0.839389
+pdu len 47
+Packet sent: 3985
+Packet detected at sample: 0/1024 with a value of: 0.808735
+pdu len 47
+Packet sent: 4004
+Packet detected at sample: 0/2048 with a value of: 0.871911
+pdu len 47
+Packet sent: 3236
+Packet detected at sample: 0/2048 with a value of: 0.632899
+pdu len 47
+Packet sent: 5013
+Packet detected at sample: 0/2048 with a value of: 0.956454
+pdu len 47
+Packet sent: 4408
+Packet detected at sample: 0/2048 with a value of: 0.968196
+pdu len 47
+Packet sent: 3462
+Packet detected at sample: 0/2048 with a value of: 0.841506
+pdu len 47
+Packet sent: 2976
+Packet detected at sample: 0/512 with a value of: 0.906276
+pdu len 47
+Packet sent: 4754
+Packet detected at sample: 0/2048 with a value of: 0.969823
+pdu len 47
+Packet sent: 3720
+Packet detected at sample: 0/2048 with a value of: 0.88772
+pdu len 47
+Packet sent: 5646
+Packet detected at sample: 0/512 with a value of: 0.748107
+pdu len 47
+Packet sent: 4848
+Packet detected at sample: 0/256 with a value of: 0.846137
+pdu len 47
+Packet sent: 4378
+Packet detected at sample: 0/2048 with a value of: 0.963793
+pdu len 47
+Packet sent: 3897
+Packet detected at sample: 0/1024 with a value of: 0.676969
+pdu len 47
+Packet sent: 3491
+Packet detected at sample: 0/512 with a value of: 0.765592
+pdu len 47
+Packet sent: 2953
+Packet detected at sample: 0/1024 with a value of: 0.78424
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.74693
+pdu len 47
+Packet sent: 3893
+Packet detected at sample: 0/1024 with a value of: 0.696407
+pdu len 47
+Packet sent: 3289
+Packet detected at sample: 0/2048 with a value of: 0.827673
+pdu len 47
+Packet sent: 2832
+Packet detected at sample: 0/2048 with a value of: 0.677159
+pdu len 47
+Packet sent: 2523
+Packet detected at sample: 0/1024 with a value of: 0.89073
+pdu len 47
+Packet sent: 3735
+Packet detected at sample: 0/2048 with a value of: 0.784934
+pdu len 47
+Packet sent: 2667
+Packet detected at sample: 0/2048 with a value of: 0.970558
+pdu len 47
+Packet sent: 2675
+Packet detected at sample: 0/2048 with a value of: 0.912824
+pdu len 47
+Packet sent: 3970
+Packet detected at sample: 0/2048 with a value of: 0.966773
+pdu len 47
+Packet sent: 3607
+Packet detected at sample: 0/2048 with a value of: 0.859488
+pdu len 47
+Packet sent: 3192
+Packet detected at sample: 0/1024 with a value of: 0.78894
+pdu len 47
+Packet sent: 4963
+Packet detected at sample: 0/512 with a value of: 0.767678
+pdu len 47
+Packet sent: 4499
+Packet detected at sample: 0/1024 with a value of: 0.937419
+pdu len 47
+Packet sent: 3760
+Packet detected at sample: 0/1024 with a value of: 0.844691
+pdu len 47
+Packet sent: 3415
+Packet detected at sample: 0/256 with a value of: 0.700757
+pdu len 47
+Packet sent: 4330
+Packet detected at sample: 0/128 with a value of: 0.903365
+pdu len 47
+Packet sent: 4101
+Packet detected at sample: 0/1024 with a value of: 0.655117
+pdu len 47
+Packet sent: 3996
+Packet detected at sample: 0/1024 with a value of: 0.785493
+pdu len 47
+Packet sent: 3218
+Packet detected at sample: 0/2048 with a value of: 0.803096
+pdu len 47
+Packet sent: 4650
+Packet detected at sample: 0/1024 with a value of: 0.914555
+pdu len 47
+Packet sent: 4011
+Packet detected at sample: 0/2048 with a value of: 0.966577
+pdu len 47
+Packet sent: 3419
+Packet detected at sample: 0/2048 with a value of: 0.86022
+pdu len 47
+Packet sent: 2764
+Packet detected at sample: 0/2048 with a value of: 0.951831
+pdu len 47
+Packet sent: 4537
+Packet detected at sample: 0/2048 with a value of: 0.94377
+pdu len 47
+Packet sent: 3874
+Packet detected at sample: 0/2048 with a value of: 0.937691
+pdu len 47
+Packet sent: 3410
+Packet detected at sample: 0/2048 with a value of: 0.84469
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.967505
+pdu len 47
+Packet sent: 4145
+Packet detected at sample: 0/2048 with a value of: 0.675927
+pdu len 47
+Packet sent: 3900
+Packet detected at sample: 0/512 with a value of: 0.889625
+pdu len 47
+Packet sent: 4899
+Packet detected at sample: 0/512 with a value of: 0.970804
+pdu len 47
+Packet sent: 4690
+Packet detected at sample: 0/256 with a value of: 0.902823
+pdu len 47
+Packet sent: 4185
+Packet detected at sample: 0/1024 with a value of: 0.96796
+pdu len 47
+Packet sent: 3684
+Packet detected at sample: 0/1024 with a value of: 0.700453
+pdu len 47
+Packet sent: 3278
+Packet detected at sample: 0/2048 with a value of: 0.904138
+pdu len 47
+Packet sent: 4639
+Packet detected at sample: 0/2048 with a value of: 0.768912
+pdu len 47
+Packet sent: 4364
+Packet detected at sample: 0/1024 with a value of: 0.943675
+pdu len 47
+Packet sent: 3675
+Packet detected at sample: 0/2048 with a value of: 0.600356
+pdu len 47
+Packet sent: 2950
+Packet detected at sample: 0/2048 with a value of: 0.926084
+pdu len 47
+Packet sent: 2536
+Packet detected at sample: 0/1024 with a value of: 0.967901
+pdu len 47
+Packet sent: 4066
+Packet detected at sample: 0/2048 with a value of: 0.969257
+pdu len 47
+Packet sent: 3595
+Packet detected at sample: 0/2048 with a value of: 0.972203
+pdu len 47
+Packet sent: 3119
+Packet detected at sample: 0/512 with a value of: 0.944573
+pdu len 47
+Packet sent: 4797
+Packet detected at sample: 0/64 with a value of: 0.959392
+pdu len 47
+Packet sent: 6320
+Packet detected at sample: 0/2048 with a value of: 0.84005
+pdu len 47
+Packet sent: 3807
+Packet detected at sample: 0/1024 with a value of: 0.821794
+pdu len 47
+Packet sent: 5071
+Packet detected at sample: 0/512 with a value of: 0.956633
+pdu len 47
+Packet sent: 4728
+Packet detected at sample: 0/2048 with a value of: 0.645241
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.761128
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.9337
+pdu len 47
+Packet sent: 3431
+Packet detected at sample: 0/2048 with a value of: 0.963835
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.910855
+pdu len 47
+Packet sent: 4309
+Packet detected at sample: 0/1024 with a value of: 0.799845
+pdu len 47
+Packet sent: 3784
+Packet detected at sample: 0/2048 with a value of: 0.969459
+pdu len 47
+Packet sent: 3327
+Packet detected at sample: 0/2048 with a value of: 0.895114
+pdu len 47
+Packet sent: 2546
+Packet detected at sample: 0/2048 with a value of: 0.85374
+pdu len 47
+Packet sent: 4360
+Packet detected at sample: 0/2048 with a value of: 0.831797
+pdu len 47
+Packet sent: 3562
+Packet detected at sample: 0/2048 with a value of: 0.818414
+pdu len 47
+Packet sent: 2999
+Packet detected at sample: 0/512 with a value of: 0.939899
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.640657
+pdu len 47
+Packet sent: 4368
+Packet detected at sample: 0/2048 with a value of: 0.955043
+pdu len 47
+Packet sent: 3865
+Packet detected at sample: 0/1024 with a value of: 0.96733
+pdu len 47
+Packet sent: 3052
+Packet detected at sample: 0/256 with a value of: 0.709782
+pdu len 47
+Packet sent: 4398
+Packet detected at sample: 0/1024 with a value of: 0.907862
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.868444
+pdu len 47
+Packet sent: 3659
+Packet detected at sample: 0/512 with a value of: 0.774041
+pdu len 47
+Packet sent: 4752
+Packet detected at sample: 0/2048 with a value of: 0.897039
+pdu len 47
+Packet sent: 4585
+Packet detected at sample: 0/1024 with a value of: 0.911471
+pdu len 47
+Packet sent: 4007
+Packet detected at sample: 0/1024 with a value of: 0.831424
+pdu len 47
+Packet sent: 4032
+Packet detected at sample: 0/2048 with a value of: 0.737824
+pdu len 47
+Packet sent: 2929
+Packet detected at sample: 0/2048 with a value of: 0.870637
+pdu len 47
+Packet sent: 4415
+Packet detected at sample: 0/2048 with a value of: 0.946233
+pdu len 47
+Packet sent: 3708
+Packet detected at sample: 0/2048 with a value of: 0.86536
+pdu len 47
+Packet sent: 3423
+Packet detected at sample: 0/2048 with a value of: 0.849489
+pdu len 47
+Packet sent: 4832
+Packet detected at sample: 0/256 with a value of: 0.917928
+pdu len 47
+Packet sent: 4379
+Packet detected at sample: 0/2048 with a value of: 0.906719
+pdu len 47
+Packet sent: 3891
+Packet detected at sample: 0/2048 with a value of: 0.76013
+pdu len 47
+Packet sent: 3496
+Packet detected at sample: 0/1024 with a value of: 0.772299
+pdu len 47
+Packet sent: 3400
+Packet detected at sample: 0/512 with a value of: 0.899816
+pdu len 47
+Packet sent: 4619
+Packet detected at sample: 0/128 with a value of: 0.928251
+pdu len 47
+Packet sent: 4099
+Packet detected at sample: 0/1024 with a value of: 0.716592
+pdu len 47
+Packet sent: 3458
+Packet detected at sample: 0/1024 with a value of: 0.960084
+pdu len 47
+Packet sent: 4087
+Packet detected at sample: 0/2048 with a value of: 0.942318
+pdu len 47
+Packet sent: 4466
+Packet detected at sample: 0/1024 with a value of: 0.950985
+pdu len 47
+Packet sent: 3750
+Packet detected at sample: 0/2048 with a value of: 0.803281
+pdu len 47
+Packet sent: 3226
+Packet detected at sample: 0/2048 with a value of: 0.727916
+pdu len 47
+Packet sent: 2578
+Packet detected at sample: 0/128 with a value of: 0.924452
+pdu len 47
+Packet sent: 4188
+Packet detected at sample: 0/2048 with a value of: 0.969459
+pdu len 47
+Packet sent: 3728
+Packet detected at sample: 0/2048 with a value of: 0.658165
+pdu len 47
+Packet sent: 3159
+Packet detected at sample: 0/2048 with a value of: 0.876955
+pdu len 47
+Packet sent: 2684
+Packet detected at sample: 0/2048 with a value of: 0.861817
+pdu len 47
+Packet sent: 4026
+Packet detected at sample: 0/2048 with a value of: 0.967531
+pdu len 47
+Packet sent: 3503
+Packet detected at sample: 0/1024 with a value of: 0.703455
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.742698
+pdu len 47
+Packet sent: 2991
+Packet detected at sample: 0/2048 with a value of: 0.873183
+pdu len 47
+Packet sent: 3948
+Packet detected at sample: 0/1024 with a value of: 0.951636
+pdu len 47
+Packet sent: 3567
+Packet detected at sample: 0/1024 with a value of: 0.802908
+pdu len 47
+Packet sent: 4940
+Packet detected at sample: 0/2048 with a value of: 0.966783
+pdu len 47
+Packet sent: 4426
+Packet detected at sample: 0/2048 with a value of: 0.841893
+pdu len 47
+Packet sent: 4342
+Packet detected at sample: 0/1024 with a value of: 0.934086
+pdu len 47
+Packet sent: 3751
+Packet detected at sample: 0/2048 with a value of: 0.76353
+pdu len 47
+Packet sent: 2741
+Packet detected at sample: 0/2048 with a value of: 0.784245
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.901751
+pdu len 47
+Packet sent: 4201
+Packet detected at sample: 0/2048 with a value of: 0.926743
+pdu len 47
+Packet sent: 3482
+Packet detected at sample: 0/2048 with a value of: 0.842634
+pdu len 47
+Packet sent: 2690
+Packet detected at sample: 0/512 with a value of: 0.858151
+pdu len 47
+Packet sent: 4771
+Packet detected at sample: 0/2048 with a value of: 0.951733
+pdu len 47
+Packet sent: 4052
+Packet detected at sample: 0/2048 with a value of: 0.945622
+pdu len 47
+Packet sent: 3594
+Packet detected at sample: 0/512 with a value of: 0.957318
+pdu len 47
+Packet sent: 2843
+Packet detected at sample: 0/512 with a value of: 0.967182
+pdu len 47
+Packet sent: 4628
+Packet detected at sample: 0/2048 with a value of: 0.962647
+pdu len 47
+Packet sent: 3936
+Packet detected at sample: 0/1024 with a value of: 0.675235
+pdu len 47
+Packet sent: 3542
+Packet detected at sample: 0/512 with a value of: 0.765576
+pdu len 47
+Packet sent: 2944
+Packet detected at sample: 0/2048 with a value of: 0.875352
+pdu len 47
+Packet sent: 4325
+Packet detected at sample: 0/1024 with a value of: 0.745818
+pdu len 47
+Packet sent: 3872
+Packet detected at sample: 0/1024 with a value of: 0.914707
+pdu len 47
+Packet sent: 5391
+Packet detected at sample: 0/2048 with a value of: 0.925978
+pdu len 47
+Packet sent: 2610
+Packet detected at sample: 0/2048 with a value of: 0.80675
+pdu len 47
+Packet sent: 4484
+Packet detected at sample: 0/2048 with a value of: 0.766999
+pdu len 47
+Packet sent: 5728
+Packet detected at sample: 0/2048 with a value of: 0.787025
+pdu len 47
+Packet sent: 4971
+Packet detected at sample: 0/2048 with a value of: 0.935774
+pdu len 47
+Packet sent: 4557
+Packet detected at sample: 0/256 with a value of: 0.916736
+pdu len 47
+Packet sent: 4364
+Packet detected at sample: 0/2048 with a value of: 0.72505
+pdu len 47
+Packet sent: 3523
+Packet detected at sample: 0/2048 with a value of: 0.96974
+pdu len 47
+Packet sent: 3471
+Packet detected at sample: 0/512 with a value of: 0.877228
+pdu len 47
+Packet sent: 3900
+Packet detected at sample: 0/256 with a value of: 0.942714
+pdu len 47
+Packet sent: 4204
+Packet detected at sample: 0/1024 with a value of: 0.811731
+pdu len 47
+Packet sent: 3634
+Packet detected at sample: 0/1024 with a value of: 0.966762
+pdu len 47
+Packet sent: 3204
+Packet detected at sample: 0/1024 with a value of: 0.693905
+pdu len 47
+Packet sent: 3194
+Packet detected at sample: 0/2048 with a value of: 0.937042
+pdu len 47
+Packet sent: 4275
+Packet detected at sample: 0/1024 with a value of: 0.946524
+pdu len 47
+Packet sent: 4021
+Packet detected at sample: 0/1024 with a value of: 0.953085
+pdu len 47
+Packet sent: 3203
+Packet detected at sample: 0/2048 with a value of: 0.95991
+pdu len 47
+Packet sent: 2570
+Packet detected at sample: 0/128 with a value of: 0.830929
+pdu len 47
+Packet sent: 4208
+Packet detected at sample: 0/2048 with a value of: 0.690729
+pdu len 47
+Packet sent: 3523
+Packet detected at sample: 0/2048 with a value of: 0.668076
+pdu len 47
+Packet sent: 5142
+Packet detected at sample: 0/2048 with a value of: 0.774895
+pdu len 47
+Packet sent: 2593
+Packet detected at sample: 0/64 with a value of: 0.794427
+pdu len 47
+Packet sent: 4115
+Packet detected at sample: 0/2048 with a value of: 0.688121
+pdu len 47
+Packet sent: 3447
+Packet detected at sample: 0/2048 with a value of: 0.919969
+pdu len 47
+Packet sent: 2946
+Packet detected at sample: 0/512 with a value of: 0.931512
+pdu len 47
+Packet sent: 4414
+Packet detected at sample: 0/256 with a value of: 0.969789
+pdu len 47
+Packet sent: 4243
+Packet detected at sample: 0/1024 with a value of: 0.774782
+pdu len 47
+Packet sent: 3307
+Packet detected at sample: 0/1024 with a value of: 0.756232
+pdu len 47
+Packet sent: 4969
+Packet detected at sample: 0/256 with a value of: 0.961169
+pdu len 47
+Packet sent: 4309
+Packet detected at sample: 0/1024 with a value of: 0.71377
+pdu len 47
+Packet sent: 3853
+Packet detected at sample: 0/1024 with a value of: 0.960889
+pdu len 47
+Packet sent: 3506
+Packet detected at sample: 0/2048 with a value of: 0.942049
+pdu len 47
+Packet sent: 2550
+Packet detected at sample: 0/2048 with a value of: 0.948265
+pdu len 47
+Packet sent: 4301
+Packet detected at sample: 0/1024 with a value of: 0.970529
+pdu len 47
+Packet sent: 3842
+Packet detected at sample: 0/2048 with a value of: 0.911618
+pdu len 47
+Packet sent: 3258
+Packet detected at sample: 0/2048 with a value of: 0.965156
+pdu len 47
+Packet sent: 4755
+Packet detected at sample: 0/2048 with a value of: 0.739162
+pdu len 47
+Packet sent: 4624
+Packet detected at sample: 0/2048 with a value of: 0.969815
+pdu len 47
+Packet sent: 3791
+Packet detected at sample: 0/2048 with a value of: 0.947732
+pdu len 47
+Packet sent: 3290
+Packet detected at sample: 0/512 with a value of: 0.956349
+pdu len 47
+Packet sent: 4453
+Packet detected at sample: 0/256 with a value of: 0.962697
+pdu len 47
+Packet sent: 4385
+Packet detected at sample: 0/64 with a value of: 0.829743
+pdu len 47
+Packet sent: 4153
+Packet detected at sample: 0/1024 with a value of: 0.932883
+pdu len 47
+Packet sent: 3199
+Packet detected at sample: 0/512 with a value of: 0.759871
+pdu len 47
+Packet sent: 2946
+Packet detected at sample: 0/2048 with a value of: 0.970898
+pdu len 47
+Packet sent: 4340
+Packet detected at sample: 0/1024 with a value of: 0.937832
+pdu len 47
+Packet sent: 3797
+Packet detected at sample: 0/1024 with a value of: 0.929692
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.96634
+pdu len 47
+Packet sent: 2725
+Packet detected at sample: 0/128 with a value of: 0.854784
+pdu len 47
+Packet sent: 4213
+Packet detected at sample: 0/1024 with a value of: 0.659565
+pdu len 47
+Packet sent: 3865
+Packet detected at sample: 0/2048 with a value of: 0.769987
+pdu len 47
+Packet sent: 2812
+Packet detected at sample: 0/2048 with a value of: 0.969655
+pdu len 47
+Packet sent: 2758
+Packet detected at sample: 0/64 with a value of: 0.929858
+pdu len 47
+Packet sent: 4406
+Packet detected at sample: 0/2048 with a value of: 0.917232
+pdu len 47
+Packet sent: 5844
+Packet detected at sample: 0/2048 with a value of: 0.81174
+pdu len 47
+Packet sent: 3230
+Packet detected at sample: 0/512 with a value of: 0.874045
+pdu len 47
+Packet sent: 2925
+Packet detected at sample: 0/16 with a value of: 0.951037
+pdu len 47
+Packet sent: 4080
+Packet detected at sample: 0/2048 with a value of: 0.605624
+pdu len 47
+Packet sent: 6044
+Packet detected at sample: 0/1024 with a value of: 0.961794
+pdu len 47
+Packet sent: 5114
+Packet detected at sample: 0/512 with a value of: 0.842034
+pdu len 47
+Packet sent: 4609
+Packet detected at sample: 0/2048 with a value of: 0.679454
+pdu len 47
+Packet sent: 4381
+Packet detected at sample: 0/1024 with a value of: 0.891454
+pdu len 47
+Packet sent: 3630
+Packet detected at sample: 0/1024 with a value of: 0.768805
+pdu len 47
+Packet sent: 5115
+Packet detected at sample: 0/2048 with a value of: 0.902939
+pdu len 47
+Packet sent: 4696
+Packet detected at sample: 0/2048 with a value of: 0.699093
+pdu len 47
+Packet sent: 4587
+Packet detected at sample: 0/2048 with a value of: 0.842462
+pdu len 47
+Packet sent: 3594
+Packet detected at sample: 0/2048 with a value of: 0.936448
+pdu len 47
+Packet sent: 2996
+Packet detected at sample: 0/2048 with a value of: 0.888402
+pdu len 47
+Packet sent: 4589
+Packet detected at sample: 0/256 with a value of: 0.76434
+pdu len 47
+Packet sent: 6422
+Packet detected at sample: 0/2048 with a value of: 0.678739
+pdu len 47
+Packet sent: 3183
+Packet detected at sample: 0/2048 with a value of: 0.925302
+pdu len 47
+Packet sent: 3232
+Packet detected at sample: 0/256 with a value of: 0.821865
+pdu len 47
+Packet sent: 4213
+Packet detected at sample: 0/256 with a value of: 0.804641
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.878629
+pdu len 47
+Packet sent: 3408
+Packet detected at sample: 0/1024 with a value of: 0.943201
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.960489
+pdu len 47
+Packet sent: 4279
+Packet detected at sample: 0/1024 with a value of: 0.829973
+pdu len 47
+Packet sent: 3996
+Packet detected at sample: 0/1024 with a value of: 0.692737
+pdu len 47
+Packet sent: 3702
+Packet detected at sample: 0/512 with a value of: 0.898751
+pdu len 47
+Packet sent: 3975
+Packet detected at sample: 0/2048 with a value of: 0.970861
+pdu len 47
+Packet sent: 4468
+Packet detected at sample: 0/1024 with a value of: 0.970292
+pdu len 47
+Packet sent: 4004
+Packet detected at sample: 0/2048 with a value of: 0.737496
+pdu len 47
+Packet sent: 3669
+Packet detected at sample: 0/2048 with a value of: 0.921471
+pdu len 47
+Packet sent: 4689
+Packet detected at sample: 0/2048 with a value of: 0.962203
+pdu len 47
+Packet sent: 4417
+Packet detected at sample: 0/2048 with a value of: 0.799795
+pdu len 47
+Packet sent: 3663
+Packet detected at sample: 0/2048 with a value of: 0.881029
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.797087
+pdu len 47
+Packet sent: 5060
+Packet detected at sample: 0/512 with a value of: 0.735374
+pdu len 47
+Packet sent: 4424
+Packet detected at sample: 0/2048 with a value of: 0.921305
+pdu len 47
+Packet sent: 3757
+Packet detected at sample: 0/1024 with a value of: 0.932972
+pdu len 47
+Packet sent: 4975
+Packet detected at sample: 0/512 with a value of: 0.795959
+pdu len 47
+Packet sent: 4592
+Packet detected at sample: 0/2048 with a value of: 0.947987
+pdu len 47
+Packet sent: 4009
+Packet detected at sample: 0/128 with a value of: 0.865433
+pdu len 47
+Packet sent: 4108
+Packet detected at sample: 0/1024 with a value of: 0.691216
+pdu len 47
+Packet sent: 3336
+Packet detected at sample: 0/2048 with a value of: 0.830168
+pdu len 47
+Packet sent: 3054
+Packet detected at sample: 0/1024 with a value of: 0.686062
+pdu len 47
+Packet sent: 3957
+Packet detected at sample: 0/1024 with a value of: 0.942537
+pdu len 47
+Packet sent: 3634
+Packet detected at sample: 0/2048 with a value of: 0.878503
+pdu len 47
+Packet sent: 2663
+Packet detected at sample: 0/2048 with a value of: 0.938812
+pdu len 47
+Packet sent: 4456
+Packet detected at sample: 0/128 with a value of: 0.728562
+pdu len 47
+Packet sent: 4087
+Packet detected at sample: 0/2048 with a value of: 0.702987
+pdu len 47
+Packet sent: 3598
+Packet detected at sample: 0/2048 with a value of: 0.933921
+pdu len 47
+Packet sent: 2975
+Packet detected at sample: 0/64 with a value of: 0.874195
+pdu len 47
+Packet sent: 4155
+Packet detected at sample: 0/2048 with a value of: 0.63004
+pdu len 47
+Packet sent: 3873
+Packet detected at sample: 0/2048 with a value of: 0.860436
+pdu len 47
+Packet sent: 3506
+Packet detected at sample: 0/512 with a value of: 0.968252
+pdu len 47
+Packet sent: 2965
+Packet detected at sample: 0/512 with a value of: 0.843751
+pdu len 47
+Packet sent: 4477
+Packet detected at sample: 0/2048 with a value of: 0.958728
+pdu len 47
+Packet sent: 3993
+Packet detected at sample: 0/1024 with a value of: 0.951985
+pdu len 47
+Packet sent: 3445
+Packet detected at sample: 0/1024 with a value of: 0.875544
+pdu len 47
+Packet sent: 3172
+Packet detected at sample: 0/2048 with a value of: 0.959147
+pdu len 47
+Packet sent: 4636
+Packet detected at sample: 0/4 with a value of: 0.966057
+pdu len 47
+Packet sent: 4075
+Packet detected at sample: 0/1024 with a value of: 0.962551
+pdu len 47
+Packet sent: 3629
+Packet detected at sample: 0/2048 with a value of: 0.970018
+pdu len 47
+Packet sent: 2864
+Packet detected at sample: 0/2048 with a value of: 0.779033
+pdu len 47
+Packet sent: 6329
+Packet detected at sample: 0/2048 with a value of: 0.942665
+pdu len 47
+Packet sent: 5776
+Packet detected at sample: 0/2048 with a value of: 0.685697
+pdu len 47
+Packet sent: 3346
+Packet detected at sample: 0/2048 with a value of: 0.966215
+pdu len 47
+Packet sent: 2849
+Packet detected at sample: 0/256 with a value of: 0.816792
+pdu len 47
+Packet sent: 4316
+Packet detected at sample: 0/64 with a value of: 0.86623
+pdu len 47
+Packet sent: 4131
+Packet detected at sample: 0/2048 with a value of: 0.9503
+pdu len 47
+Packet sent: 3912
+Packet detected at sample: 0/512 with a value of: 0.955803
+pdu len 47
+Packet sent: 4660
+Packet detected at sample: 0/256 with a value of: 0.815701
+pdu len 47
+Packet sent: 4269
+Packet detected at sample: 0/1024 with a value of: 0.965081
+pdu len 47
+Packet sent: 3647
+Packet detected at sample: 0/1024 with a value of: 0.908443
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.895951
+pdu len 47
+Packet sent: 3264
+Packet detected at sample: 0/2048 with a value of: 0.773751
+pdu len 47
+Packet sent: 4551
+Packet detected at sample: 0/2048 with a value of: 0.899542
+pdu len 47
+Packet sent: 4324
+Packet detected at sample: 0/2048 with a value of: 0.930151
+pdu len 47
+Packet sent: 3384
+Packet detected at sample: 0/2048 with a value of: 0.83801
+pdu len 47
+Packet sent: 2711
+Packet detected at sample: 0/2048 with a value of: 0.959828
+pdu len 47
+Packet sent: 4346
+Packet detected at sample: 0/2048 with a value of: 0.655667
+pdu len 47
+Packet sent: 3573
+Packet detected at sample: 0/2048 with a value of: 0.771219
+pdu len 47
+Packet sent: 5348
+Packet detected at sample: 0/2048 with a value of: 0.936773
+pdu len 47
+Packet sent: 2694
+Packet detected at sample: 0/2048 with a value of: 0.724033
+pdu len 47
+Packet sent: 3993
+Packet detected at sample: 0/2048 with a value of: 0.916559
+pdu len 47
+Packet sent: 3644
+Packet detected at sample: 0/1024 with a value of: 0.809949
+pdu len 47
+Packet sent: 3065
+Packet detected at sample: 0/512 with a value of: 0.787838
+pdu len 47
+Packet sent: 4617
+Packet detected at sample: 0/256 with a value of: 0.94433
+pdu len 47
+Packet sent: 4298
+Packet detected at sample: 0/1024 with a value of: 0.969993
+pdu len 47
+Packet sent: 3912
+Packet detected at sample: 0/1024 with a value of: 0.967027
+pdu len 47
+Packet sent: 3226
+Packet detected at sample: 0/512 with a value of: 0.92644
+pdu len 47
+Packet sent: 4545
+Packet detected at sample: 0/128 with a value of: 0.968826
+pdu len 47
+Packet sent: 4182
+Packet detected at sample: 0/1024 with a value of: 0.877463
+pdu len 47
+Packet sent: 5513
+Packet detected at sample: 0/2048 with a value of: 0.954226
+pdu len 47
+Packet sent: 4886
+Packet detected at sample: 0/2048 with a value of: 0.681798
+pdu len 47
+Packet sent: 2773
+Packet detected at sample: 0/8 with a value of: 0.839126
+pdu len 47
+Packet sent: 4082
+Packet detected at sample: 0/2048 with a value of: 0.961888
+pdu len 47
+Packet sent: 3456
+Packet detected at sample: 0/2048 with a value of: 0.939617
+pdu len 47
+Packet sent: 2789
+Packet detected at sample: 0/2048 with a value of: 0.880178
+pdu len 47
+Packet sent: 4372
+Packet detected at sample: 0/2048 with a value of: 0.970167
+pdu len 47
+Packet sent: 3822
+Packet detected at sample: 0/2048 with a value of: 0.931769
+pdu len 47
+Packet sent: 3579
+Packet detected at sample: 0/512 with a value of: 0.708278
+pdu len 47
+Packet sent: 4776
+Packet detected at sample: 0/256 with a value of: 0.967487
+pdu len 47
+Packet sent: 4308
+Packet detected at sample: 0/2048 with a value of: 0.956932
+pdu len 47
+Packet sent: 3879
+Packet detected at sample: 0/1024 with a value of: 0.947743
+pdu len 47
+Packet sent: 3674
+Packet detected at sample: 0/512 with a value of: 0.955367
+pdu len 47
+Packet sent: 3042
+Packet detected at sample: 0/2048 with a value of: 0.968393
+pdu len 47
+Packet sent: 4443
+Packet detected at sample: 0/1024 with a value of: 0.965433
+pdu len 47
+Packet sent: 3859
+Packet detected at sample: 0/1024 with a value of: 0.686514
+pdu len 47
+Packet sent: 3315
+Packet detected at sample: 0/2048 with a value of: 0.941032
+pdu len 47
+Packet sent: 2775
+Packet detected at sample: 0/2048 with a value of: 0.77556
+pdu len 47
+Packet sent: 4367
+Packet detected at sample: 0/1024 with a value of: 0.94015
+pdu len 47
+Packet sent: 3814
+Packet detected at sample: 0/2048 with a value of: 0.912163
+pdu len 47
+Packet sent: 3105
+Packet detected at sample: 0/2048 with a value of: 0.966797
+pdu len 47
+Packet sent: 3174
+Packet detected at sample: 0/2048 with a value of: 0.81171
+pdu len 47
+Packet sent: 3980
+Packet detected at sample: 0/2048 with a value of: 0.658087
+pdu len 47
+Packet sent: 3593
+Packet detected at sample: 0/2048 with a value of: 0.878894
+pdu len 47
+Packet sent: 2968
+Packet detected at sample: 0/512 with a value of: 0.801646
+pdu len 47
+Packet sent: 4685
+Packet detected at sample: 0/2048 with a value of: 0.92904
+pdu len 47
+Packet sent: 3960
+Packet detected at sample: 0/2048 with a value of: 0.92573
+pdu len 47
+Packet sent: 3954
+Packet detected at sample: 0/1024 with a value of: 0.744383
+pdu len 47
+Packet sent: 3659
+Packet detected at sample: 0/512 with a value of: 0.875782
+pdu len 47
+Packet sent: 4604
+Packet detected at sample: 0/2048 with a value of: 0.88806
+pdu len 47
+Packet sent: 4266
+Packet detected at sample: 0/1024 with a value of: 0.937728
+pdu len 47
+Packet sent: 3614
+Packet detected at sample: 0/1024 with a value of: 0.700736
+pdu len 47
+Packet sent: 3813
+Packet detected at sample: 0/2048 with a value of: 0.967099
+pdu len 47
+Packet sent: 4673
+Packet detected at sample: 0/2048 with a value of: 0.93658
+pdu len 47
+Packet sent: 4293
+Packet detected at sample: 0/2048 with a value of: 0.651009
+pdu len 47
+Packet sent: 3970
+Packet detected at sample: 0/2048 with a value of: 0.871981
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.902936
+pdu len 47
+Packet sent: 2606
+Packet detected at sample: 0/2048 with a value of: 0.964548
+pdu len 47
+Packet sent: 4019
+Packet detected at sample: 0/2048 with a value of: 0.912857
+pdu len 47
+Packet sent: 3830
+Packet detected at sample: 0/2048 with a value of: 0.801853
+pdu len 47
+Packet sent: 3317
+Packet detected at sample: 0/512 with a value of: 0.649253
+pdu len 47
+Packet sent: 4430
+Packet detected at sample: 0/4 with a value of: 0.943472
+pdu len 47
+Packet sent: 4076
+Packet detected at sample: 0/1024 with a value of: 0.811768
+pdu len 47
+Packet sent: 5811
+Packet detected at sample: 0/512 with a value of: 0.717142
+pdu len 47
+Packet sent: 4856
+Packet detected at sample: 0/512 with a value of: 0.728937
+pdu len 47
+Packet sent: 4636
+Packet detected at sample: 0/2048 with a value of: 0.970447
+pdu len 47
+Packet sent: 4476
+Packet detected at sample: 0/1024 with a value of: 0.880004
+pdu len 47
+Packet sent: 3635
+Packet detected at sample: 0/1024 with a value of: 0.943693
+pdu len 47
+Packet sent: 3385
+Packet detected at sample: 0/2048 with a value of: 0.933362
+pdu len 47
+Packet sent: 4643
+Packet detected at sample: 0/1024 with a value of: 0.923848
+pdu len 47
+Packet sent: 4023
+Packet detected at sample: 0/2048 with a value of: 0.73215
+pdu len 47
+Packet sent: 3375
+Packet detected at sample: 0/2048 with a value of: 0.970169
+pdu len 47
+Packet sent: 2819
+Packet detected at sample: 0/2048 with a value of: 0.779508
+pdu len 47
+Packet sent: 2683
+Packet detected at sample: 0/2048 with a value of: 0.941205
+pdu len 47
+Packet sent: 3882
+Packet detected at sample: 0/2048 with a value of: 0.968542
+pdu len 47
+Packet sent: 3532
+Packet detected at sample: 0/512 with a value of: 0.835238
+pdu len 47
+Packet sent: 5065
+Packet detected at sample: 0/256 with a value of: 0.931313
+pdu len 47
+Packet sent: 4363
+Packet detected at sample: 0/2048 with a value of: 0.941489
+pdu len 47
+Packet sent: 3941
+Packet detected at sample: 0/1024 with a value of: 0.971074
+pdu len 47
+Packet sent: 5114
+Packet detected at sample: 0/512 with a value of: 0.96994
+pdu len 47
+Packet sent: 4704
+Packet detected at sample: 0/1022 with a value of: 0.690144
+pdu len 47
+Packet sent: 14475
+Packet detected at sample: 0/1024 with a value of: 0.919405
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.737634
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.795011
+pdu len 47
+Packet sent: 2587
+Packet detected at sample: 0/2048 with a value of: 0.885686
+pdu len 47
+Packet sent: 4305
+Packet detected at sample: 0/1024 with a value of: 0.863892
+pdu len 47
+Packet sent: 3976
+Packet detected at sample: 0/2048 with a value of: 0.967539
+pdu len 47
+Packet sent: 3374
+Packet detected at sample: 0/2048 with a value of: 0.839694
+pdu len 47
+Packet sent: 2708
+Packet detected at sample: 0/2048 with a value of: 0.906062
+pdu len 47
+Packet sent: 4390
+Packet detected at sample: 0/2048 with a value of: 0.791944
+pdu len 47
+Packet sent: 3324
+Packet detected at sample: 0/2048 with a value of: 0.945777
+pdu len 47
+Packet sent: 3053
+Packet detected at sample: 0/1024 with a value of: 0.935861
+pdu len 47
+Packet sent: 3141
+Packet detected at sample: 0/2048 with a value of: 0.823756
+pdu len 47
+Packet sent: 3921
+Packet detected at sample: 0/2048 with a value of: 0.963842
+pdu len 47
+Packet sent: 3569
+Packet detected at sample: 0/1024 with a value of: 0.959568
+pdu len 47
+Packet sent: 3135
+Packet detected at sample: 0/2048 with a value of: 0.650713
+pdu len 47
+Packet sent: 4049
+Packet detected at sample: 0/2048 with a value of: 0.875462
+pdu len 47
+Packet sent: 3994
+Packet detected at sample: 0/1024 with a value of: 0.85841
+pdu len 47
+Packet sent: 3638
+Packet detected at sample: 0/1024 with a value of: 0.842312
+pdu len 47
+Packet sent: 4180
+Packet detected at sample: 0/2048 with a value of: 0.927057
+pdu len 47
+Packet sent: 4596
+Packet detected at sample: 0/128 with a value of: 0.746898
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.785108
+pdu len 47
+Packet sent: 3569
+Packet detected at sample: 0/2048 with a value of: 0.971126
+pdu len 47
+Packet sent: 2902
+Packet detected at sample: 0/2048 with a value of: 0.934014
+pdu len 47
+Packet sent: 4652
+Packet detected at sample: 0/2048 with a value of: 0.839028
+pdu len 47
+Packet sent: 4145
+Packet detected at sample: 0/2048 with a value of: 0.966944
+pdu len 47
+Packet sent: 3322
+Packet detected at sample: 0/2048 with a value of: 0.970359
+pdu len 47
+Packet sent: 3086
+Packet detected at sample: 0/256 with a value of: 0.971615
+pdu len 47
+Packet sent: 4260
+Packet detected at sample: 0/2048 with a value of: 0.619905
+pdu len 47
+Packet sent: 3739
+Packet detected at sample: 0/2048 with a value of: 0.853025
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.964448
+pdu len 47
+Packet sent: 4680
+Packet detected at sample: 0/256 with a value of: 0.818145
+pdu len 47
+Packet sent: 4364
+Packet detected at sample: 0/1024 with a value of: 0.865811
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.642625
+pdu len 47
+Packet sent: 3723
+Packet detected at sample: 0/1024 with a value of: 0.796174
+pdu len 47
+Packet sent: 3275
+Packet detected at sample: 0/2048 with a value of: 0.734004
+pdu len 47
+Packet sent: 4901
+Packet detected at sample: 0/1024 with a value of: 0.965873
+pdu len 47
+Packet sent: 5811
+Packet detected at sample: 0/2048 with a value of: 0.814613
+pdu len 47
+Packet sent: 3649
+Packet detected at sample: 0/2048 with a value of: 0.969485
+pdu len 47
+Packet sent: 2988
+Packet detected at sample: 0/2048 with a value of: 0.776221
+pdu len 47
+Packet sent: 2630
+Packet detected at sample: 0/2048 with a value of: 0.611484
+pdu len 47
+Packet sent: 3725
+Packet detected at sample: 0/2048 with a value of: 0.692336
+pdu len 47
+Packet sent: 3416
+Packet detected at sample: 0/2048 with a value of: 0.965199
+pdu len 47
+Packet sent: 2980
+Packet detected at sample: 0/256 with a value of: 0.814939
+pdu len 47
+Packet sent: 4260
+Packet detected at sample: 0/2048 with a value of: 0.955018
+pdu len 47
+Packet sent: 3803
+Packet detected at sample: 0/1024 with a value of: 0.947505
+pdu len 47
+Packet sent: 5518
+Packet detected at sample: 0/512 with a value of: 0.864714
+pdu len 47
+Packet sent: 4842
+Packet detected at sample: 0/64 with a value of: 0.729002
+pdu len 47
+Packet sent: 4119
+Packet detected at sample: 0/1024 with a value of: 0.964193
+pdu len 47
+Packet sent: 4065
+Packet detected at sample: 0/1024 with a value of: 0.681735
+pdu len 47
+Packet sent: 5105
+Packet detected at sample: 0/512 with a value of: 0.893321
+pdu len 47
+Packet sent: 4918
+Packet detected at sample: 0/2048 with a value of: 0.771472
+pdu len 47
+Packet sent: 4351
+Packet detected at sample: 0/1024 with a value of: 0.606686
+pdu len 47
+Packet sent: 3760
+Packet detected at sample: 0/2048 with a value of: 0.914057
+pdu len 47
+Packet sent: 3107
+Packet detected at sample: 0/2048 with a value of: 0.829221
+pdu len 47
+Packet sent: 4657
+Packet detected at sample: 0/2048 with a value of: 0.95995
+pdu len 47
+Packet sent: 4224
+Packet detected at sample: 0/2048 with a value of: 0.655182
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.629786
+pdu len 47
+Packet sent: 3155
+Packet detected at sample: 0/256 with a value of: 0.749068
+pdu len 47
+Packet sent: 4546
+Packet detected at sample: 0/64 with a value of: 0.927322
+pdu len 47
+Packet sent: 4118
+Packet detected at sample: 0/2048 with a value of: 0.723104
+pdu len 47
+Packet sent: 3333
+Packet detected at sample: 0/512 with a value of: 0.857662
+pdu len 47
+Packet sent: 3012
+Packet detected at sample: 0/256 with a value of: 0.874752
+pdu len 47
+Packet sent: 4354
+Packet detected at sample: 0/2048 with a value of: 0.628601
+pdu len 47
+Packet sent: 3766
+Packet detected at sample: 0/1024 with a value of: 0.969262
+pdu len 47
+Packet sent: 3586
+Packet detected at sample: 0/512 with a value of: 0.842361
+pdu len 47
+Packet sent: 4519
+Packet detected at sample: 0/128 with a value of: 0.926363
+pdu len 47
+Packet sent: 6320
+Packet detected at sample: 0/1024 with a value of: 0.936493
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.766696
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.891473
+pdu len 47
+Packet sent: 3042
+Packet detected at sample: 0/2048 with a value of: 0.958775
+pdu len 47
+Packet sent: 4252
+Packet detected at sample: 0/2048 with a value of: 0.828954
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.967479
+pdu len 47
+Packet sent: 3263
+Packet detected at sample: 0/2048 with a value of: 0.860245
+pdu len 47
+Packet sent: 4769
+Packet detected at sample: 0/256 with a value of: 0.887261
+pdu len 47
+Packet sent: 4169
+Packet detected at sample: 0/2048 with a value of: 0.622713
+pdu len 47
+Packet sent: 3488
+Packet detected at sample: 0/2048 with a value of: 0.857806
+pdu len 47
+Packet sent: 3271
+Packet detected at sample: 0/512 with a value of: 0.965611
+pdu len 47
+Packet sent: 4500
+Packet detected at sample: 0/64 with a value of: 0.913085
+pdu len 47
+Packet sent: 4113
+Packet detected at sample: 0/2048 with a value of: 0.804877
+pdu len 47
+Packet sent: 3648
+Packet detected at sample: 0/1024 with a value of: 0.971568
+pdu len 47
+Packet sent: 3666
+Packet detected at sample: 0/512 with a value of: 0.891756
+pdu len 47
+Packet sent: 4493
+Packet detected at sample: 0/128 with a value of: 0.959923
+pdu len 47
+Packet sent: 4154
+Packet detected at sample: 0/1024 with a value of: 0.82879
+pdu len 47
+Packet sent: 3421
+Packet detected at sample: 0/1024 with a value of: 0.912541
+pdu len 47
+Packet sent: 3182
+Packet detected at sample: 0/2048 with a value of: 0.93698
+pdu len 47
+Packet sent: 2671
+Packet detected at sample: 0/128 with a value of: 0.971109
+pdu len 47
+Packet sent: 4127
+Packet detected at sample: 0/2048 with a value of: 0.760718
+pdu len 47
+Packet sent: 3763
+Packet detected at sample: 0/2048 with a value of: 0.932623
+pdu len 47
+Packet sent: 2927
+Packet detected at sample: 0/2048 with a value of: 0.963255
+pdu len 47
+Packet sent: 4709
+Packet detected at sample: 0/2048 with a value of: 0.8503
+pdu len 47
+Packet sent: 3891
+Packet detected at sample: 0/2048 with a value of: 0.955783
+pdu len 47
+Packet sent: 3461
+Packet detected at sample: 0/2048 with a value of: 0.946915
+pdu len 47
+Packet sent: 3010
+Packet detected at sample: 0/256 with a value of: 0.75906
+pdu len 47
+Packet sent: 4361
+Packet detected at sample: 0/256 with a value of: 0.908821
+pdu len 47
+Packet sent: 4200
+Packet detected at sample: 0/1024 with a value of: 0.965682
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.967511
+pdu len 47
+Packet sent: 4549
+Packet detected at sample: 0/2048 with a value of: 0.956279
+pdu len 47
+Packet sent: 4018
+Packet detected at sample: 0/1024 with a value of: 0.638022
+pdu len 47
+Packet sent: 5626
+Packet detected at sample: 0/1024 with a value of: 0.971567
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.849778
+pdu len 47
+Packet sent: 4647
+Packet detected at sample: 0/128 with a value of: 0.965776
+pdu len 47
+Packet sent: 4202
+Packet detected at sample: 0/128 with a value of: 0.960093
+pdu len 47
+Packet sent: 4086
+Packet detected at sample: 0/2048 with a value of: 0.942244
+pdu len 47
+Packet sent: 2908
+Packet detected at sample: 0/2048 with a value of: 0.880969
+pdu len 47
+Packet sent: 2994
+Packet detected at sample: 0/2048 with a value of: 0.8978
+pdu len 47
+Packet sent: 4231
+Packet detected at sample: 0/2048 with a value of: 0.910372
+pdu len 47
+Packet sent: 3502
+Packet detected at sample: 0/2048 with a value of: 0.966773
+pdu len 47
+Packet sent: 3187
+Packet detected at sample: 0/512 with a value of: 0.854902
+pdu len 47
+Packet sent: 6763
+Packet detected at sample: 0/4 with a value of: 0.893062
+pdu len 47
+Packet sent: 4075
+Packet detected at sample: 0/2048 with a value of: 0.633479
+pdu len 47
+Packet sent: 3424
+Packet detected at sample: 0/512 with a value of: 0.971612
+pdu len 47
+Packet sent: 2950
+Packet detected at sample: 0/512 with a value of: 0.820358
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.716789
+pdu len 47
+Packet sent: 4136
+Packet detected at sample: 0/1024 with a value of: 0.811303
+pdu len 47
+Packet sent: 3644
+Packet detected at sample: 0/1024 with a value of: 0.872058
+pdu len 47
+Packet sent: 3273
+Packet detected at sample: 0/2048 with a value of: 0.946418
+pdu len 47
+Packet sent: 4493
+Packet detected at sample: 0/1024 with a value of: 0.80351
+pdu len 47
+Packet sent: 3965
+Packet detected at sample: 0/1024 with a value of: 0.967438
+pdu len 47
+Packet sent: 3661
+Packet detected at sample: 0/2048 with a value of: 0.964594
+pdu len 47
+Packet sent: 4583
+Packet detected at sample: 0/128 with a value of: 0.96854
+pdu len 47
+Packet sent: 6087
+Packet detected at sample: 0/1024 with a value of: 0.792261
+pdu len 47
+Packet sent: 3941
+Packet detected at sample: 0/2048 with a value of: 0.971419
+pdu len 47
+Packet sent: 2782
+Packet detected at sample: 0/2048 with a value of: 0.75356
+pdu len 47
+Packet sent: 4633
+Packet detected at sample: 0/2048 with a value of: 0.927606
+pdu len 47
+Packet sent: 4049
+Packet detected at sample: 0/2048 with a value of: 0.840112
+pdu len 47
+Packet sent: 3335
+Packet detected at sample: 0/2048 with a value of: 0.933834
+pdu len 47
+Packet sent: 3398
+Packet detected at sample: 0/256 with a value of: 0.658015
+pdu len 47
+Packet sent: 4185
+Packet detected at sample: 0/2048 with a value of: 0.950981
+pdu len 47
+Packet sent: 4054
+Packet detected at sample: 0/1024 with a value of: 0.86254
+pdu len 47
+Packet sent: 3246
+Packet detected at sample: 0/1024 with a value of: 0.914367
+pdu len 47
+Packet sent: 3126
+Packet detected at sample: 0/512 with a value of: 0.925497
+pdu len 47
+Packet sent: 4750
+Packet detected at sample: 0/1024 with a value of: 0.90572
+pdu len 47
+Packet sent: 4050
+Packet detected at sample: 0/1024 with a value of: 0.97004
+pdu len 47
+Packet sent: 3599
+Packet detected at sample: 0/1024 with a value of: 0.631898
+pdu len 47
+Packet sent: 3174
+Packet detected at sample: 0/2048 with a value of: 0.937592
+pdu len 47
+Packet sent: 4667
+Packet detected at sample: 0/1024 with a value of: 0.69744
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.843162
+pdu len 47
+Packet sent: 3423
+Packet detected at sample: 0/2048 with a value of: 0.958606
+pdu len 47
+Packet sent: 2879
+Packet detected at sample: 0/2048 with a value of: 0.653672
+pdu len 47
+Packet sent: 2515
+Packet detected at sample: 0/2048 with a value of: 0.876728
+pdu len 47
+Packet sent: 3978
+Packet detected at sample: 0/2048 with a value of: 0.80507
+pdu len 47
+Packet sent: 3709
+Packet detected at sample: 0/2048 with a value of: 0.7248
+pdu len 47
+Packet sent: 2923
+Packet detected at sample: 0/256 with a value of: 0.965365
+pdu len 47
+Packet sent: 4357
+Packet detected at sample: 0/2048 with a value of: 0.969139
+pdu len 47
+Packet sent: 4037
+Packet detected at sample: 0/1024 with a value of: 0.653514
+pdu len 47
+Packet sent: 3492
+Packet detected at sample: 0/512 with a value of: 0.945081
+pdu len 47
+Packet sent: 2988
+Packet detected at sample: 0/512 with a value of: 0.805421
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.967269
+pdu len 47
+Packet sent: 4010
+Packet detected at sample: 0/1024 with a value of: 0.721284
+pdu len 47
+Packet sent: 3278
+Packet detected at sample: 0/2048 with a value of: 0.969125
+pdu len 47
+Packet sent: 4636
+Packet detected at sample: 0/1024 with a value of: 0.970879
+pdu len 47
+Packet sent: 5834
+Packet detected at sample: 0/1024 with a value of: 0.766495
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.936228
+pdu len 47
+Packet sent: 2888
+Packet detected at sample: 0/2048 with a value of: 0.962578
+pdu len 47
+Packet sent: 2647
+Packet detected at sample: 0/2048 with a value of: 0.966521
+pdu len 47
+Packet sent: 4680
+Packet detected at sample: 0/2048 with a value of: 0.675289
+pdu len 47
+Packet sent: 3564
+Packet detected at sample: 0/2048 with a value of: 0.889984
+pdu len 47
+Packet sent: 3155
+Packet detected at sample: 0/512 with a value of: 0.970159
+pdu len 47
+Packet sent: 4925
+Packet detected at sample: 0/2048 with a value of: 0.743562
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.965236
+pdu len 47
+Packet sent: 5782
+Packet detected at sample: 0/1024 with a value of: 0.913502
+pdu len 47
+Packet sent: 3279
+Packet detected at sample: 0/512 with a value of: 0.749703
+pdu len 47
+Packet sent: 4510
+Packet detected at sample: 0/2048 with a value of: 0.970146
+pdu len 47
+Packet sent: 4500
+Packet detected at sample: 0/1024 with a value of: 0.954408
+pdu len 47
+Packet sent: 3982
+Packet detected at sample: 0/1024 with a value of: 0.812885
+pdu len 47
+Packet sent: 3357
+Packet detected at sample: 0/2048 with a value of: 0.966394
+pdu len 47
+Packet sent: 4691
+Packet detected at sample: 0/2048 with a value of: 0.962617
+pdu len 47
+Packet sent: 4299
+Packet detected at sample: 0/1024 with a value of: 0.898981
+pdu len 47
+Packet sent: 5648
+Packet detected at sample: 0/2048 with a value of: 0.773212
+pdu len 47
+Packet sent: 3312
+Packet detected at sample: 0/2048 with a value of: 0.941404
+pdu len 47
+Packet sent: 2725
+Packet detected at sample: 0/2048 with a value of: 0.685834
+pdu len 47
+Packet sent: 5979
+Packet detected at sample: 0/2048 with a value of: 0.966054
+pdu len 47
+Packet sent: 3597
+Packet detected at sample: 0/2048 with a value of: 0.689845
+pdu len 47
+Packet sent: 2963
+Packet detected at sample: 0/512 with a value of: 0.897068
+pdu len 47
+Packet sent: 4570
+Packet detected at sample: 0/2048 with a value of: 0.948894
+pdu len 47
+Packet sent: 6149
+Packet detected at sample: 0/2048 with a value of: 0.867744
+pdu len 47
+Packet sent: 3504
+Packet detected at sample: 0/1024 with a value of: 0.931329
+pdu len 47
+Packet sent: 5176
+Packet detected at sample: 0/512 with a value of: 0.921064
+pdu len 47
+Packet sent: 4484
+Packet detected at sample: 0/1024 with a value of: 0.850236
+pdu len 47
+Packet sent: 3932
+Packet detected at sample: 0/1024 with a value of: 0.956386
+pdu len 47
+Packet sent: 5386
+Packet detected at sample: 0/1024 with a value of: 0.882676
+pdu len 47
+Packet sent: 5248
+Packet detected at sample: 0/128 with a value of: 0.895912
+pdu len 47
+Packet sent: 4172
+Packet detected at sample: 0/1024 with a value of: 0.932253
+pdu len 47
+Packet sent: 3856
+Packet detected at sample: 0/1024 with a value of: 0.834744
+pdu len 47
+Packet sent: 5311
+Packet detected at sample: 0/2048 with a value of: 0.92969
+pdu len 47
+Packet sent: 2736
+Packet detected at sample: 0/2048 with a value of: 0.941245
+pdu len 47
+Packet sent: 4571
+Packet detected at sample: 0/2048 with a value of: 0.948693
+pdu len 47
+Packet sent: 3770
+Packet detected at sample: 0/2048 with a value of: 0.969991
+pdu len 47
+Packet sent: 3533
+Packet detected at sample: 0/2048 with a value of: 0.908636
+pdu len 47
+Packet sent: 2998
+Packet detected at sample: 0/64 with a value of: 0.964861
+pdu len 47
+Packet sent: 4111
+Packet detected at sample: 0/2048 with a value of: 0.968593
+pdu len 47
+Packet sent: 3761
+Packet detected at sample: 0/1024 with a value of: 0.796421
+pdu len 47
+Packet sent: 3067
+Packet detected at sample: 0/1024 with a value of: 0.946837
+pdu len 47
+Packet sent: 3150
+Packet detected at sample: 0/2048 with a value of: 0.867702
+pdu len 47
+Packet sent: 3837
+Packet detected at sample: 0/1024 with a value of: 0.850195
+pdu len 47
+Packet sent: 3595
+Packet detected at sample: 0/1024 with a value of: 0.966503
+pdu len 47
+Packet sent: 3354
+Packet detected at sample: 0/512 with a value of: 0.908354
+pdu len 47
+Packet sent: 2553
+Packet detected at sample: 0/1024 with a value of: 0.968745
+pdu len 47
+Packet sent: 3992
+Packet detected at sample: 0/1024 with a value of: 0.882833
+pdu len 47
+Packet sent: 3577
+Packet detected at sample: 0/2048 with a value of: 0.897611
+pdu len 47
+Packet sent: 5309
+Packet detected at sample: 0/2048 with a value of: 0.85073
+pdu len 47
+Packet sent: 4524
+Packet detected at sample: 0/128 with a value of: 0.83305
+pdu len 47
+Packet sent: 4171
+Packet detected at sample: 0/2048 with a value of: 0.93031
+pdu len 47
+Packet sent: 3609
+Packet detected at sample: 0/2048 with a value of: 0.755625
+pdu len 47
+Packet sent: 2906
+Packet detected at sample: 0/2048 with a value of: 0.970592
+pdu len 47
+Packet sent: 4835
+Packet detected at sample: 0/2048 with a value of: 0.941756
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.959939
+pdu len 47
+Packet sent: 3438
+Packet detected at sample: 0/1024 with a value of: 0.707296
+pdu len 47
+Packet sent: 3150
+Packet detected at sample: 0/512 with a value of: 0.819306
+pdu len 47
+Packet sent: 4428
+Packet detected at sample: 0/256 with a value of: 0.86421
+pdu len 47
+Packet sent: 4213
+Packet detected at sample: 0/1024 with a value of: 0.885143
+pdu len 47
+Packet sent: 3386
+Packet detected at sample: 0/1024 with a value of: 0.759349
+pdu len 47
+Packet sent: 3071
+Packet detected at sample: 0/2048 with a value of: 0.932195
+pdu len 47
+Packet sent: 3920
+Packet detected at sample: 0/1024 with a value of: 0.919166
+pdu len 47
+Packet sent: 3754
+Packet detected at sample: 0/1024 with a value of: 0.818532
+pdu len 47
+Packet sent: 3611
+Packet detected at sample: 0/2048 with a value of: 0.957431
+pdu len 47
+Packet sent: 2745
+Packet detected at sample: 0/2048 with a value of: 0.879551
+pdu len 47
+Packet sent: 4684
+Packet detected at sample: 0/1024 with a value of: 0.954734
+pdu len 47
+Packet sent: 5671
+Packet detected at sample: 0/2048 with a value of: 0.687384
+pdu len 47
+Packet sent: 3264
+Packet detected at sample: 0/2048 with a value of: 0.706385
+pdu len 47
+Packet sent: 2824
+Packet detected at sample: 0/256 with a value of: 0.847907
+pdu len 47
+Packet sent: 4544
+Packet detected at sample: 0/2048 with a value of: 0.865837
+pdu len 47
+Packet sent: 3605
+Packet detected at sample: 0/2048 with a value of: 0.772972
+pdu len 47
+Packet sent: 3033
+Packet detected at sample: 0/512 with a value of: 0.870188
+pdu len 47
+Packet sent: 6716
+Packet detected at sample: 0/2048 with a value of: 0.813386
+pdu len 47
+Packet sent: 3989
+Packet detected at sample: 0/2048 with a value of: 0.716606
+pdu len 47
+Packet sent: 3827
+Packet detected at sample: 0/1024 with a value of: 0.928648
+pdu len 47
+Packet sent: 3102
+Packet detected at sample: 0/512 with a value of: 0.897979
+pdu len 47
+Packet sent: 4622
+Packet detected at sample: 0/8 with a value of: 0.781789
+pdu len 47
+Packet sent: 4085
+Packet detected at sample: 0/1024 with a value of: 0.970383
+pdu len 47
+Packet sent: 3731
+Packet detected at sample: 0/1024 with a value of: 0.684109
+pdu len 47
+Packet sent: 5045
+Packet detected at sample: 0/2048 with a value of: 0.70818
+pdu len 47
+Packet sent: 4586
+Packet detected at sample: 0/128 with a value of: 0.848363
+pdu len 47
+Packet sent: 4104
+Packet detected at sample: 0/2048 with a value of: 0.668477
+pdu len 47
+Packet sent: 3690
+Packet detected at sample: 0/2048 with a value of: 0.885438
+pdu len 47
+Packet sent: 2824
+Packet detected at sample: 0/2048 with a value of: 0.871465
+pdu len 47
+Packet sent: 4515
+Packet detected at sample: 0/2048 with a value of: 0.933692
+pdu len 47
+Packet sent: 3786
+Packet detected at sample: 0/2048 with a value of: 0.96452
+pdu len 47
+Packet sent: 3281
+Packet detected at sample: 0/2048 with a value of: 0.81855
+pdu len 47
+Packet sent: 2887
+Packet detected at sample: 0/256 with a value of: 0.799885
+pdu len 47
+Packet sent: 4409
+Packet detected at sample: 0/64 with a value of: 0.644181
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.954953
+pdu len 47
+Packet sent: 5164
+Packet detected at sample: 0/512 with a value of: 0.852979
+pdu len 47
+Packet sent: 4415
+Packet detected at sample: 0/64 with a value of: 0.91893
+pdu len 47
+Packet sent: 4127
+Packet detected at sample: 0/1024 with a value of: 0.692003
+pdu len 47
+Packet sent: 4020
+Packet detected at sample: 0/512 with a value of: 0.898306
+pdu len 47
+Packet sent: 2927
+Packet detected at sample: 0/1024 with a value of: 0.950737
+pdu len 47
+Packet sent: 3087
+Packet detected at sample: 0/2048 with a value of: 0.61725
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.814741
+pdu len 47
+Packet sent: 5477
+Packet detected at sample: 0/2048 with a value of: 0.965092
+pdu len 47
+Packet sent: 3098
+Packet detected at sample: 0/2048 with a value of: 0.962525
+pdu len 47
+Packet sent: 4519
+Packet detected at sample: 0/8 with a value of: 0.969388
+pdu len 47
+Packet sent: 4085
+Packet detected at sample: 0/2048 with a value of: 0.885145
+pdu len 47
+Packet sent: 3409
+Packet detected at sample: 0/2048 with a value of: 0.793588
+pdu len 47
+Packet sent: 3104
+Packet detected at sample: 0/2048 with a value of: 0.967703
+pdu len 47
+Packet sent: 4697
+Packet detected at sample: 0/2048 with a value of: 0.919097
+pdu len 47
+Packet sent: 3801
+Packet detected at sample: 0/2048 with a value of: 0.819629
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.970343
+pdu len 47
+Packet sent: 3160
+Packet detected at sample: 0/512 with a value of: 0.948267
+pdu len 47
+Packet sent: 4592
+Packet detected at sample: 0/2048 with a value of: 0.941765
+pdu len 47
+Packet sent: 3749
+Packet detected at sample: 0/1024 with a value of: 0.814074
+pdu len 47
+Packet sent: 3713
+Packet detected at sample: 0/512 with a value of: 0.830895
+pdu len 47
+Packet sent: 4743
+Packet detected at sample: 0/2048 with a value of: 0.846513
+pdu len 47
+Packet sent: 4411
+Packet detected at sample: 0/2048 with a value of: 0.93741
+pdu len 47
+Packet sent: 4396
+Packet detected at sample: 0/1024 with a value of: 0.644736
+pdu len 47
+Packet sent: 5375
+Packet detected at sample: 0/2048 with a value of: 0.621001
+pdu len 47
+Packet sent: 2792
+Packet detected at sample: 0/2048 with a value of: 0.855951
+pdu len 47
+Packet sent: 4520
+Packet detected at sample: 0/1024 with a value of: 0.717869
+pdu len 47
+Packet sent: 5747
+Packet detected at sample: 0/2048 with a value of: 0.695434
+pdu len 47
+Packet sent: 3392
+Packet detected at sample: 0/2048 with a value of: 0.937552
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.771802
+pdu len 47
+Packet sent: 4004
+Packet detected at sample: 0/2048 with a value of: 0.762826
+pdu len 47
+Packet sent: 3686
+Packet detected at sample: 0/2048 with a value of: 0.682719
+pdu len 47
+Packet sent: 3178
+Packet detected at sample: 0/512 with a value of: 0.963709
+pdu len 47
+Packet sent: 4548
+Packet detected at sample: 0/256 with a value of: 0.967009
+pdu len 47
+Packet sent: 4258
+Packet detected at sample: 0/2048 with a value of: 0.957191
+pdu len 47
+Packet sent: 3661
+Packet detected at sample: 0/1024 with a value of: 0.646032
+pdu len 47
+Packet sent: 3189
+Packet detected at sample: 0/512 with a value of: 0.970639
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.907486
+pdu len 47
+Packet sent: 4112
+Packet detected at sample: 0/1024 with a value of: 0.706564
+pdu len 47
+Packet sent: 4027
+Packet detected at sample: 0/1024 with a value of: 0.9115
+pdu len 47
+Packet sent: 3488
+Packet detected at sample: 0/2048 with a value of: 0.956267
+pdu len 47
+Packet sent: 2741
+Packet detected at sample: 0/2048 with a value of: 0.949539
+pdu len 47
+Packet sent: 4402
+Packet detected at sample: 0/2048 with a value of: 0.87023
+pdu len 47
+Packet sent: 5953
+Packet detected at sample: 0/2048 with a value of: 0.812366
+pdu len 47
+Packet sent: 3115
+Packet detected at sample: 0/2048 with a value of: 0.830619
+pdu len 47
+Packet sent: 2831
+Packet detected at sample: 0/256 with a value of: 0.929677
+pdu len 47
+Packet sent: 6354
+Packet detected at sample: 0/2048 with a value of: 0.898249
+pdu len 47
+Packet sent: 3658
+Packet detected at sample: 0/2048 with a value of: 0.885863
+pdu len 47
+Packet sent: 3146
+Packet detected at sample: 0/2048 with a value of: 0.790812
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.74287
+pdu len 47
+Packet sent: 6208
+Packet detected at sample: 0/1024 with a value of: 0.838822
+pdu len 47
+Packet sent: 5552
+Packet detected at sample: 0/1024 with a value of: 0.847469
+pdu len 47
+Packet sent: 3116
+Packet detected at sample: 0/512 with a value of: 0.803476
+pdu len 47
+Packet sent: 4545
+Packet detected at sample: 0/128 with a value of: 0.877228
+pdu len 47
+Packet sent: 4108
+Packet detected at sample: 0/1024 with a value of: 0.872686
+pdu len 47
+Packet sent: 3407
+Packet detected at sample: 0/2048 with a value of: 0.807951
+pdu len 47
+Packet sent: 2994
+Packet detected at sample: 0/2048 with a value of: 0.92441
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.967384
+pdu len 47
+Packet sent: 4104
+Packet detected at sample: 0/2048 with a value of: 0.970226
+pdu len 47
+Packet sent: 3135
+Packet detected at sample: 0/2048 with a value of: 0.649173
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.890155
+pdu len 47
+Packet sent: 4579
+Packet detected at sample: 0/2048 with a value of: 0.857327
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.826681
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.69884
+pdu len 47
+Packet sent: 5007
+Packet detected at sample: 0/256 with a value of: 0.937368
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.76944
+pdu len 47
+Packet sent: 3692
+Packet detected at sample: 0/1024 with a value of: 0.76479
+pdu len 47
+Packet sent: 3428
+Packet detected at sample: 0/512 with a value of: 0.903228
+pdu len 47
+Packet sent: 4557
+Packet detected at sample: 0/64 with a value of: 0.926444
+pdu len 47
+Packet sent: 4139
+Packet detected at sample: 0/1024 with a value of: 0.843367
+pdu len 47
+Packet sent: 5507
+Packet detected at sample: 0/1024 with a value of: 0.675054
+pdu len 47
+Packet sent: 3335
+Packet detected at sample: 0/2048 with a value of: 0.649795
+pdu len 47
+Packet sent: 4755
+Packet detected at sample: 0/2048 with a value of: 0.789744
+pdu len 47
+Packet sent: 4253
+Packet detected at sample: 0/1024 with a value of: 0.968697
+pdu len 47
+Packet sent: 3469
+Packet detected at sample: 0/2048 with a value of: 0.96694
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.962285
+pdu len 47
+Packet sent: 2666
+Packet detected at sample: 0/2048 with a value of: 0.673679
+pdu len 47
+Packet sent: 4595
+Packet detected at sample: 0/2048 with a value of: 0.888547
+pdu len 47
+Packet sent: 3375
+Packet detected at sample: 0/2048 with a value of: 0.785556
+pdu len 47
+Packet sent: 4637
+Packet detected at sample: 0/2048 with a value of: 0.904417
+pdu len 47
+Packet sent: 3889
+Packet detected at sample: 0/2048 with a value of: 0.723849
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.924525
+pdu len 47
+Packet sent: 3639
+Packet detected at sample: 0/512 with a value of: 0.969542
+pdu len 47
+Packet sent: 4536
+Packet detected at sample: 0/2048 with a value of: 0.789087
+pdu len 47
+Packet sent: 3938
+Packet detected at sample: 0/1024 with a value of: 0.62773
+pdu len 47
+Packet sent: 5697
+Packet detected at sample: 0/1024 with a value of: 0.969589
+pdu len 47
+Packet sent: 3401
+Packet detected at sample: 0/512 with a value of: 0.723517
+pdu len 47
+Packet sent: 4717
+Packet detected at sample: 0/1024 with a value of: 0.704564
+pdu len 47
+Packet sent: 3623
+Packet detected at sample: 0/1024 with a value of: 0.934162
+pdu len 47
+Packet sent: 3414
+Packet detected at sample: 0/512 with a value of: 0.943166
+pdu len 47
+Packet sent: 2842
+Packet detected at sample: 0/2048 with a value of: 0.972079
+pdu len 47
+Packet sent: 4387
+Packet detected at sample: 0/1024 with a value of: 0.938327
+pdu len 47
+Packet sent: 3844
+Packet detected at sample: 0/2048 with a value of: 0.927766
+pdu len 47
+Packet sent: 2947
+Packet detected at sample: 0/2048 with a value of: 0.717201
+pdu len 47
+Packet sent: 4641
+Packet detected at sample: 0/2048 with a value of: 0.683423
+pdu len 47
+Packet sent: 2563
+Packet detected at sample: 0/2048 with a value of: 0.659052
+pdu len 47
+Packet sent: 3623
+Packet detected at sample: 0/2048 with a value of: 0.634957
+pdu len 47
+Packet sent: 3117
+Packet detected at sample: 0/2048 with a value of: 0.864787
+pdu len 47
+Packet sent: 2612
+Packet detected at sample: 0/256 with a value of: 0.96892
+pdu len 47
+Packet sent: 4171
+Packet detected at sample: 0/2048 with a value of: 0.718553
+pdu len 47
+Packet sent: 3907
+Packet detected at sample: 0/1024 with a value of: 0.969557
+pdu len 47
+Packet sent: 3345
+Packet detected at sample: 0/512 with a value of: 0.757978
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.780118
+pdu len 47
+Packet sent: 4201
+Packet detected at sample: 0/1024 with a value of: 0.899634
+pdu len 47
+Packet sent: 3808
+Packet detected at sample: 0/1024 with a value of: 0.731738
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.708761
+pdu len 47
+Packet sent: 4707
+Packet detected at sample: 0/128 with a value of: 0.967675
+pdu len 47
+Packet sent: 6069
+Packet detected at sample: 0/1024 with a value of: 0.796537
+pdu len 47
+Packet sent: 4019
+Packet detected at sample: 0/2048 with a value of: 0.776363
+pdu len 47
+Packet sent: 2696
+Packet detected at sample: 0/2048 with a value of: 0.613717
+pdu len 47
+Packet sent: 4686
+Packet detected at sample: 0/128 with a value of: 0.853255
+pdu len 47
+Packet sent: 4091
+Packet detected at sample: 0/2048 with a value of: 0.834433
+pdu len 47
+Packet sent: 3272
+Packet detected at sample: 0/2048 with a value of: 0.962274
+pdu len 47
+Packet sent: 5163
+Packet detected at sample: 0/512 with a value of: 0.897143
+pdu len 47
+Packet sent: 4817
+Packet detected at sample: 0/64 with a value of: 0.971109
+pdu len 47
+Packet sent: 4101
+Packet detected at sample: 0/2048 with a value of: 0.796163
+pdu len 47
+Packet sent: 3837
+Packet detected at sample: 0/512 with a value of: 0.735712
+pdu len 47
+Packet sent: 3961
+Packet detected at sample: 0/256 with a value of: 0.919582
+pdu len 47
+Packet sent: 4264
+Packet detected at sample: 0/2048 with a value of: 0.8173
+pdu len 47
+Packet sent: 4295
+Packet detected at sample: 0/1024 with a value of: 0.956296
+pdu len 47
+Packet sent: 3466
+Packet detected at sample: 0/1024 with a value of: 0.882858
+pdu len 47
+Packet sent: 3289
+Packet detected at sample: 0/2048 with a value of: 0.955202
+pdu len 47
+Packet sent: 4549
+Packet detected at sample: 0/1024 with a value of: 0.908582
+pdu len 47
+Packet sent: 5909
+Packet detected at sample: 0/1024 with a value of: 0.919042
+pdu len 47
+Packet sent: 3669
+Packet detected at sample: 0/2048 with a value of: 0.910062
+pdu len 47
+Packet sent: 4805
+Packet detected at sample: 0/2048 with a value of: 0.865142
+pdu len 47
+Packet sent: 4235
+Packet detected at sample: 0/2048 with a value of: 0.879434
+pdu len 47
+Packet sent: 4083
+Packet detected at sample: 0/2048 with a value of: 0.794225
+pdu len 47
+Packet sent: 3402
+Packet detected at sample: 0/2048 with a value of: 0.959389
+pdu len 47
+Packet sent: 2841
+Packet detected at sample: 0/256 with a value of: 0.830386
+pdu len 47
+Packet sent: 4262
+Packet detected at sample: 0/2048 with a value of: 0.847687
+pdu len 47
+Packet sent: 3570
+Packet detected at sample: 0/2048 with a value of: 0.899641
+pdu len 47
+Packet sent: 3523
+Packet detected at sample: 0/256 with a value of: 0.887048
+pdu len 47
+Packet sent: 4217
+Packet detected at sample: 0/16 with a value of: 0.760315
+pdu len 47
+Packet sent: 4088
+Packet detected at sample: 0/1024 with a value of: 0.740277
+pdu len 47
+Packet sent: 3150
+Packet detected at sample: 0/1024 with a value of: 0.705103
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.726486
+pdu len 47
+Packet sent: 4596
+Packet detected at sample: 0/2048 with a value of: 0.958478
+pdu len 47
+Packet sent: 4513
+Packet detected at sample: 0/1024 with a value of: 0.649238
+pdu len 47
+Packet sent: 3513
+Packet detected at sample: 0/512 with a value of: 0.874163
+pdu len 47
+Packet sent: 3020
+Packet detected at sample: 0/2048 with a value of: 0.858471
+pdu len 47
+Packet sent: 4398
+Packet detected at sample: 0/1024 with a value of: 0.720926
+pdu len 47
+Packet sent: 3987
+Packet detected at sample: 0/2048 with a value of: 0.966903
+pdu len 47
+Packet sent: 5577
+Packet detected at sample: 0/2048 with a value of: 0.903919
+pdu len 47
+Packet sent: 2639
+Packet detected at sample: 0/2048 with a value of: 0.891588
+pdu len 47
+Packet sent: 4567
+Packet detected at sample: 0/2048 with a value of: 0.782469
+pdu len 47
+Packet sent: 3580
+Packet detected at sample: 0/2048 with a value of: 0.970143
+pdu len 47
+Packet sent: 3276
+Packet detected at sample: 0/2048 with a value of: 0.928159
+pdu len 47
+Packet sent: 2781
+Packet detected at sample: 0/512 with a value of: 0.966046
+pdu len 47
+Packet sent: 4520
+Packet detected at sample: 0/2048 with a value of: 0.856888
+pdu len 47
+Packet sent: 3451
+Packet detected at sample: 0/1024 with a value of: 0.793805
+pdu len 47
+Packet sent: 4958
+Packet detected at sample: 0/512 with a value of: 0.773516
+pdu len 47
+Packet sent: 3874
+Packet detected at sample: 0/256 with a value of: 0.899133
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.929598
+pdu len 47
+Packet sent: 5739
+Packet detected at sample: 0/1024 with a value of: 0.833011
+pdu len 47
+Packet sent: 3222
+Packet detected at sample: 0/2048 with a value of: 0.814128
+pdu len 47
+Packet sent: 2565
+Packet detected at sample: 0/128 with a value of: 0.894246
+pdu len 47
+Packet sent: 6020
+Packet detected at sample: 0/1024 with a value of: 0.63707
+pdu len 47
+Packet sent: 3449
+Packet detected at sample: 0/2048 with a value of: 0.970442
+pdu len 47
+Packet sent: 3004
+Packet detected at sample: 0/2048 with a value of: 0.968979
+pdu len 47
+Packet sent: 4629
+Packet detected at sample: 0/1024 with a value of: 0.965434
+pdu len 47
+Packet sent: 5713
+Packet detected at sample: 0/2048 with a value of: 0.68719
+pdu len 47
+Packet sent: 3884
+Packet detected at sample: 0/2048 with a value of: 0.89852
+pdu len 47
+Packet sent: 2899
+Packet detected at sample: 0/256 with a value of: 0.771999
+pdu len 47
+Packet sent: 4298
+Packet detected at sample: 0/2048 with a value of: 0.970503
+pdu len 47
+Packet sent: 3952
+Packet detected at sample: 0/2048 with a value of: 0.685023
+pdu len 47
+Packet sent: 3382
+Packet detected at sample: 0/512 with a value of: 0.705778
+pdu len 47
+Packet sent: 2990
+Packet detected at sample: 0/256 with a value of: 0.967535
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.970757
+pdu len 47
+Packet sent: 3908
+Packet detected at sample: 0/1024 with a value of: 0.880255
+pdu len 47
+Packet sent: 3247
+Packet detected at sample: 0/1024 with a value of: 0.942297
+pdu len 47
+Packet sent: 3411
+Packet detected at sample: 0/2048 with a value of: 0.957856
+pdu len 47
+Packet sent: 4232
+Packet detected at sample: 0/2048 with a value of: 0.8399
+pdu len 47
+Packet sent: 4312
+Packet detected at sample: 0/1024 with a value of: 0.846396
+pdu len 47
+Packet sent: 3437
+Packet detected at sample: 0/2048 with a value of: 0.937068
+pdu len 47
+Packet sent: 4819
+Packet detected at sample: 0/2048 with a value of: 0.94696
+pdu len 47
+Packet sent: 4248
+Packet detected at sample: 0/2048 with a value of: 0.953022
+pdu len 47
+Packet sent: 3892
+Packet detected at sample: 0/2048 with a value of: 0.743599
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.915128
+pdu len 47
+Packet sent: 4854
+Packet detected at sample: 0/2048 with a value of: 0.724033
+pdu len 47
+Packet sent: 3970
+Packet detected at sample: 0/2048 with a value of: 0.970432
+pdu len 47
+Packet sent: 3252
+Packet detected at sample: 0/2048 with a value of: 0.952325
+pdu len 47
+Packet sent: 3261
+Packet detected at sample: 0/256 with a value of: 0.875957
+pdu len 47
+Packet sent: 4362
+Packet detected at sample: 0/2048 with a value of: 0.859881
+pdu len 47
+Packet sent: 4036
+Packet detected at sample: 0/1024 with a value of: 0.915221
+pdu len 47
+Packet sent: 3400
+Packet detected at sample: 0/1024 with a value of: 0.701673
+pdu len 47
+Packet sent: 3227
+Packet detected at sample: 0/1024 with a value of: 0.745016
+pdu len 47
+Packet sent: 3199
+Packet detected at sample: 0/8 with a value of: 0.765717
+pdu len 47
+Packet sent: 4079
+Packet detected at sample: 0/1024 with a value of: 0.768276
+pdu len 47
+Packet sent: 3701
+Packet detected at sample: 0/2048 with a value of: 0.60061
+pdu len 47
+Packet sent: 3392
+Packet detected at sample: 0/2048 with a value of: 0.698907
+pdu len 47
+Packet sent: 2524
+Packet detected at sample: 0/2 with a value of: 0.826429
+pdu len 47
+Packet sent: 4073
+Packet detected at sample: 0/2048 with a value of: 0.858647
+pdu len 47
+Packet sent: 3209
+Packet detected at sample: 0/2048 with a value of: 0.942869
+pdu len 47
+Packet sent: 2840
+Packet detected at sample: 0/2048 with a value of: 0.971961
+pdu len 47
+Packet sent: 4626
+Packet detected at sample: 0/2048 with a value of: 0.861721
+pdu len 47
+Packet sent: 3974
+Packet detected at sample: 0/2048 with a value of: 0.965682
+pdu len 47
+Packet sent: 3319
+Packet detected at sample: 0/512 with a value of: 0.71964
+pdu len 47
+Packet sent: 3007
+Packet detected at sample: 0/256 with a value of: 0.90286
+pdu len 47
+Packet sent: 4274
+Packet detected at sample: 0/2048 with a value of: 0.790719
+pdu len 47
+Packet sent: 3629
+Packet detected at sample: 0/1024 with a value of: 0.952508
+pdu len 47
+Packet sent: 3413
+Packet detected at sample: 0/256 with a value of: 0.861235
+pdu len 47
+Packet sent: 4357
+Packet detected at sample: 0/512 with a value of: 0.823237
+pdu len 47
+Packet sent: 4496
+Packet detected at sample: 0/1024 with a value of: 0.840208
+pdu len 47
+Packet sent: 3474
+Packet detected at sample: 0/512 with a value of: 0.933523
+pdu len 47
+Packet sent: 3925
+Packet detected at sample: 0/2048 with a value of: 0.761381
+pdu len 47
+Packet sent: 4364
+Packet detected at sample: 0/1024 with a value of: 0.769193
+pdu len 47
+Packet sent: 3992
+Packet detected at sample: 0/1024 with a value of: 0.970755
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.911168
+pdu len 47
+Packet sent: 4708
+Packet detected at sample: 0/2048 with a value of: 0.924303
+pdu len 47
+Packet sent: 4349
+Packet detected at sample: 0/1024 with a value of: 0.934091
+pdu len 47
+Packet sent: 3939
+Packet detected at sample: 0/2048 with a value of: 0.760716
+pdu len 47
+Packet sent: 3157
+Packet detected at sample: 0/2048 with a value of: 0.771202
+pdu len 47
+Packet sent: 2713
+Packet detected at sample: 0/2048 with a value of: 0.957123
+pdu len 47
+Packet sent: 3907
+Packet detected at sample: 0/2048 with a value of: 0.929796
+pdu len 47
+Packet sent: 3568
+Packet detected at sample: 0/2048 with a value of: 0.965196
+pdu len 47
+Packet sent: 3117
+Packet detected at sample: 0/512 with a value of: 0.960185
+pdu len 47
+Packet sent: 4506
+Packet detected at sample: 0/2048 with a value of: 0.895476
+pdu len 47
+Packet sent: 3831
+Packet detected at sample: 0/1024 with a value of: 0.883098
+pdu len 47
+Packet sent: 3583
+Packet detected at sample: 0/1024 with a value of: 0.895437
+pdu len 47
+Packet sent: 3499
+Packet detected at sample: 0/256 with a value of: 0.932518
+pdu len 47
+Packet sent: 4359
+Packet detected at sample: 0/128 with a value of: 0.71167
+pdu len 47
+Packet sent: 4096
+Packet detected at sample: 0/1024 with a value of: 0.966974
+pdu len 47
+Packet sent: 3954
+Packet detected at sample: 0/512 with a value of: 0.801131
+pdu len 47
+Packet sent: 4898
+Packet detected at sample: 0/2048 with a value of: 0.782526
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.621096
+pdu len 47
+Packet sent: 3987
+Packet detected at sample: 0/2048 with a value of: 0.934371
+pdu len 47
+Packet sent: 3128
+Packet detected at sample: 0/2048 with a value of: 0.839924
+pdu len 47
+Packet sent: 2789
+Packet detected at sample: 0/2048 with a value of: 0.823711
+pdu len 47
+Packet sent: 4558
+Packet detected at sample: 0/2048 with a value of: 0.956236
+pdu len 47
+Packet sent: 3764
+Packet detected at sample: 0/2048 with a value of: 0.945753
+pdu len 47
+Packet sent: 3367
+Packet detected at sample: 0/2048 with a value of: 0.765545
+pdu len 47
+Packet sent: 2912
+Packet detected at sample: 0/512 with a value of: 0.935319
+pdu len 47
+Packet sent: 4555
+Packet detected at sample: 0/2048 with a value of: 0.925608
+pdu len 47
+Packet sent: 3827
+Packet detected at sample: 0/1024 with a value of: 0.824665
+pdu len 47
+Packet sent: 3728
+Packet detected at sample: 0/512 with a value of: 0.807703
+pdu len 47
+Packet sent: 4692
+Packet detected at sample: 0/64 with a value of: 0.951536
+pdu len 47
+Packet sent: 4151
+Packet detected at sample: 0/2048 with a value of: 0.787442
+pdu len 47
+Packet sent: 4265
+Packet detected at sample: 0/1024 with a value of: 0.956037
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.844477
+pdu len 47
+Packet sent: 4384
+Packet detected at sample: 0/128 with a value of: 0.702541
+pdu len 47
+Packet sent: 4189
+Packet detected at sample: 0/1024 with a value of: 0.935553
+pdu len 47
+Packet sent: 3920
+Packet detected at sample: 0/2048 with a value of: 0.970889
+pdu len 47
+Packet sent: 2950
+Packet detected at sample: 0/2048 with a value of: 0.77069
+pdu len 47
+Packet sent: 2592
+Packet detected at sample: 0/2048 with a value of: 0.863092
+pdu len 47
+Packet sent: 4283
+Packet detected at sample: 0/2048 with a value of: 0.820623
+pdu len 47
+Packet sent: 3365
+Packet detected at sample: 0/2048 with a value of: 0.924698
+pdu len 47
+Packet sent: 4948
+Packet detected at sample: 0/256 with a value of: 0.741372
+pdu len 47
+Packet sent: 4502
+Packet detected at sample: 0/512 with a value of: 0.760617
+pdu len 47
+Packet sent: 4451
+Packet detected at sample: 0/2048 with a value of: 0.97005
+pdu len 47
+Packet sent: 3517
+Packet detected at sample: 0/512 with a value of: 0.611435
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.960997
+pdu len 47
+Packet sent: 4383
+Packet detected at sample: 0/128 with a value of: 0.836997
+pdu len 47
+Packet sent: 4142
+Packet detected at sample: 0/1024 with a value of: 0.960256
+pdu len 47
+Packet sent: 5026
+Packet detected at sample: 0/1024 with a value of: 0.941831
+pdu len 47
+Packet sent: 4935
+Packet detected at sample: 0/2048 with a value of: 0.779579
+pdu len 47
+Packet sent: 4442
+Packet detected at sample: 0/1024 with a value of: 0.939648
+pdu len 47
+Packet sent: 4029
+Packet detected at sample: 0/1024 with a value of: 0.93093
+pdu len 47
+Packet sent: 3637
+Packet detected at sample: 0/2048 with a value of: 0.714472
+pdu len 47
+Packet sent: 2737
+Packet detected at sample: 0/2048 with a value of: 0.816164
+pdu len 47
+Packet sent: 2749
+Packet detected at sample: 0/2048 with a value of: 0.939626
+pdu len 47
+Packet sent: 3836
+Packet detected at sample: 0/2048 with a value of: 0.641551
+pdu len 47
+Packet sent: 3062
+Packet detected at sample: 0/2048 with a value of: 0.795805
+pdu len 47
+Packet sent: 2626
+Packet detected at sample: 0/2048 with a value of: 0.968679
+pdu len 47
+Packet sent: 4008
+Packet detected at sample: 0/2048 with a value of: 0.714826
+pdu len 47
+Packet sent: 3428
+Packet detected at sample: 0/2048 with a value of: 0.929912
+pdu len 47
+Packet sent: 2931
+Packet detected at sample: 0/256 with a value of: 0.751834
+pdu len 47
+Packet sent: 4406
+Packet detected at sample: 0/2048 with a value of: 0.949165
+pdu len 47
+Packet sent: 4041
+Packet detected at sample: 0/1024 with a value of: 0.616082
+pdu len 47
+Packet sent: 3551
+Packet detected at sample: 0/512 with a value of: 0.815884
+pdu len 47
+Packet sent: 4591
+Packet detected at sample: 0/256 with a value of: 0.833922
+pdu len 47
+Packet sent: 4373
+Packet detected at sample: 0/1024 with a value of: 0.689948
+pdu len 47
+Packet sent: 4031
+Packet detected at sample: 0/1024 with a value of: 0.969976
+pdu len 47
+Packet sent: 3449
+Packet detected at sample: 0/512 with a value of: 0.971551
+pdu len 47
+Packet sent: 4695
+Packet detected at sample: 0/2048 with a value of: 0.955474
+pdu len 47
+Packet sent: 4489
+Packet detected at sample: 0/1024 with a value of: 0.813609
+pdu len 47
+Packet sent: 3870
+Packet detected at sample: 0/2048 with a value of: 0.716251
+pdu len 47
+Packet sent: 3539
+Packet detected at sample: 0/2048 with a value of: 0.694004
+pdu len 47
+Packet sent: 2619
+Packet detected at sample: 0/2048 with a value of: 0.898726
+pdu len 47
+Packet sent: 4359
+Packet detected at sample: 0/2048 with a value of: 0.878389
+pdu len 47
+Packet sent: 3258
+Packet detected at sample: 0/2048 with a value of: 0.89179
+pdu len 47
+Packet sent: 2856
+Packet detected at sample: 0/2048 with a value of: 0.600376
+pdu len 47
+Packet sent: 2532
+Packet detected at sample: 0/2048 with a value of: 0.826455
+pdu len 47
+Packet sent: 3920
+Packet detected at sample: 0/2048 with a value of: 0.699862
+pdu len 47
+Packet sent: 3470
+Packet detected at sample: 0/512 with a value of: 0.743783
+pdu len 47
+Packet sent: 4924
+Packet detected at sample: 0/512 with a value of: 0.766354
+pdu len 47
+Packet sent: 4568
+Packet detected at sample: 0/2048 with a value of: 0.889725
+pdu len 47
+Packet sent: 3971
+Packet detected at sample: 0/1024 with a value of: 0.902828
+pdu len 47
+Packet sent: 3327
+Packet detected at sample: 0/512 with a value of: 0.927011
+pdu len 47
+Packet sent: 2933
+Packet detected at sample: 0/2048 with a value of: 0.841573
+pdu len 47
+Packet sent: 4445
+Packet detected at sample: 0/1024 with a value of: 0.958876
+pdu len 47
+Packet sent: 3799
+Packet detected at sample: 0/1024 with a value of: 0.891168
+pdu len 47
+Packet sent: 3604
+Packet detected at sample: 0/2048 with a value of: 0.632137
+pdu len 47
+Packet sent: 2694
+Packet detected at sample: 0/1024 with a value of: 0.866168
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.911458
+pdu len 47
+Packet sent: 5562
+Packet detected at sample: 0/2048 with a value of: 0.717693
+pdu len 47
+Packet sent: 3160
+Packet detected at sample: 0/2048 with a value of: 0.935219
+pdu len 47
+Packet sent: 2779
+Packet detected at sample: 0/512 with a value of: 0.761249
+pdu len 47
+Packet sent: 4506
+Packet detected at sample: 0/2048 with a value of: 0.947753
+pdu len 47
+Packet sent: 3727
+Packet detected at sample: 0/2048 with a value of: 0.612012
+pdu len 47
+Packet sent: 3207
+Packet detected at sample: 0/512 with a value of: 0.81974
+pdu len 47
+Packet sent: 4577
+Packet detected at sample: 0/2048 with a value of: 0.837352
+pdu len 47
+Packet sent: 4041
+Packet detected at sample: 0/2048 with a value of: 0.852524
+pdu len 47
+Packet sent: 3499
+Packet detected at sample: 0/512 with a value of: 0.892655
+pdu len 47
+Packet sent: 3044
+Packet detected at sample: 0/512 with a value of: 0.634434
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.608705
+pdu len 47
+Packet sent: 3969
+Packet detected at sample: 0/128 with a value of: 0.820702
+pdu len 47
+Packet sent: 4097
+Packet detected at sample: 0/1024 with a value of: 0.710936
+pdu len 47
+Packet sent: 3107
+Packet detected at sample: 0/2048 with a value of: 0.686112
+pdu len 47
+Packet sent: 4485
+Packet detected at sample: 0/1024 with a value of: 0.757728
+pdu len 47
+Packet sent: 3935
+Packet detected at sample: 0/2048 with a value of: 0.776834
+pdu len 47
+Packet sent: 3647
+Packet detected at sample: 0/2048 with a value of: 0.756027
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.690061
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.920202
+pdu len 47
+Packet sent: 3785
+Packet detected at sample: 0/2048 with a value of: 0.907908
+pdu len 47
+Packet sent: 3369
+Packet detected at sample: 0/2048 with a value of: 0.868531
+Packet Timeout Reached

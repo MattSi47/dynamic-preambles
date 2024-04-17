@@ -1,0 +1,2122 @@
+MAPPER: encoding: 0
+chunks_to_symbols :info: set_min_output_buffer on block 7 to 207744
+fft_v_fftw :info: set_min_output_buffer on block 9 to 2077440
+ofdm_cyclic_prefixer :info: set_min_output_buffer on block 11 to 2077440
+ofdm_carrier_allocator_cvc :info: set_min_output_buffer on block 12 to 207744
+chunks_to_symbols :info: set_min_output_buffer on block 13 to 415488
+tagged_stream_mux :info: set_min_output_buffer on block 14 to 207744
+Press Enter to quit: Packet detected at sample: 0/2048 with a value of: 0.805297
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.899787
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.94401
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.676853
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.926229
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.926645
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.791485
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.810282
+pdu len 47
+Packet sent: 3396
+Packet detected at sample: 0/2048 with a value of: 0.73456
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.90347
+pdu len 47
+Packet sent: 4086
+Packet detected at sample: 0/2048 with a value of: 0.940909
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.920464
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.878929
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.924488
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.795016
+pdu len 47
+Packet sent: 3427
+Packet detected at sample: 0/512 with a value of: 0.892504
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.942064
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.946443
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.80859
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.949075
+pdu len 47
+Packet sent: 4728
+Packet detected at sample: 0/2048 with a value of: 0.924758
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.645818
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.789536
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947792
+pdu len 47
+Packet sent: 2541
+Packet detected at sample: 0/2048 with a value of: 0.911054
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.716755
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.912871
+pdu len 47
+Packet sent: 3173
+Packet detected at sample: 0/2048 with a value of: 0.690463
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.794309
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.773538
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.927585
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.619655
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.914652
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.945765
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.899374
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.947242
+pdu len 47
+Packet sent: 4332
+Packet detected at sample: 0/1024 with a value of: 0.848723
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.773619
+pdu len 47
+Packet sent: 5116
+Packet detected at sample: 0/1024 with a value of: 0.934678
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.623679
+pdu len 47
+Packet sent: 4490
+Packet detected at sample: 0/1024 with a value of: 0.943737
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.720722
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.907606
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.807578
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.74674
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.865137
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.869274
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.847736
+pdu len 47
+Packet sent: 3845
+Packet detected at sample: 0/2048 with a value of: 0.88932
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.900141
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.712385
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.94812
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.682388
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.861145
+pdu len 47
+Packet sent: 2936
+Packet detected at sample: 0/2048 with a value of: 0.93061
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.945139
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.889972
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.730368
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.714893
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.804983
+pdu len 47
+Packet sent: 3390
+Packet detected at sample: 0/2048 with a value of: 0.948456
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.861595
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932698
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.793702
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.7473
+pdu len 47
+Packet sent: 3082
+Packet detected at sample: 0/256 with a value of: 0.912546
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.715309
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.836772
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.848122
+pdu len 47
+Packet sent: 4818
+Packet detected at sample: 0/256 with a value of: 0.950455
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.86883
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.627097
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.92526
+pdu len 47
+Packet sent: 4700
+Packet detected at sample: 0/2048 with a value of: 0.838441
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.826992
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.899805
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.95196
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.788697
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.776467
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.93592
+pdu len 47
+Packet sent: 3148
+Packet detected at sample: 0/2048 with a value of: 0.798153
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.908964
+pdu len 47
+Packet sent: 4019
+Packet detected at sample: 0/2048 with a value of: 0.94851
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.890323
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.89314
+pdu len 47
+Packet sent: 4658
+Packet detected at sample: 0/2048 with a value of: 0.881805
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.948062
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.882991
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.936697
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.73935
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.902502
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.907097
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.953073
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.798994
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.936329
+pdu len 47
+Packet sent: 3120
+Packet detected at sample: 0/2048 with a value of: 0.786737
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.763017
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.890315
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.917213
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.713659
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.698924
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.913004
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.952838
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.870893
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.926496
+pdu len 47
+Packet sent: 3803
+Packet detected at sample: 0/1024 with a value of: 0.938508
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.844319
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.71961
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.909137
+pdu len 47
+Packet sent: 3629
+Packet detected at sample: 0/1024 with a value of: 0.950195
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.920919
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.923843
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.781438
+pdu len 47
+Packet sent: 4468
+Packet detected at sample: 0/2048 with a value of: 0.94508
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.943384
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944924
+pdu len 47
+Packet sent: 3294
+Packet detected at sample: 0/2048 with a value of: 0.905254
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947866
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.799665
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.931163
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.870972
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.945808
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.746024
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.943898
+pdu len 47
+Packet sent: 3170
+Packet detected at sample: 0/512 with a value of: 0.904406
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.941101
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.896277
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.928378
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.640529
+Packet Timeout Reached
+Packet detected at sample: 0/4 with a value of: 0.879683
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.612363
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.698614
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947608
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.695692
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.92166
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.855818
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.656559
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.870721
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.627856
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.950134
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.946903
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.715979
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.809678
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.846215
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.937494
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.648435
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.786556
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.886998
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.836815
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.710067
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.83133
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.843339
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.752741
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947591
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.759977
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.738958
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.917048
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.949782
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.911799
+pdu len 47
+Packet sent: 4359
+Packet detected at sample: 0/2048 with a value of: 0.933317
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.950312
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.772519
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.925974
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.934537
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.940325
+pdu len 47
+Packet sent: 3988
+Packet detected at sample: 0/2048 with a value of: 0.733602
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.906688
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.94984
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949593
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.930908
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.646214
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.791475
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.744322
+pdu len 47
+Packet sent: 2847
+Packet detected at sample: 0/64 with a value of: 0.950637
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.828559
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.822461
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.687252
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.927192
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.951057
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.790562
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.886448
+pdu len 47
+Packet sent: 4206
+Packet detected at sample: 0/1024 with a value of: 0.948416
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.900216
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.942947
+pdu len 47
+Packet sent: 2690
+Packet detected at sample: 0/2048 with a value of: 0.845263
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.886188
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932567
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.777068
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.948415
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.940859
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.817901
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.940088
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.943551
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.950881
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.952371
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.769736
+pdu len 47
+Packet sent: 2496
+Packet detected at sample: 0/2048 with a value of: 0.924256
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.949605
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.895653
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.946967
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.829335
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.913639
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.675211
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.787218
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.870621
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.938991
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.60422
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.835774
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.905484
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.911116
+pdu len 47
+Packet sent: 2728
+Packet detected at sample: 0/256 with a value of: 0.74166
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.866727
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.933249
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.758409
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.814381
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.727809
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.908398
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.896274
+pdu len 47
+Packet sent: 4304
+Packet detected at sample: 0/2048 with a value of: 0.680774
+pdu len 47
+Packet sent: 4485
+Packet detected at sample: 0/1024 with a value of: 0.931014
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.872217
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.859483
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.91936
+pdu len 47
+Packet sent: 4251
+Packet detected at sample: 0/2048 with a value of: 0.910622
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.835325
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.941646
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.920368
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.927706
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.781329
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.751362
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.856194
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.941975
+Packet Timeout Reached
+Packet detected at sample: 0/16 with a value of: 0.950202
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.702628
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.811969
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.856837
+pdu len 47
+Packet sent: 4687
+Packet detected at sample: 0/8 with a value of: 0.874003
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.933864
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.950782
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.946938
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.915266
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.720926
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.955951
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.885835
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.926834
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.778072
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.882836
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.845958
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947278
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.944669
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.950297
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.805206
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.953914
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.770526
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.953041
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.921656
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.616033
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.830926
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.834188
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.741006
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.802088
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.762949
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.954744
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.887858
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.938539
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.708669
+Packet Timeout Reached
+Packet detected at sample: 0/4 with a value of: 0.828656
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.845112
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.922121
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.873857
+pdu len 47
+Packet sent: 4385
+Packet detected at sample: 0/1024 with a value of: 0.931521
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.946963
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.846334
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.945743
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.904533
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.916064
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.805595
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.864195
+Packet Timeout Reached
+Packet detected at sample: 0/16 with a value of: 0.649947
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.753301
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.918748
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.898306
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.907433
+pdu len 47
+Packet sent: 3646
+Packet detected at sample: 0/1024 with a value of: 0.814871
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.682449
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.949587
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.936501
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.637883
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.794182
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.898855
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.909137
+pdu len 47
+Packet sent: 3377
+Packet detected at sample: 0/2048 with a value of: 0.940208
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.920263
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.919439
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.657781
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947082
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.757678
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.729958
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.946393
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.83521
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.890229
+pdu len 47
+Packet sent: 4329
+Packet detected at sample: 0/2048 with a value of: 0.921592
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.952376
+pdu len 47
+Packet sent: 3318
+Packet detected at sample: 0/512 with a value of: 0.858259
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.950704
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.836133
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.950755
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.703507
+pdu len 47
+Packet sent: 3838
+Packet detected at sample: 0/1024 with a value of: 0.734201
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.887641
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.927095
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.781966
+pdu len 47
+Packet sent: 3648
+Packet detected at sample: 0/2048 with a value of: 0.860475
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.747399
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.732786
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.822271
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.948734
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.884878
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.86097
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.868142
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.935884
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.945753
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.806007
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.826938
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.944313
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.918399
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.855048
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.776373
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.864794
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.91747
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.947789
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.821505
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947294
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.732382
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.952227
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.928867
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.933064
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.797812
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.606358
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.828335
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.945207
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.94191
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.921567
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.932975
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.929974
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.949794
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.919435
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.901131
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.906307
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.74062
+pdu len 47
+Packet sent: 3006
+Packet detected at sample: 0/2048 with a value of: 0.674791
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.663641
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.9293
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.86106
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.804423
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.726057
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.946922
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.816772
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.848711
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.924742
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.871806
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.628853
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.939046
+pdu len 47
+Packet sent: 4280
+Packet detected at sample: 0/1024 with a value of: 0.942884
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.950157
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.834022
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.893214
+pdu len 47
+Packet sent: 4506
+Packet detected at sample: 0/2048 with a value of: 0.92276
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.764677
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.764715
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.755993
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.892146
+pdu len 47
+Packet sent: 3021
+Packet detected at sample: 0/2048 with a value of: 0.71187
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.71798
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.842895
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.932082
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.773161
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.782509
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.759132
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.947275
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.726166
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.816403
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.68988
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.887579
+pdu len 47
+Packet sent: 2948
+Packet detected at sample: 0/2048 with a value of: 0.663896
+Packet Timeout Reached
+Packet detected at sample: 0/2 with a value of: 0.769999
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.952064
+pdu len 47
+Packet sent: 3354
+Packet detected at sample: 0/2048 with a value of: 0.915139
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.944747
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.831915
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.906719
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.884578
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.951957
+pdu len 47
+Packet sent: 3779
+Packet detected at sample: 0/2048 with a value of: 0.775063
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.868584
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.746658
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.73742
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.948813
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.708401
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.917242
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.951107
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.867959
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.875028
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949944
+pdu len 47
+Packet sent: 4325
+Packet detected at sample: 0/2048 with a value of: 0.950248
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944287
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.913316
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.912322
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.802014
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.954052
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.7734
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.931499
+pdu len 47
+Packet sent: 3396
+Packet detected at sample: 0/1024 with a value of: 0.61303
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.945324
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.907755
+pdu len 47
+Packet sent: 4053
+Packet detected at sample: 0/1024 with a value of: 0.697775
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.741898
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.656932
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.868617
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.935556
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.802696
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.695275
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.833904
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947765
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.950674
+pdu len 47
+Packet sent: 2922
+Packet detected at sample: 0/256 with a value of: 0.67028
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.7911
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.787582
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.93554
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.911191
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.705013
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.705253
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.843894
+pdu len 47
+Packet sent: 4517
+Packet detected at sample: 0/1024 with a value of: 0.88488
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.660896
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.864039
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.881998
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.946545
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.700517
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.721167
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.846763
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.940921
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.865152
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.931027
+pdu len 47
+Packet sent: 2639
+Packet detected at sample: 0/2048 with a value of: 0.951478
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.915761
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.949969
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.829019
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.912557
+pdu len 47
+Packet sent: 4008
+Packet detected at sample: 0/1024 with a value of: 0.946413
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.859789
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.951375
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.921355
+pdu len 47
+Packet sent: 3724
+Packet detected at sample: 0/1024 with a value of: 0.945755
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.943679
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.82849
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.714263
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.848127
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.941818
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.92452
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.763912
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.890773
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.817035
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944555
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.838339
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.916328
+Packet Timeout Reached
+Packet detected at sample: 0/16 with a value of: 0.755835
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.869483
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.776364
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.884821
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.851879
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.836852
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.832036
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.935883
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.922186
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.780167
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.777476
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.928911
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.88861
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.816082
+pdu len 47
+Packet sent: 3396
+Packet detected at sample: 0/2048 with a value of: 0.720129
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.726355
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.894875
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.85738
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.934108
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.923035
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.624252
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.892481
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.905773
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.816741
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.946755
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.933072
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.884832
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.929397
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.797438
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.948408
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.911299
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.714091
+pdu len 47
+Packet sent: 3007
+Packet detected at sample: 0/2048 with a value of: 0.950893
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.854684
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.668807
+pdu len 47
+Packet sent: 3858
+Packet detected at sample: 0/2048 with a value of: 0.8726
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.954424
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.917574
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.955008
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.943341
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.906877
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.893251
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.926919
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.869362
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.928312
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.949189
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.945807
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.828578
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.73298
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.842048
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.929673
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.867932
+pdu len 47
+Packet sent: 3647
+Packet detected at sample: 0/2048 with a value of: 0.771788
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.93941
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.606852
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.950332
+pdu len 47
+Packet sent: 3811
+Packet detected at sample: 0/2048 with a value of: 0.710735
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.941474
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.747067
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.926728
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.778723
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.629105
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.937472
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.819235
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.945847
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.910776
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.887363
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.865082
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.87599
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.778908
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.950771
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.897115
+pdu len 47
+Packet sent: 3023
+Packet detected at sample: 0/512 with a value of: 0.828135
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.814481
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.94077
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.675152
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.783019
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.949529
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.925913
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.606348
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.945593
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.711101
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.951086
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.74597
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.861943
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.867259
+pdu len 47
+Packet sent: 3954
+Packet detected at sample: 0/2048 with a value of: 0.879203
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.850443
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.950626
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.901488
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.732369
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.941185
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.678888
+pdu len 47
+Packet sent: 3584
+Packet detected at sample: 0/512 with a value of: 0.92787
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.778854
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.935371
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.949853
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.903713
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.947787
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.950867
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.80294
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.66446
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.871682
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.949453
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.74917
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.707527
+pdu len 47
+Packet sent: 2968
+Packet detected at sample: 0/2048 with a value of: 0.945169
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944773
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.74908
+pdu len 47
+Packet sent: 3235
+Packet detected at sample: 0/512 with a value of: 0.925155
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.941286
+pdu len 47
+Packet sent: 3865
+Packet detected at sample: 0/2048 with a value of: 0.936758
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.886203
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.91166
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.91343
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.946059
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.896505
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.919152
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.789731
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.865109
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.634222
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.947253
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.915583
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.942028
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.813877
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.801094
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.794131
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.651167
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.763016
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.804598
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.730543
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.712178
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.720741
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.947384
+pdu len 47
+Packet sent: 3512
+Packet detected at sample: 0/512 with a value of: 0.937519
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.866075
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.86813
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.938582
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.735124
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.942303
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.905643
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.912829
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.744465
+pdu len 47
+Packet sent: 2629
+Packet detected at sample: 0/512 with a value of: 0.937589
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.870159
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.854447
+pdu len 47
+Packet sent: 3163
+Packet detected at sample: 0/512 with a value of: 0.747175
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.91263
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947948
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.89504
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.952985
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.671303
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.653695
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.859896
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.853479
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.899079
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.704246
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944777
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.935636
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.756874
+pdu len 47
+Packet sent: 3201
+Packet detected at sample: 0/2048 with a value of: 0.782172
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.864109
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.798339
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.811014
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.947767
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.832312
+pdu len 47
+Packet sent: 4065
+Packet detected at sample: 0/2048 with a value of: 0.946099
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.94894
+pdu len 47
+Packet sent: 3352
+Packet detected at sample: 0/512 with a value of: 0.662588
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.929533
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.790093
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.88728
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.914957
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.82254
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.914558
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.917367
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.926802
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.929811
+pdu len 47
+Packet sent: 3778
+Packet detected at sample: 0/2048 with a value of: 0.952058
+pdu len 47
+Packet sent: 2919
+Packet detected at sample: 0/2048 with a value of: 0.913718
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.940407
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.822164
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944488
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.747285
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.792257
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.64652
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.93798
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.93474
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.842926
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.947891
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.942333
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.942669
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.920679
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.774999
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.877026
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.754377
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.737633
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.703599
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.819764
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.896396
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.803302
+pdu len 47
+Packet sent: 2817
+Packet detected at sample: 0/64 with a value of: 0.928134
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.927984
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.952781
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.611068
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.819139
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.825051
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.734821
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.886451
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.788586
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.7697
+pdu len 47
+Packet sent: 3903
+Packet detected at sample: 0/1024 with a value of: 0.925179
+pdu len 47
+Packet sent: 3523
+Packet detected at sample: 0/2048 with a value of: 0.887587
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.91237
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.720962
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.813072
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.941052
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.933515
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.657163
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.763218
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.857176
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.604468
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.902867
+pdu len 47
+Packet sent: 3179
+Packet detected at sample: 0/1024 with a value of: 0.937382
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.896932
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.884216
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.950153
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.64197
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.930646
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.739052
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.898788
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.90611
+pdu len 47
+Packet sent: 2544
+Packet detected at sample: 0/128 with a value of: 0.900891
+pdu len 47
+Packet sent: 4208
+Packet detected at sample: 0/2048 with a value of: 0.945349
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.792375
+Packet Timeout Reached
+Packet detected at sample: 0/4 with a value of: 0.865191
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.931563
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.916746
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.939369
+pdu len 47
+Packet sent: 4217
+Packet detected at sample: 0/2048 with a value of: 0.945401
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944934
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.73255
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.952659
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.93259
+pdu len 47
+Packet sent: 3622
+Packet detected at sample: 0/1024 with a value of: 0.775907
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.754029
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.894556
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.907582
+pdu len 47
+Packet sent: 3568
+Packet detected at sample: 0/1024 with a value of: 0.722902
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.890642
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.804354
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.662879
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.954363
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.757243
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.921322
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.697899
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.835386
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.723736
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.689016
+pdu len 47
+Packet sent: 4058
+Packet detected at sample: 0/1024 with a value of: 0.92376
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.651814
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.768533
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.882604
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.810099
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.724023
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.830906
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.727999
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.752582
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.791024
+pdu len 47
+Packet sent: 4599
+Packet detected at sample: 0/1024 with a value of: 0.765508
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.88336
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.844471
+pdu len 47
+Packet sent: 4699
+Packet detected at sample: 0/2048 with a value of: 0.896952
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.828472
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.840143
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.922431
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.785343
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.928024
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.940064
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.919814
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.841337
+pdu len 47
+Packet sent: 4226
+Packet detected at sample: 0/1024 with a value of: 0.946182
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.828422
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.88896
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.753316
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932229
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.927302
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.799542
+pdu len 47
+Packet sent: 4285
+Packet detected at sample: 0/2048 with a value of: 0.947948
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.707656
+pdu len 47
+Packet sent: 2781
+Packet detected at sample: 0/2048 with a value of: 0.814058
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.916681
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.74522
+pdu len 47
+Packet sent: 3472
+Packet detected at sample: 0/1024 with a value of: 0.928101
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.930779
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949474
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.940614
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.940091
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.945796
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.940718
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.748491
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949782
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.783701
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.63382
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.753829
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.843968
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.710106
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.699257
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.919817
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.764657
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.952985
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.860218
+pdu len 47
+Packet sent: 3671
+Packet detected at sample: 0/512 with a value of: 0.758076
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.694513
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.839137
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.902899
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.952316
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.88914
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.949395
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.949867
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.861435
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.94139
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.897883
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.832925
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.901303
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.891576
+pdu len 47
+Packet sent: 3436
+Packet detected at sample: 0/2048 with a value of: 0.798483
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.933968
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.642297
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.856989
+pdu len 47
+Packet sent: 3416
+Packet detected at sample: 0/1024 with a value of: 0.94607
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.91261
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.722193
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.805824
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.888266
+pdu len 47
+Packet sent: 4003
+Packet detected at sample: 0/2048 with a value of: 0.933822
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.951914
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.79687
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.951805
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.911617
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.827283
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.944286
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.691737
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.921982
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.778627
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932565
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.853752
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.841999
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.721293
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.831755
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.943211
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.938311
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.651587
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.950495
+pdu len 47
+Packet sent: 3576
+Packet detected at sample: 0/2048 with a value of: 0.787905
+pdu len 47
+Packet sent: 2768
+Packet detected at sample: 0/128 with a value of: 0.951039
+pdu len 47
+Packet sent: 4106
+Packet detected at sample: 0/2048 with a value of: 0.705794
+pdu len 47
+Packet sent: 3461
+Packet detected at sample: 0/2048 with a value of: 0.718659
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.944432
+pdu len 47
+Packet sent: 4121
+Packet detected at sample: 0/2048 with a value of: 0.676948
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.951948
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.930555
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932178
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.740666
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.841244
+pdu len 47
+Packet sent: 4431
+Packet detected at sample: 0/2048 with a value of: 0.826891
+pdu len 47
+Packet sent: 3773
+Packet detected at sample: 0/2048 with a value of: 0.838752
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.938894
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.926724
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949223
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.868472
+pdu len 47
+Packet sent: 3336
+Packet detected at sample: 0/512 with a value of: 0.949298
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.941897
+pdu len 47
+Packet sent: 4305
+Packet detected at sample: 0/1024 with a value of: 0.706769
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.83229
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.694216
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.791931
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.766188
+pdu len 47
+Packet sent: 5560
+Packet detected at sample: 0/2048 with a value of: 0.642443
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.883274
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.615912
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.819728
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.717289
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.734846
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.745855
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.94871
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.658248
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.783847
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.848144
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.733862
+pdu len 47
+Packet sent: 3760
+Packet detected at sample: 0/512 with a value of: 0.906303
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.812163
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.945226
+pdu len 47
+Packet sent: 4358
+Packet detected at sample: 0/2048 with a value of: 0.881493
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.952977
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.9303
+pdu len 47
+Packet sent: 3917
+Packet detected at sample: 0/2048 with a value of: 0.624586
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947286
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.893848
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.709578
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.698833
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.84805
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.675726
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.640321
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.878274
+pdu len 47
+Packet sent: 4712
+Packet detected at sample: 0/512 with a value of: 0.791716
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.744445
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.946436
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.899556
+pdu len 47
+Packet sent: 4604
+Packet detected at sample: 0/2048 with a value of: 0.888616
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.80269
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.932154
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932285
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.946037
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.890982
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.90785
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.720389
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.947069
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.690675
+pdu len 47
+Packet sent: 4196
+Packet detected at sample: 0/2048 with a value of: 0.934457
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.873669
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.935105
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.759795
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.81607
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.899808
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.90928
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.942681
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.794142
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.660931
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.643063
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.765669
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.936879
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.72927
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.718377
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.903184
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.67391
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.934163
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.643519
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.877712
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.890189
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949545
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.821703
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.833966
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.846873
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.790978
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.87047
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.771425
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.852836
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.943569
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.903827
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.946523
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.886103
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.745801
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.779257
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.876899
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.938445
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.849812
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.725492
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.717295
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.909935
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.954478
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.93193
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.934654
+Packet Timeout Reached
+Packet detected at sample: 0/256 with a value of: 0.946379
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.916134
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.906272
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.904774
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.840541
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.888673
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.875349
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.649172
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.923703
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.937056
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949623
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.719813
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.941734
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.85022
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.663027
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.877931
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.861794
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.756947
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.693349
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.947609
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.833907
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.921628
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.790643
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.861758
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932656
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.869497
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.888097
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.949978
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.82217
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.734596
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.91973
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.753853
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.928492
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.954988
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.743575
+Packet Timeout Reached
+Packet detected at sample: 0/128 with a value of: 0.948124
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.826781
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.836553
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.910313
+pdu len 47
+Packet sent: 4528
+Packet detected at sample: 0/2048 with a value of: 0.856184
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.928841
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.77876
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.753813
+Packet Timeout Reached
+Packet detected at sample: 0/16 with a value of: 0.623599
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.808377
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.901653
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.698373
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.745326
+pdu len 47
+Packet sent: 4024
+Packet detected at sample: 0/2048 with a value of: 0.783525
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.870912
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.785115
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.947096
+pdu len 47
+Packet sent: 3720
+Packet detected at sample: 0/1024 with a value of: 0.840047
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.905462
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.726422
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.84274
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.79079
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.955236
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.932628
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.794367
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.606015
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.954026
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.726141
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.894803
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.946896
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.666915
+Packet Timeout Reached
+Packet detected at sample: 0/64 with a value of: 0.860897
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.936803
+Packet Timeout Reached
+Packet detected at sample: 0/512 with a value of: 0.799209
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.906179
+Packet Timeout Reached
+Packet detected at sample: 0/1024 with a value of: 0.94536
+Packet Timeout Reached

@@ -1,0 +1,17 @@
+MAPPER: encoding: 0
+chunks_to_symbols :info: set_min_output_buffer on block 7 to 207744
+fft_v_fftw :info: set_min_output_buffer on block 9 to 2077440
+ofdm_cyclic_prefixer :info: set_min_output_buffer on block 11 to 2077440
+ofdm_carrier_allocator_cvc :info: set_min_output_buffer on block 12 to 207744
+chunks_to_symbols :info: set_min_output_buffer on block 13 to 415488
+tagged_stream_mux :info: set_min_output_buffer on block 14 to 207744
+Press Enter to quit: Packet detected at sample: 0/2048 with a value of: 0.620058
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.61319
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.603746
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.615356
+Packet Timeout Reached
+Packet detected at sample: 0/2048 with a value of: 0.616121
+Packet Timeout Reached
