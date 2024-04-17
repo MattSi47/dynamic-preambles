@@ -82,19 +82,19 @@ class Test_Wifi_Tx(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.tx_gain = tx_gain = .8
+        self.tx_gain = tx_gain = 0.8
         self.samp_rate = samp_rate = 5e6
-        self.rx_gain = rx_gain = .8
+        self.rx_gain = rx_gain = 0.8
         self.noise = noise = 0
         self.freq = freq = 5890000000
         self.encoding = encoding = 0
         self.chan_est = chan_est = 0
-        self.cfo = cfo = 2e3
+        self.cfo = cfo = 0
 
         ##################################################
         # Blocks
         ##################################################
-        self._cfo_range = Range(0, 50e3, 1000, 2e3, 200)
+        self._cfo_range = Range(0, 50e3, 1000, 0, 200)
         self._cfo_win = RangeWidget(self._cfo_range, self.set_cfo, "CFO", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_layout.addWidget(self._cfo_win)
         self.wifi_phy_hier_0 = wifi_phy_hier(

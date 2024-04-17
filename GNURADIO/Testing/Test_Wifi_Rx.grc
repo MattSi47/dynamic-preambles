@@ -73,7 +73,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '.8'
+    value: '.5'
   states:
     bus_sink: false
     bus_source: false
@@ -119,9 +119,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [512, 160.0]
+    coordinate: [584, 56.0]
     rotation: 0
-    state: true
+    state: enabled
 - name: UConn2402_fftXCorr_0
   id: UConn2402_fftXCorr
   parameters:
@@ -129,14 +129,14 @@ blocks:
     alias: ''
     comment: ''
     file: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
+      Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [304, 84.0]
+    coordinate: [320, 28.0]
     rotation: 0
     state: enabled
 - name: blocks_null_sink_0
@@ -627,7 +627,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [56, 124.0]
+    coordinate: [40, 132.0]
     rotation: 0
     state: enabled
 - name: wifi_phy_hier_0

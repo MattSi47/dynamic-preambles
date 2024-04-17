@@ -40,7 +40,7 @@ class Test_Wifi_Rx(gr.top_block):
         ##################################################
         self.tx_gain = tx_gain = .8
         self.samp_rate = samp_rate = 5e6
-        self.rx_gain = rx_gain = .8
+        self.rx_gain = rx_gain = .5
         self.freq = freq = 5890000000
         self.encoding = encoding = 0
         self.chan_est = chan_est = 0
@@ -72,13 +72,14 @@ class Test_Wifi_Rx(gr.top_block):
         self.network_socket_pdu_0_0 = network.socket_pdu('UDP_CLIENT', '127.0.0.1', '52001', 10000, False)
         self.ieee802_11_mac_0 = ieee802_11.mac([0x12, 0x34, 0x56, 0x78, 0x90, 0xab], [0x30, 0x14, 0x4a, 0xe6, 0x46, 0xe4], [0x42, 0x42, 0x42, 0x42, 0x42, 0x42])
         self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_gr_complex*1)
-        self.UConn2402_fftXCorr_0 = UConn2402.fftXCorr('/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv')
-        self.UConn2402_ArbitrarySync2_0 = UConn2402.ArbitrarySync2(0.8, 20000)
+        self.UConn2402_fftXCorr_0 = UConn2402.fftXCorr('/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv')
+        self.UConn2402_ArbitrarySync2_0 = UConn2402.ArbitrarySync2(0.6, 20000)
 
 
         ##################################################
         # Connections
         ##################################################
+        self.msg_connect((self.ieee802_11_mac_0, 'app out'), (self.UConn2402_ArbitrarySync2_0, 'stop'))
         self.msg_connect((self.ieee802_11_mac_0, 'app out'), (self.network_socket_pdu_0_0, 'pdus'))
         self.msg_connect((self.ieee802_11_mac_0, 'phy out'), (self.wifi_phy_hier_0, 'mac_in'))
         self.msg_connect((self.wifi_phy_hier_0, 'mac_out'), (self.ieee802_11_mac_0, 'phy in'))

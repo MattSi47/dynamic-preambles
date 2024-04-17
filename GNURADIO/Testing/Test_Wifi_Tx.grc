@@ -45,7 +45,7 @@ blocks:
     start: '0'
     step: '1000'
     stop: 50e3
-    value: 2e3
+    value: '0'
     widget: counter_slider
   states:
     bus_sink: false
@@ -115,7 +115,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '.8'
+    value: '0.5'
   states:
     bus_sink: false
     bus_source: false
@@ -139,7 +139,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '.8'
+    value: '0.8'
   states:
     bus_sink: false
     bus_source: false
@@ -252,7 +252,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1256, 256.0]
+    coordinate: [1208, 120.0]
     rotation: 180
     state: true
 - name: channels_channel_model_0
@@ -273,7 +273,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 220.0]
+    coordinate: [288, 220.0]
     rotation: 180
     state: disabled
 - name: ieee802_11_mac_0
