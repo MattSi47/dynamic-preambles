@@ -4,7 +4,7 @@
 password="uconn"
 
 # Define an array of IP addresses
-ip_addresses=("137.99.0.17" "137.99.252.245" "137.99.252.208")
+ip_addresses=("10.0.1.187" "10.0.1.171" "10.0.1.176")
 
 
 
