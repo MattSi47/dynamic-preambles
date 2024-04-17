@@ -15,7 +15,7 @@ all_preambles_data = []
 
 # Iterate through different Preamble_mcX directories
 for preamble_number in range(5):  # Range 5 for Preamble_mc0 to Preamble_mc4
-    directory = f'/home/spencer/Desktop/testing data/Preamble_mc{preamble_number}/Noise'
+    directory = f'/home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/MC Preamble Testing data/Preamble_mc{preamble_number}/Noise'
 
     # Initialize lists to store CFO and PDR values for the current preamble
     SNR_values = []
@@ -46,10 +46,11 @@ for i, preamble_data in enumerate(all_preambles_data):
     SNR_values, PDR_values = zip(*preamble_data)
     plt.plot(SNR_values, PDR_values,marker='o', label=f'Preamble {i}')
 
-plt.xlabel('SNR (dB)')
-plt.ylabel('PDR (1000 packet set)')
-plt.title('PDR vs SNR')
-plt.legend()
+plt.xlabel('SNR (dB)', fontsize= 26)
+plt.ylabel('PDR (1000 packet set)', fontsize= 26)
+plt.title('PDR vs SNR', fontsize= 30)
+plt.tick_params(axis='both', which='major', labelsize=20)
+plt.legend(fontsize= 22)
 plt.grid(True)
 plt.show()
 
