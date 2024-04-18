@@ -131,51 +131,25 @@ blocks:
     label4: ''
     labels: '[]'
     num_opts: '3'
-    option0: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
-    option1: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_1.csv
-    option2: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_2.csv
+    option0: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
+      Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
+    option1: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
+      Preambles/Preambles/SigSet696_MonteCarlo1k_1.csv
+    option2: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
+      Preambles/Preambles/SigSet696_MonteCarlo1k_2.csv
     option3: '3'
     option4: '4'
     options: '[0, 1, 2]'
     orient: Qt.QHBoxLayout
     type: string
-    value: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
+    value: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
+      Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
     widget: radio_buttons
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1160, 212.0]
-    rotation: 0
-    state: true
-- name: filepath2
-  id: variable_qtgui_chooser
-  parameters:
-    comment: ''
-    gui_hint: 'Messaging@1: 0,0'
-    label: Preamble
-    label0: Preamble 1
-    label1: Preamble 2
-    label2: Preamble 3
-    label3: ''
-    label4: ''
-    labels: '[]'
-    num_opts: '3'
-    option0: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
-    option1: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_1.csv
-    option2: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_2.csv
-    option3: '3'
-    option4: '4'
-    options: '[0, 1, 2]'
-    orient: Qt.QHBoxLayout
-    type: string
-    value: /home/uconn/dynamic-preambles/GNURADIO/Universal Preambles/Preambles/SigSet696_MonteCarlo1k_0.csv
-    widget: radio_buttons
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1368, 204.0]
+    coordinate: [1240, 124.0]
     rotation: 0
     state: true
 - name: freq
@@ -385,7 +359,7 @@ blocks:
     label7: Tab 7
     label8: Tab 8
     label9: Tab 9
-    num_tabs: '2'
+    num_tabs: '1'
   states:
     bus_sink: false
     bus_source: false
@@ -402,7 +376,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     samples: '20000'
-    threshold: '0.8'
+    threshold: '0.6'
   states:
     bus_sink: false
     bus_source: false
@@ -418,7 +392,7 @@ blocks:
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    prefix: 'Wifi-Device1: '
+    prefix: 'Wifi-Device3: '
   states:
     bus_sink: false
     bus_source: false
@@ -432,8 +406,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    file: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv
+    file: filepath
     maxoutbuf: '0'
     minoutbuf: '100000'
     pcklen: '"packet_len"'
@@ -441,33 +414,16 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [488, 748.0]
+    coordinate: [624, 628.0]
     rotation: 180
     state: true
-- name: UConn2402_StatusMessage_0
-  id: UConn2402_StatusMessage
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    n: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [992, 220.0]
-    rotation: 0
-    state: disabled
 - name: UConn2402_fftXCorr_0
   id: UConn2402_fftXCorr
   parameters:
     affinity: ''
     alias: ''
     comment: ''
-    file: /home/spencer/Documents/SeniorDesign/Git/dynamic-preambles/GNURADIO/Universal
-      Preambles/Preambles/SigSet696_MonteCarlo1k_4.csv
+    file: filepath
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
@@ -476,64 +432,6 @@ blocks:
     bus_structure: null
     coordinate: [1648, 748.0]
     rotation: 180
-    state: true
-- name: blocks_message_strobe_random_0
-  id: blocks_message_strobe_random
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    dist: blocks.STROBE_POISSON
-    maxoutbuf: '0'
-    mean: '3000'
-    minoutbuf: '0'
-    msg: pmt.intern("Wifi-Device1")
-    std: '3000'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [624, 196.0]
-    rotation: 0
-    state: disabled
-- name: blocks_multiply_const_vxx_0_0_0
-  id: blocks_multiply_const_vxx
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    const: '0.2'
-    maxoutbuf: '0'
-    minoutbuf: '100000'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [856, 772.0]
-    rotation: 180
-    state: enabled
-- name: channels_channel_model_0
-  id: channels_channel_model
-  parameters:
-    affinity: ''
-    alias: ''
-    block_tags: 'False'
-    comment: ''
-    epsilon: '1.0'
-    freq_offset: '0.0'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    noise_voltage: '0.0'
-    seed: '0'
-    taps: 1.0 + 1.0j
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [904, 972.0]
-    rotation: 0
     state: true
 - name: ieee802_11_mac_0
   id: ieee802_11_mac
@@ -702,7 +600,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [256, 588.0]
+    coordinate: [256, 628.0]
     rotation: 180
     state: enabled
 - name: qtgui_time_sink_x_1_0_0
@@ -799,7 +697,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1328, 716.0]
+    coordinate: [1360, 828.0]
     rotation: 180
     state: enabled
 - name: uhd_usrp_sink_0_1_0
@@ -1078,7 +976,7 @@ blocks:
     bus_structure: null
     coordinate: [80, 748.0]
     rotation: 180
-    state: disabled
+    state: enabled
 - name: uhd_usrp_source_0
   id: uhd_usrp_source
   parameters:
@@ -1512,9 +1410,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2152, 772.0]
+    coordinate: [1976, 564.0]
     rotation: 180
-    state: disabled
+    state: enabled
 - name: wifi_phy_hier_0
   id: wifi_phy_hier
   parameters:
@@ -1540,23 +1438,17 @@ connections:
 - [UConn2402_ArbitrarySync2_0, '0', wifi_phy_hier_0, '0']
 - [UConn2402_GUIMessagePrefixer_0, clear, qtgui_edit_box_msg_0, val]
 - [UConn2402_GUIMessagePrefixer_0, msg_out, ieee802_11_mac_0, app in]
-- [UConn2402_Preamble_0, '0', channels_channel_model_0, '0']
 - [UConn2402_Preamble_0, '0', qtgui_time_sink_x_0_0_1, '0']
-- [UConn2402_StatusMessage_0, status, ieee802_11_mac_0, app in]
+- [UConn2402_Preamble_0, '0', uhd_usrp_sink_0_1_0, '0']
 - [UConn2402_fftXCorr_0, '0', UConn2402_ArbitrarySync2_0, '1']
 - [UConn2402_fftXCorr_0, '0', qtgui_time_sink_x_1_0_0, '0']
-- [blocks_message_strobe_random_0, strobe, UConn2402_StatusMessage_0, strobe]
-- [blocks_multiply_const_vxx_0_0_0, '0', UConn2402_Preamble_0, '0']
-- [blocks_multiply_const_vxx_0_0_0, '0', uhd_usrp_sink_0_1_0, '0']
-- [channels_channel_model_0, '0', UConn2402_ArbitrarySync2_0, '0']
-- [channels_channel_model_0, '0', UConn2402_fftXCorr_0, '0']
 - [ieee802_11_mac_0, app out, UConn2402_ArbitrarySync2_0, stop]
 - [ieee802_11_mac_0, app out, network_socket_pdu_0_0, pdus]
 - [ieee802_11_mac_0, phy out, wifi_phy_hier_0, mac_in]
 - [qtgui_edit_box_msg_0, msg, UConn2402_GUIMessagePrefixer_0, msg_in]
 - [uhd_usrp_source_0, '0', UConn2402_ArbitrarySync2_0, '0']
 - [uhd_usrp_source_0, '0', UConn2402_fftXCorr_0, '0']
-- [wifi_phy_hier_0, '0', blocks_multiply_const_vxx_0_0_0, '0']
+- [wifi_phy_hier_0, '0', UConn2402_Preamble_0, '0']
 - [wifi_phy_hier_0, mac_out, ieee802_11_mac_0, phy in]
 
 metadata:
