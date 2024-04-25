@@ -39,16 +39,16 @@ for preamble_number in range(5):  # Range 5 for Preamble_mc0 to Preamble_mc4
     all_preambles_data.append(sorted_data)
 
 # Plotting PDR vs CFO for each preamble
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 10))
 for i, preamble_data in enumerate(all_preambles_data):
     CFO_values, PDR_values = zip(*preamble_data)
     plt.plot(CFO_values, PDR_values,marker='o', label=f'Preamble {i}')
 
-plt.xlabel('CFO (kHz)', fontsize= 26)
-plt.ylabel('PDR (1000 packet set)', fontsize= 26)
-plt.title('PDR vs CFO', fontsize= 30)
-plt.tick_params(axis='both', which='major', labelsize=20)
-plt.legend(fontsize= 22)
+plt.xlabel('CFO (kHz)', fontsize= 32)
+plt.ylabel('PDR (1000 packet set)', fontsize= 32)
+plt.title('PDR vs CFO', fontsize= 38)
+plt.tick_params(axis='both', which='major', labelsize=28)
+plt.legend(fontsize= 30)
 plt.grid(True)
 plt.show()
 
