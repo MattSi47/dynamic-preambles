@@ -759,24 +759,6 @@ blocks:
     coordinate: [1784, 1508.0]
     rotation: 180
     state: disabled
-- name: blocks_multiply_const_vxx_0
-  id: blocks_multiply_const_vxx
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    const: '.2'
-    maxoutbuf: '0'
-    minoutbuf: '415488'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [2072, 1412.0]
-    rotation: 0
-    state: enabled
 - name: blocks_or_xx_0
   id: blocks_or_xx
   parameters:
@@ -836,9 +818,9 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    high: '0.8'
+    high: '0.6'
     init: '0'
-    low: '0.8'
+    low: '0.6'
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
@@ -854,9 +836,9 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    high: '0.8'
+    high: '0.6'
     init: '0'
-    low: '0.8'
+    low: '0.6'
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
@@ -872,9 +854,9 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    high: '0.8'
+    high: '0.6'
     init: '0'
-    low: '0.8'
+    low: '0.6'
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
@@ -890,9 +872,9 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    high: '0.8'
+    high: '0.6'
     init: '0'
-    low: '0.8'
+    low: '0.6'
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
@@ -908,9 +890,9 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    high: '0.8'
+    high: '0.6'
     init: '0'
-    low: '0.8'
+    low: '0.6'
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
@@ -2919,8 +2901,8 @@ connections:
 - [UConn2402_GUIMessagePrefixer_0, msg_out, ieee802_11_mac_0, app in]
 - [UConn2402_GUIMessagePrefixer_0_0, clear, qtgui_edit_box_msg_0_0, val]
 - [UConn2402_GUIMessagePrefixer_0_0, msg_out, ieee802_15_4_rime_stack_0, bcin]
-- [UConn2402_Preamble_0, '0', blocks_multiply_const_vxx_0, '0']
 - [UConn2402_Preamble_0, '0', qtgui_time_sink_x_0_0_1, '0']
+- [UConn2402_Preamble_0, '0', uhd_usrp_sink_0_0, '0']
 - [UConn2402_Preamble_1, '0', qtgui_time_sink_x_0_0_1_0, '0']
 - [UConn2402_Preamble_1, '0', uhd_usrp_sink_0, '0']
 - [UConn2402_StatusMessage_0, status, ieee802_15_4_rime_stack_0, bcin]
@@ -2944,7 +2926,6 @@ connections:
 - [blocks_int_to_float_0_0, '0', UConn2402_ArbitrarySync2_0, '1']
 - [blocks_message_strobe_0, strobe, UConn2402_StatusMessage_0, strobe]
 - [blocks_message_strobe_0_0, strobe, UConn2402_StatusMessage_0_0, strobe]
-- [blocks_multiply_const_vxx_0, '0', uhd_usrp_sink_0_0, '0']
 - [blocks_or_xx_0, '0', blocks_int_to_float_0, '0']
 - [blocks_or_xx_0_0, '0', blocks_int_to_float_0_0, '0']
 - [blocks_tagged_stream_multiply_length_0, '0', UConn2402_Preamble_1, '0']
