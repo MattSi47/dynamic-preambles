@@ -10,6 +10,19 @@ from matplotlib import cm
 
 #### Signal modification tools ####
 
+def mtsfm_generator(a, b, freqs, B, N):
+    # print(f'shape of b_mat: {np.shape(b_mat)}')
+    n = np.linspace(0, N-1, N)
+    signal = np.zeros(N)
+    phi = np.zeros(N)
+    for L in range(len(freqs)):
+        phi += a[L]*np.cos(2*np.pi*freqs[L]*n/B)
+        phi += b[L]*np.sin(2*np.pi*freqs[L]*n/B)
+
+    phi_unity = phi/max(np.abs(phi))
+    signal = np.exp(1j*2*np.pi*phi_unity)
+    return signal
+
 def chirp_fn(T, B, f0, f1):
     Ts = 1/B
     N = round(T*B)
@@ -37,15 +50,19 @@ def xcorr(x, y):
 def normalize(sig):
     #mag = np.sqrt(np.vdot(sig,sig))
     mag = np.linalg.norm(sig)
-    x = sig/mag
-    # print(f"Max of norm sig:{max(x)}")
-    return x
+    return sig/mag
 
-def normalize_set(S):
-    S_norm = np.zeros((len(S),len(S[0])))
-    for m in range(len(S)):
-        S_norm[m] = normalize(S[m])
-    return S_norm
+def normalize_set(S_in):
+    # the following does not work:
+    # S_norm = np.zeros((len(S_in),len(S_in[0])))
+    # for m in range(len(S_in)):
+    #     S_norm[m] = normalize(S_in[m])
+    #     # print(f"from norm set: {np.linalg.norm(S_norm[m])}")
+    # return S_norm
+
+    #but this does:
+    return np.array([normalize(sig) for sig in S_in])
+    # ?????????
 
 # Treat Im and Re components seperately due to SDR hardware
 def round_bits(S, B, S_range_pm1=False):
@@ -88,15 +105,14 @@ def round_bits(S, B, S_range_pm1=False):
     return S_digitized
 
 #### Objective functions and measures ####
+
 def ambiguity_fn(filt_in, sig_in, freqs, B, norm_inputs=False):
-    #print(f"filt_in: {filt_in}")
     if not norm_inputs:
         filt = normalize(filt_in)
         sig = normalize(sig_in)
     else:
         filt = filt_in
         sig = sig_in
-    #print(f"filt: {filt}")
     Ts = 1/B
     K = len(filt)+len(sig)-1
     I = len(freqs)
@@ -104,11 +120,7 @@ def ambiguity_fn(filt_in, sig_in, freqs, B, norm_inputs=False):
     n = np.arange(len(sig))
     for i in range(I):
         sig_CFO = sig*np.exp(1j*2*np.pi*freqs[i]*n*Ts)
-        # plot_complex(sig_CFO, f"sig_CFO {i}, cfo={freqs[i]}")
-        #print(f"dot: {np.vdot(sig_CFO,filt)}")
-        af[i] = xcorr(filt, sig_CFO) #np.abs(signal.correlate(filt, sig_CFO, mode='full', method="fft"))
-        # plot_complex(af[i], f"CC mag {i}")
-    
+        af[i] = xcorr(filt, sig_CFO)
     return af
 
 def psl(S,i,j, S_is_normalized=False):
@@ -118,7 +130,7 @@ def psl(S,i,j, S_is_normalized=False):
     else:
         S_ = S
      
-    Rij = np.abs(np.correlate(S[i], S[j], mode='full'))
+    Rij = xcorr(S[i], S[j])
     
     if i == j:
         middle_index = len(S[i])-1
@@ -127,7 +139,6 @@ def psl(S,i,j, S_is_normalized=False):
     return max(Rij)
 
 def max_cc_val(S, S_is_normalized=False):
-    S_=None
     if not S_is_normalized:
         S_ = normalize_set(S)
     else:
@@ -146,12 +157,20 @@ def max_ac_sidelobe(S, S_is_normalized=False):
         S_ = normalize_set(S)
     else:
         S_ = S
+
     M = len(S_)
 
     running_max = -1
     for m in range(M):
         running_max = np.max([psl(S_,m,m,S_is_normalized=True), running_max])
     return running_max
+
+# def cfo_AF_objective(S, f_step, n_freqs):
+#     cfo_freqs = np.array(range(n_freqs,-n_freqs+1,-1))*f_step
+#     for 
+#     AF = ambiguity_fn(filt, sig, cfo_freqs)
+
+
 
 def gen_obj_scatter_pts(S):
     L = len(S)
@@ -165,6 +184,33 @@ def gen_obj_scatter_pts(S):
 
 
 #### plotting tools ####
+fig_size = (10,10)
+title_font_size = 36
+label_font_size = 18
+
+def plot_corr(X, Y, X_notation, Y_notation, title):
+    # Length of the correlation operation
+    K = len(X) + len(Y) - 1
+    
+    # since 0 is assumed to be first full overlap between 2 signals
+    if K%2 == 0:
+        k_upper = K/2
+        k_lower = -k_upper + 1
+    else:
+        k_upper = (K-1)/2
+        k_lower = -k_upper
+
+    corr_fn = xcorr(X,Y)
+    fig, axs = plt.subplots(figsize=fig_size)
+    lag_range = np.arange(k_lower, k_upper+1)
+    axs.plot(lag_range, corr_fn)
+    axs.set_xlabel("Lag (k)", fontsize=label_font_size)
+    axs.set_ylabel(fr"$|R_{{{X_notation},{Y_notation}}}(k)|$", fontsize=label_font_size)
+    axs.set_title(f"{title}", fontsize=title_font_size)
+    axs.grid(True)
+    axs.tick_params(axis='x', labelsize=label_font_size-4)
+    axs.tick_params(axis='y', labelsize=label_font_size-4)
+    plt.show()
 
 def plot_pareto_scatter(data):
     x_coords = data[0]
@@ -195,18 +241,19 @@ def plot_pareto_scatter(data):
     # indices of all pareto points:
     pareto_ind = np.where(pareto_mask)[0].tolist()
     # Add index labels
-    labels = [plt.text(x_coords[i], y_coords[i], str(i), ha="right", va="top", color="black") for i in pareto_ind]
-    adjust_text(labels, arrowprops=dict(arrowstyle='->', color='black'))
+    labels = [plt.text(x_coords[i], y_coords[i], str(i), ha="right", va="top", color="black", fontsize=label_font_size-5) for i in pareto_ind]
+    adjust_text(labels, expand=(1,1), arrowprops=dict(arrowstyle='->', color='black'))
 
     # Labels and title 
-    plt.xlabel("Max autocorrelation sidelobe value")
-    plt.ylabel("Max crosscorrelation value")
-    plt.title("Pareto analysis of signal sets")
-
+    plt.xlabel("Max autocorrelation sidelobe value", fontsize=label_font_size)
+    plt.ylabel("Max crosscorrelation value", fontsize=label_font_size)
+    plt.title("Pareto analysis of signal sets", fontsize=title_font_size)
+    plt.xticks(fontsize=label_font_size-4)
+    plt.yticks(fontsize=label_font_size-4)
     plt.show()
 
 
-def plot_complex(complex_signal,title=""):
+def plot_complex(complex_signal, title=""):
     # Extract real and imaginary parts
     real_part = np.real(complex_signal)
     imaginary_part = np.imag(complex_signal)
@@ -215,76 +262,60 @@ def plot_complex(complex_signal,title=""):
     samples = np.arange(len(complex_signal))
 
     # Plot stacked stem plots for real and imaginary parts
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6), sharex=True)
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=fig_size, sharex=True)
 
-    # Plot real part
-    ax1.plot(samples, real_part)
-    ax1.set_ylabel('Real Part')
+    # Plot real part in blue
+    ax1.plot(samples, real_part, color='blue')
+    ax1.set_ylabel('Real Component')
     ax1.grid(True)
 
-    # Plot imaginary part
-    ax2.plot(samples, imaginary_part)
-    ax2.set_xlabel('Sample Index')
-    ax2.set_ylabel('Imaginary Part')
+    # Plot imaginary part in red
+    ax2.plot(samples, imaginary_part, color='red')
+    ax2.set_xlabel('Sample Index (n)', fontsize=label_font_size)
+    ax2.set_ylabel('Imaginary Component', fontsize=label_font_size)
     ax2.grid(True)
 
-    plt.suptitle(title)
+    plt.suptitle(title, fontsize=title_font_size)
     plt.show()
-
-    
-
 
 def corr_plot(S, title):
     M = len(S)
     N = len(S[0])
-    fig, axs = plt.subplots(M, M, figsize=(10, 10))  # Create a grid of subplots
+    fig, axs = plt.subplots(M, M, figsize=fig_size) # Create a grid of subplots
     
     for m in range(M):
         for j in range(M):
             if m <= j:  # Only plot upper triangular part to avoid duplication
-                corr_fn = xcorr(normalize(S[m]), normalize(S[j])) # np.abs(signal.correlate(S[m], S[j], mode='full', method="fft"))
-                print(f"Max of corr {m}, {j}:{max(corr_fn)}")
+                corr_fn = xcorr(S[m], S[j])
+                # print(f"Max of corr {m}, {j}:{max(corr_fn)}")
                 lag_range = np.arange(-N + 1, N)
                 axs[m, j].plot(lag_range, corr_fn)
-                axs[m, j].set_xlabel("Lag (k)")
-                axs[m, j].set_ylabel(r"$|R_{{{},{}}}(k)|$".format(m, j), fontsize=12)  # Using LaTeX for subscript
-                axs[m, j].set_title(f"Correlation of signals {m} and {j}")
+                
+                axs[m, j].set_ylabel(r"$|R_{{{},{}}}(k)|$".format(m, j), fontsize=label_font_size) # Using LaTeX for subscript
+                # axs[m, j].set_title(f"Correlation of signals {m} and {j}", fontsize=label_font_size)
+                axs[m, j].set_ylim(0, 1)  # Set y-axis range from 0 to 1
+                axs[m, j].locator_params(axis='y', nbins=6)
+                axs[m, j].grid(True)
+                axs[m, j].tick_params(axis='x', labelsize=label_font_size)  # Adjust x axis tick font size
+                axs[m, j].tick_params(axis='y', labelsize=label_font_size)  # Adjust y axis tick font size
+                if j == m:
+                    axs[m, j].set_xlabel("Lag (k)", fontsize=label_font_size)
+                else:
+                    axs[m,j].yaxis.set_ticklabels([])
+                    axs[m,j].yaxis.set_ticks_position('none')
             else:
                 axs[m, j].axis('off')  # Turn off axis for unused subplots
-    
-    plt.suptitle(title)
+
+    plt.suptitle(title, fontsize=title_font_size)
     plt.subplots_adjust(
         wspace=0.3,
-        hspace=0.6,
-        left=0.03,
-        right=1-0.03
+        hspace=0.4,
+        left=0.05,
+        right=0.95
     )
     plt.show()
 
-def plot_2_cplx(signal1,signal2,N):
-    n = np.arange(N)  # Discrete time index
-    # Combined plot for real and imaginary parts
-    fig, axs = plt.subplots(2, 1, sharex=True)
-    fig.suptitle('Signals 1 and 2')
-
-    # Signal 1
-    axs[0].plot(n, signal1.real, 'r-', linewidth=2, label='Signal 1')
-    axs[0].set_ylabel('Real Part')
-    axs[0].grid(True)
-
-    axs[1].plot(n, signal1.imag, 'r-', linewidth=2)
-    axs[1].set_xlabel('Sample Index (n)')
-    axs[1].set_ylabel('Imaginary Part')
-    axs[1].grid(True)
-
-    # Signal 2
-    axs[0].plot(n, signal2.real, 'b--', linewidth=2, label='Signal 2')
-    axs[1].plot(n, signal2.imag, 'b--', linewidth=2)
-
-    plt.legend()
-    plt.show()
-
-def plot_ambiguity(filter, sig, B, cfo_freqs,title=""):
+def plot_ambiguity(filter, sig, B, cfo_freqs,title="", plot_3D=True, plot_2D=True, display=True):
     # Length of the correlation operation
     K = len(filter) + len(sig) - 1
     
@@ -297,7 +328,7 @@ def plot_ambiguity(filter, sig, B, cfo_freqs,title=""):
         k_lower = -k_upper
         
     delay = np.linspace(k_lower, k_upper, num=K)  # Time axis for the signal
-    cfo_freqs = np.linspace(cfo_freqs[-1], cfo_freqs[0], num=len(cfo_freqs))  # Frequency axis
+    # cfo_freqs = np.linspace(cfo_freqs[-1], cfo_freqs[0], num=len(cfo_freqs))  # Frequency axis
 
     Ts = 1/B
     # Compute the ambiguity function surface
@@ -305,51 +336,119 @@ def plot_ambiguity(filter, sig, B, cfo_freqs,title=""):
 
     #===========================#
     # Plotting the surface
-    fig = plt.figure(figsize=(10,20))
-    fig.clf()
+    if plot_3D:
+        fig = plt.figure(figsize=fig_size)
+        fig.clf()
 
-    ax3d = fig.add_subplot(111, projection='3d')
-    ax3d.clear()
+        ax3d = fig.add_subplot(111, projection='3d')
+        ax3d.clear()
 
-    x_coords = delay
-    y_coords = cfo_freqs/1000
-    mesh_z = AF
-    (mesh_x, mesh_y) = np.meshgrid(x_coords, y_coords)
+        x_coords = delay
+        y_coords = cfo_freqs/1000
+        mesh_z = AF
+        (mesh_x, mesh_y) = np.meshgrid(x_coords, y_coords)
 
-    surface_z = np.vstack((np.zeros(len(AF[0])), AF[-1])) #don't know
-    (surface_x, surface_y) = np.meshgrid(x_coords, [0,0])
-    # makes the "front cover" of the plot
-    ax3d.plot_surface(surface_x, surface_y, surface_z, linewidth=0, edgecolor="black", color="black", shade=False, alpha=1)
+        surface_z = np.vstack((np.zeros(len(AF[0])), AF[-1])) #don't know
+        (surface_x, surface_y) = np.meshgrid(x_coords, [0,0])
+        # makes the "front cover" of the plot
+        ax3d.plot_surface(surface_x, surface_y, surface_z, linewidth=0, edgecolor="black", color="black", shade=False, alpha=1)
+        
+        #plot AF
+        ax3d.plot_surface(mesh_x, mesh_y, mesh_z, linewidth=1, color="whitesmoke", edgecolor="black", shade=True, alpha=1)
+
+        # visual stuff
+        ax3d.view_init(elev=35, azim=135)
+        ax3d.set_zlim([0, 1])
+
+        ax3d.set_xlabel(' Sample lag $ \\it k$ ', fontsize=label_font_size)
+        ax3d.set_ylabel(' CFO (kHz), $\\it f$ ', fontsize=label_font_size)
+        ax3d.set_zlabel(' $|\\it\\chi(\\it\\k,\\it f)|$ ', fontsize=label_font_size)
+        fig.suptitle(f"{title}", fontsize=title_font_size)
+        # Adjusting plot layout to center the plot and title
+        # plt.subplots_adjust(top=0.95)
+        if display:
+            plt.show()
+        fig.savefig(f"{title}_3D.png", format="png")
+
+    if plot_2D:
+        # Create a new figure and axes for 2D plot
+        fig, ax = plt.subplots(figsize=fig_size)
+        
+        # Plot the 2D colormap with corrected axes orientation
+        im = ax.imshow(AF,
+                       extent=[min(delay), max(delay), min(cfo_freqs)/1000, max(cfo_freqs)/1000],
+                       aspect='auto',
+                       cmap='viridis', vmax=1.0)
+        cbar = plt.colorbar(im, ax=ax, label='Magnitude', ticks=np.linspace(0, 1, 6))
+        cbar.set_label('Magnitude', fontsize=label_font_size)
+        # cbar.ax.tick_params(labelsize=label_font_size)  # Set font size for colorbar ticks
+        # plt.colorbar(im, ax=ax, label='Magnitude', fontsize=label_font_size)
+        
+        # Set labels and title
+        ax.tick_params(axis='x', labelsize=label_font_size-4)
+        ax.tick_params(axis='y', labelsize=label_font_size-4)
+        ax.set_xlabel('Sample lag $ \\it k$', fontsize=label_font_size)
+        ax.set_ylabel('CFO (kHz), $\\it f$ (kHz)', fontsize=label_font_size)
+        ax.set_title(f"{title}", fontsize=title_font_size)
+        ax.grid(False)
+
+        # Saving and displaying the plot
+        if display:
+            plt.show()
+        fig.savefig(f"{title}_2D.png", format="png")
+
+def plot_ambiguity_triangle(S, B, cfo_freqs, title=""):
+    # Length of the correlation operation
+    K = 2 * len(S[0]) - 1
     
-    #plot AF
-    ax3d.plot_surface(mesh_x, mesh_y, mesh_z, linewidth=1, color="whitesmoke", edgecolor="black", shade=True, alpha=1)
+    # since 0 is assumed to be first full overlap between 2 signals
+    if K % 2 == 0:
+        k_upper = K / 2
+        k_lower = -k_upper + 1
+    else:
+        k_upper = (K - 1) / 2
+        k_lower = -k_upper
+    delay = np.linspace(k_lower, k_upper, num=K)  # Time axis for the signal
 
-    # visual stuff
-    ax3d.view_init(elev=35, azim=135)
-    ax3d.set_zlim([0, 1])
+    M = len(S)
+    fig, axs = plt.subplots(M, M, figsize=fig_size)  # Create a grid of subplots
 
-    ax3d.set_xlabel(' Sample lag $ \\it k$ ', fontsize=12)
-    ax3d.set_ylabel(' CFO (kHz), $\\it f$ ', fontsize=12)
-    ax3d.set_zlabel(' $|\\it\\chi(\\it\\k,\\it f)|$ ', fontsize=12)
-    fig.suptitle(f"{title}", fontsize=18, )
-    # Adjusting plot layout to center the plot and title
-    plt.subplots_adjust(top=0.95, left=0.05, right=0.95)
+    for m in range(M):
+        for j in range(M):
+            if m <= j:  # Only plot upper triangular part to avoid duplication
+                print(f"m={m}, j={j}")
+                AF = ambiguity_fn(S[m], S[j], np.array(cfo_freqs), B)
+                # Plot the 2D colormap
+                im = axs[m, j].imshow(AF,
+                                      extent=[min(delay), max(delay), min(cfo_freqs) / 1000, max(cfo_freqs) / 1000],
+                                      aspect='auto',
+                                      cmap='viridis', vmax=1.0)
+
+                # Set labels and title
+                axs[m, j].grid(False)
+
+                if j == m:
+                    axs[m, j].set_xlabel('Sample lag $ \\it k$', fontsize=label_font_size)
+                    axs[m, j].set_ylabel('CFO (kHz)', fontsize=label_font_size)
+                else:
+                    axs[m, j].yaxis.set_ticklabels([])
+                    axs[m, j].yaxis.set_ticks_position('none')
+            else:
+                axs[m, j].axis('off')  # Turn off axis for unused subplots
+
+    # Create a colorbar for all plots
+    # cbar_ax = fig.add_axes([0.95, 0.1, 0.02, 0.8])  # [left, bottom, width, height]
+    # cbar = plt.colorbar(im, ax=cbar_ax, ticks=np.linspace(0, 1, 6))
+    # cbar.set_label('Magnitude', fontsize=label_font_size)
+
+    plt.suptitle(title, fontsize=title_font_size)
+    plt.subplots_adjust(
+        wspace=0.3,
+        hspace=0.4,
+        left=0.05,
+        right=0.95
+    )
     plt.show()
-    fig.savefig(f"{title}.png", format="png")
-
-    # Plotting the 2D colormap
-    plt.figure(figsize=(8, 6))  # Set the figure size (width, height)
-    plt.imshow(AF.T, extent=[min(delay), max(delay), min(cfo_freqs), max(cfo_freqs)/1000], aspect='auto', cmap='viridis')
-    plt.colorbar(label='Magnitude')
-    plt.xlabel('Sample lag $ \\it k$')
-    plt.ylabel('CFO (kHz), $\\it f$ (kHz)')
-    plt.title(f"Ambiguity Function: {title}")
-    plt.grid(True)
-
-    # Saving and displaying the plot
-    plt.tight_layout()
-    plt.show()
-    plt.savefig(f"{title}_2D.png", format="png")
 
 #### No work ####
 # def multican(N,M,X0=None,epsilon=1e-3):
